@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicable_Country_Requirements__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the applicable country requirement(s)</inlineHelpText>
+    <label>Applicable Country Requirements</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Logistics_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>China CIQ parameters tested</fullName>
+                <default>false</default>
+                <label>China CIQ parameters tested</label>
+            </value>
+            <value>
+                <fullName>China factory list</fullName>
+                <default>false</default>
+                <label>China factory list</label>
+            </value>
+            <value>
+                <fullName>Russia approved</fullName>
+                <default>false</default>
+                <label>Russia approved</label>
+            </value>
+            <value>
+                <fullName>Saudi Arabia SFDA registration</fullName>
+                <default>false</default>
+                <label>Saudi Arabia SFDA registration</label>
+            </value>
+            <value>
+                <fullName>Pre-shipment Inspection</fullName>
+                <default>false</default>
+                <label>Pre-shipment Inspection</label>
+            </value>
+            <value>
+                <fullName>Additional testing required</fullName>
+                <default>false</default>
+                <label>Additional testing required</label>
+            </value>
+            <value>
+                <fullName>Legalizations CoC and/or Embassy</fullName>
+                <default>false</default>
+                <label>Legalizations CoC and/or Embassy</label>
+            </value>
+            <value>
+                <fullName>Import license/derogation</fullName>
+                <default>false</default>
+                <label>Import license/derogation</label>
+            </value>
+            <value>
+                <fullName>Sanctioned country</fullName>
+                <default>false</default>
+                <label>Sanctioned country</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>China CIQ parameters tested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>China factory list</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Russia approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Saudi Arabia SFDA registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Pre-shipment Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Additional testing required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Legalizations CoC and/or Embassy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Import license/derogation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Sanctioned country</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

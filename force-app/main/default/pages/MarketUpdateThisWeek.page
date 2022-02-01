@@ -1,0 +1,88 @@
+<apex:page controller="MarketUpdateThisWeekCtrl" showHeader="false" renderAs="pdf" applyBodyTag="false">
+    <head>
+<Style>
+    @page {  
+             size: A4 landscape; /* ISO/JIS A4 (210mm�297mm) */  
+             margin: 5mm; 
+          } 
+            table {
+              border-collapse: collapse;
+            }
+
+        table, th, td {
+          border: 1px solid black;
+        }
+    }
+</Style></head>
+<body>
+    <h3></h3>
+    <br/>
+    <apex:repeat value="{!lstMarket_Information}" var="obj" >
+        <table  width="100%">
+            <tr>
+                <td  width="10%" style="background-color:#e0e0e2;"><p style="transform:rotate(90deg);">{!obj.Dairy_Product_Type__c}</p></td>
+                <td style="90%">
+                    <table width="100%" >
+                        <tr>
+                            <td width="33%" style="vertical-align:top;">
+                                <center style="color:blue;"><u><b>PRICING</b></u></center>
+                                <br/>
+                                <apex:outputField value="{!obj.Pricing__c}" />
+                            </td>
+                            <td width="33%"  style="vertical-align:top;">
+                                <center style="color:blue;"><u><b>COMMENTRY</b></u></center>
+                                <br/>
+                                <apex:outputField value="{!obj.Commentry__c}"/>
+                            </td>
+                            <td width="34%"  style="vertical-align:top;">
+                                <center style="color:blue;"><u><b>STRATEGY</b></u></center>
+                                <br/>
+                                <apex:outputField value="{!obj.Strategy__c}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <b>FUTURE Commentry:</b> {!obj.FutureCommentry__c} 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><b>POSITION: </b>
+                            {!obj.Position__c}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;">
+                                
+                                <center style="color:green;"><u><b>EU Supply</b></u></center>
+                                <br/>
+                                <apex:outputField value="{!obj.EUSupply__c}"/>
+                            
+                            </td>
+                            <td style="vertical-align:top;">
+                                
+                                <center style="color:green;"><u><b>OCEANIA SUPPLY</b></u></center>
+                                <br/>
+                                <apex:outputField value="{!obj.OceaniaSupply__c}"/>
+                            
+                            </td>
+                            <td style="vertical-align:top;">
+                                
+                                <center style="color:green;"><u><b>CANADA (OR OTHER) SUPPLY</b></u></center>
+                                <br/>
+                                <apex:outputField value="{!obj.CanadaOrOtherSupply__c}"/>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <center><b><u>GLOBAL DEMAND</u></b></center>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+    </apex:repeat>
+    </body>
+</apex:page>

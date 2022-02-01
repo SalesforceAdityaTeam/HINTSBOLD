@@ -1,0 +1,19 @@
+<apex:page standardController="Contact" recordSetVar="lstcon" extensions="ContactEmailercl">        
+    <apex:includeLightning />
+    <div id="Con" />
+    <script>
+      var sContactIds = "{!sIds}";
+        $Lightning.use("c:ContactEmailerApp", function() {
+            $Lightning.createComponent(
+                "c:ContactEmailer",
+                {"contactIds": sContactIds,
+                  "isNewList": "true"
+                },
+                "Con",
+                function(cmp) {
+                    console.log("Component is created!");
+                    console.log(cmp);
+                });
+            });        
+      </script>
+</apex:page>

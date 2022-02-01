@@ -1,0 +1,468 @@
+<apex:page standardcontroller="BPF__c" extensions="GenerateFileName" renderAs="pdf" showHeader="false" standardStylesheets="false" applyBodyTag="false" title="{!BPF__c.name}" > 
+    <head>
+        <title>{!BPF__c.name}</title>
+        <style>
+            body{
+               font-size: 65%;
+               font-family: Arial,Helvetica,sans-serif;
+                color: #222;
+            }
+            label{
+                font-weight: 700;
+                float: left;
+            }
+            span{
+                float: left;
+            }
+            .headerval{
+                width="20%"; 
+                float: right;
+            }
+            .bodyval{
+                width="30%";
+            }
+        </style>
+    </head>
+    <body>
+        <table width="100%">
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td><h2>BPF Detail</h2></td>
+            </tr>
+        </table>
+        <hr/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="4"><b>Trader - Prospect Info</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Account Name</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.AccountName__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Owner</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.OwnerId}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Stages</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Stage__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Expiration Date</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.ExpirationDate__c}"/></td>
+                </tr>
+            </table>
+            <hr/>
+        <table width="100%" cellspacing="8">
+                 <tr>
+                    <td colspan="4"><b>Trader - Overview</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">How Long Client ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.HowLongClient__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Main Activities ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MainActivities__c  }"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Family Ties ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.FamilyTies__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Family Ties Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.FamilyTiesDetails__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Evidence of Tax Avoidance ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.EvidenceofTaxAvoidance__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Tax Avoidance Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.TaxAvoidanceDetails__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Represent HUS ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.RepresentHUS__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">HUS Represent Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.HUSRepresentDetails__c}"/></td>
+                </tr>
+                 <tr>
+                    <td  width="20%"  ><Label style="float:right;">Credit/Terms Requested ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Credit_Terms_Requested__c}"/></td>
+                    <td  width="20%"  ></td>
+                    <td  width="30%"  ></td>
+                </tr>
+            </table>
+            <hr/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="4"><b>Trader - Questions for Agents</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Agent Services ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.AgentServices__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Country Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.CountryDetails__c}"/></td>
+                </tr><tr>
+                    <td  width="20%"  ><Label style="float:right;">Remuneration Type ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.RemunerationType__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Contract Total ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.ContractTotal__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Remueration % ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Remueration__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Remuneration Reasonable ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.RemunerationReasonable__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Annual Revenue % ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.AnnualRevenue__c}"/></td>
+                    <td  width="20%"  ></td>
+                    <td  width="30%"  ></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Agent Family Ties ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.AgentFamilyTies__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Agent Family Ties Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.AgentFamilyTiesDetails__c}"/></td>
+                    
+                </tr>
+                </table>
+            <hr/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="4"><b>Trader - General</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Agent Difficulty ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.AgentDifficulty__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Difficulty Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.DifficultyDetails__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Relevant Facts ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.RelevantFacts__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Facts Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.FactsDetails__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Trader Family Ties with Agent ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.FamilyTieswithAgent__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Trader Ties Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Trader_Ties_Details__c}"/></td>
+                </tr>
+                
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Red Flags ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.RedFlags__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Red Flag Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.RedFlagDetails__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Further Due Diligence ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.FurtherDueDiligence__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Further Details ?</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.FurtherDetails__c}"/></td>
+                </tr>
+        </table>
+            <hr/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="4"><b>Customer - Compliance</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 1</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_1__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 1 %</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_1_per__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 2</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_2__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 2 %</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_2_per__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 3</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_3__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 3 %</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_3_per__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 4</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_4__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Ultimate Beneficial Owner (UBO) 4 %</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_4_per__c}"/></td>
+                </tr>
+                
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Company State Owned</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Company_State_Owned__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Company State Owned Detail</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.CompanyStateOwnedDetail__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Code of Conduct</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.CodeofConduct__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Code of Conduct Detail</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.CodeofConductDetail__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Personal Associations with Public Officials</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PersonalAssociationswithPublicOfficials__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Personal Associations Details</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PersonalAssociationsDetails__c}"/></td>
+                </tr>
+                
+                 <tr>
+                    <td  width="20%"  ><Label style="float:right;">Payment Same Country</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PaymentSameCountry__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Payment same country detail</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Paymentsamecountrydetail__c}"/></td>
+                </tr>
+                 <tr>
+                    <td  width="20%"  ><Label style="float:right;">Payment same bank</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Payments_same_bank__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Payment same bank detail</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Paymentsamebankdetail__c}"/></td>
+                </tr>
+                
+                </table>
+            <hr/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="4"><b>Customer - Application</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Registered Legal Name</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Registered_Legal_Name__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Tax ID # or Registration #</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.TaxIDorRegistration__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">DBA name </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.DBA_name__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> Vat # (if applicable)</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Vatifapplicable__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Legal entity type </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Legalentitytype__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Company website </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Companywebsite__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Line of Business </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.LineofBusiness__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Company phone number </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Companyphonenumber__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Year of Incorporation </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.YearofIncorporation__c}"/></td>
+                    <td  width="20%"  ></td>
+                    <td  width="30%"  ></td>
+                </tr>
+               
+                
+        </table>
+        <hr/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="4"><b>Customer - Addresses</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Principal Office </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PrincipalOffice_formula__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> Mailing Address (if different)</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MailingAddressifdifferent_formula__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Street Address </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PO_StreetAddress__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Street Address</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MA_StreetAddress__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">City </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PO_City__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> City</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MA_City__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">State/Province </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PO_StateProvince__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> State/Province</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MA_StateProvince__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Postal Code</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PO_PostalCode__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> Postal Code</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MA_PostalCode__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Country </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.PO_Country__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Country</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.MA_Country__c}"/></td>
+                </tr>
+                
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Branch Office</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BranchOffice_formula__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> Billing Address (if different)</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Billing_Address_if_different__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Street Address </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BO_StreetAddress__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Street Address</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BA_StreetAddress__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">City </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BO_City__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> City</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BA_City__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">State/Province </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BO_StateProvince__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> State/Province</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BA_StateProvince__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Postal Code</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BO_PostalCode__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> Postal Code</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BA_PostalCode__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Country </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BO_Country__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Country</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BA_Country__c}"/></td>
+                </tr>
+                
+          </table>
+        <hr/>
+        
+            <table width="100%" cellspacing="8">  
+                <tr>
+                    <td colspan="4"><b>Customer - Credit application information</b></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Bank name: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Bankname__c}"/></td>
+                     <td  width="20%"  ><Label style="float:right;">Name on Account </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.NameonAccount__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Bank Address: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BankAddress__c}"/></td>
+                     <td  width="20%"  ><Label style="float:right;">Account number: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Accountnumber__c}"/></td>
+                    
+                    
+                    <td  width="20%"  ><Label style="float:right;"> Bank Contact:</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BankContact__c}"/></td>
+                     <td  width="20%"  ><Label style="float:right;">Email Address: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.EmailAddress__c}"/></td>
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;"> Bank Contact:</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.BankContact__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;"> Type of account: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Typeofaccount__c}"/></td>
+                    
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;">Email Address: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.EmailAddress__c}"/></td>
+                    <td  width="20%"  ><Label style="float:right;">Swift Code: </label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.SwiftCode__c}"/></td>
+                    
+                </tr>
+                <tr>
+                    <td  width="20%"  ><Label style="float:right;"> Phone number:</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Phonenumber__c}"/></td>
+                     <td  width="20%"  ><Label style="float:right;">Method of payment</label></td>
+                    <td  width="30%"  ><apex:outputField value="{!BPF__c.Methodofpayment__c}"/></td>
+                </tr>
+        </table>
+        <br/>
+        <br/>
+        <br/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="6"><b>Credit application information</b></td>
+                </tr>
+                <tr>
+                     <th>Company Name</th>
+                     <th>Address</th>
+                     <th>Contact Name</th>
+                     <th>Email</th>
+                     <th>Phone</th>
+                     <th>Created Date</th>
+                </tr>
+                <apex:repeat value="{!BPF__c.Trade_References__r}" var="objTR" >
+                    <tr>
+                        <td><apex:outputField value="{!objTR.Name}" /></td>
+                        <td><apex:outputField value="{!objTR.Address__c}" /></td>
+                        <td><apex:outputField value="{!objTR.ContactName__c}" /></td>
+                        <td><apex:outputField value="{!objTR.Email__c}" /></td>
+                        <td><apex:outputField value="{!objTR.Phone__c}" /></td>
+                        <td><apex:outputField value="{!objTR.CreatedDate}" /></td>
+                    </tr>
+                </apex:repeat>
+        </table>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="2"><b>BPF Contacts</b></td>
+                </tr>
+                <tr>
+                     <th>BPF Contact</th>
+                     <th>First Name</th>
+                     <th>Last Name</th>
+                     <th>Title Name</th>
+                     <th>Phone</th>
+                     <th>Email</th>
+                </tr>
+                <apex:repeat value="{!BPF__c.BPF_Contacts__r}" var="objTR" >
+                    <tr>
+                        <td><apex:outputField value="{!objTR.Name}" /></td>
+                        <td><apex:outputField value="{!objTR.Contact__r.FirstName}" /></td>
+                        <td><apex:outputField value="{!objTR.Contact__r.LastName}" /></td>
+                        <td><apex:outputField value="{!objTR.Contact__r.Title}" /></td>
+                        <td><apex:outputField value="{!objTR.Contact__r.Phone}" /></td>
+                        <td><apex:outputField value="{!objTR.Contact__r.email}" /></td>
+                    </tr>
+                </apex:repeat>
+           </table>
+        <br/>
+        <br/>
+        <table width="100%" cellspacing="8">
+                <tr>
+                    <td colspan="2"><b>BPF History</b></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                     <th>User</th>
+                     <th>Field</th>
+                     <th>Old Value</th>
+                     <th>New Value</th>
+                </tr>
+                
+                <apex:repeat value="{!lstBPFHostory}" var="objTR" >
+                    <tr>
+                        <td><apex:outputField value="{!objTR.createdDate}"/></td>
+                        <td><apex:outputField value="{!objTR.CreatedBy.Name}"  /></td>
+                        <td><apex:outputField value="{!objTR.Field}"  /></td>
+                        <td><apex:outputField value="{!objTR.OldValue}"  /></td>
+                        <td><apex:outputField value="{!objTR.NewValue}"  /></td>
+                    </tr>
+                </apex:repeat>
+        </table>
+        
+ </body>
+</apex:page>

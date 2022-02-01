@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Item__c</fullName>
+    <externalId>false</externalId>
+    <label>Approved Item</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMF / BUTTEROIL</fullName>
+                <default>false</default>
+                <label>AMF / BUTTEROIL</label>
+            </value>
+            <value>
+                <fullName>AMPI WPC Feed</fullName>
+                <default>false</default>
+                <label>AMPI WPC Feed</label>
+            </value>
+            <value>
+                <fullName>AMPI WPC Food</fullName>
+                <default>false</default>
+                <label>AMPI WPC Food</label>
+            </value>
+            <value>
+                <fullName>ANIMAL FEED BLENDS</fullName>
+                <default>false</default>
+                <label>ANIMAL FEED BLENDS</label>
+            </value>
+            <value>
+                <fullName>ANIMAL FEED LSDP</fullName>
+                <default>false</default>
+                <label>ANIMAL FEED LSDP</label>
+            </value>
+            <value>
+                <fullName>ANIMAL FEED MISC.</fullName>
+                <default>false</default>
+                <label>ANIMAL FEED MISC.</label>
+            </value>
+            <value>
+                <fullName>BFP FUTURES</fullName>
+                <default>false</default>
+                <label>BFP FUTURES</label>
+            </value>
+            <value>
+                <fullName>BFP OPTIONS</fullName>
+                <default>false</default>
+                <label>BFP OPTIONS</label>
+            </value>
+            <value>
+                <fullName>BLENDED MPC</fullName>
+                <default>false</default>
+                <label>BLENDED MPC</label>
+            </value>
+            <value>
+                <fullName>BLUEGRASS</fullName>
+                <default>false</default>
+                <label>BLUEGRASS</label>
+            </value>
+            <value>
+                <fullName>BULK SWEET WHEY</fullName>
+                <default>false</default>
+                <label>BULK SWEET WHEY</label>
+            </value>
+            <value>
+                <fullName>BUTTER FUTURES</fullName>
+                <default>false</default>
+                <label>BUTTER FUTURES</label>
+            </value>
+            <value>
+                <fullName>BUTTERMILK</fullName>
+                <default>false</default>
+                <label>BUTTERMILK</label>
+            </value>
+            <value>
+                <fullName>BUTTERMILK   LSDP</fullName>
+                <default>false</default>
+                <label>BUTTERMILK   LSDP</label>
+            </value>
+            <value>
+                <fullName>BUTTERMILK OFF-SPEC</fullName>
+                <default>false</default>
+                <label>BUTTERMILK OFF-SPEC</label>
+            </value>
+            <value>
+                <fullName>BUTTER OPTIONS</fullName>
+                <default>false</default>
+                <label>BUTTER OPTIONS</label>
+            </value>
+            <value>
+                <fullName>BUTTER - SALTED</fullName>
+                <default>false</default>
+                <label>BUTTER - SALTED</label>
+            </value>
+            <value>
+                <fullName>BUTTER-SALTED LSDP</fullName>
+                <default>false</default>
+                <label>BUTTER-SALTED LSDP</label>
+            </value>
+            <value>
+                <fullName>BUTTER - UNSALTED</fullName>
+                <default>false</default>
+                <label>BUTTER - UNSALTED</label>
+            </value>
+            <value>
+                <fullName>BUTTER UNSALTED LSDP</fullName>
+                <default>false</default>
+                <label>BUTTER UNSALTED LSDP</label>
+            </value>
+            <value>
+                <fullName>CASEIN, ACID</fullName>
+                <default>false</default>
+                <label>CASEIN, ACID</label>
+            </value>
+            <value>
+                <fullName>CASEIN, RENNET</fullName>
+                <default>false</default>
+                <label>CASEIN, RENNET</label>
+            </value>
+            <value>
+                <fullName>CASEINATE, CALCIUM</fullName>
+                <default>false</default>
+                <label>CASEINATE, CALCIUM</label>
+            </value>
+            <value>
+                <fullName>CASEINATE, POTASSIUM</fullName>
+                <default>false</default>
+                <label>CASEINATE, POTASSIUM</label>
+            </value>
+            <value>
+                <fullName>CASEINATE, SODIUM</fullName>
+                <default>false</default>
+                <label>CASEINATE, SODIUM</label>
+            </value>
+            <value>
+                <fullName>CHEDDAR CHEESE</fullName>
+                <default>false</default>
+                <label>CHEDDAR CHEESE</label>
+            </value>
+            <value>
+                <fullName>CHEESE, MISC</fullName>
+                <default>false</default>
+                <label>CHEESE, MISC</label>
+            </value>
+            <value>
+                <fullName>COCOA POWDER</fullName>
+                <default>false</default>
+                <label>COCOA POWDER</label>
+            </value>
+            <value>
+                <fullName>CREAM PRODUCTS</fullName>
+                <default>false</default>
+                <label>CREAM PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>CREAM PRODUCTS  LSDP</fullName>
+                <default>false</default>
+                <label>CREAM PRODUCTS  LSDP</label>
+            </value>
+            <value>
+                <fullName>DELACTOSED WHEY</fullName>
+                <default>false</default>
+                <label>DELACTOSED WHEY</label>
+            </value>
+            <value>
+                <fullName>DEMINERALIZED WHEY</fullName>
+                <default>false</default>
+                <label>DEMINERALIZED WHEY</label>
+            </value>
+            <value>
+                <fullName>ELLSWORTH WHEY</fullName>
+                <default>false</default>
+                <label>ELLSWORTH WHEY</label>
+            </value>
+            <value>
+                <fullName>EMPTY TOTE BAGS</fullName>
+                <default>false</default>
+                <label>EMPTY TOTE BAGS</label>
+            </value>
+            <value>
+                <fullName>ESIDE ENT NFDM</fullName>
+                <default>false</default>
+                <label>ESIDE ENT NFDM</label>
+            </value>
+            <value>
+                <fullName>FLUIDS</fullName>
+                <default>false</default>
+                <label>FLUIDS</label>
+            </value>
+            <value>
+                <fullName>FLUIDS LSDP</fullName>
+                <default>false</default>
+                <label>FLUIDS LSDP</label>
+            </value>
+            <value>
+                <fullName>FOOD GRADE BLENDS</fullName>
+                <default>false</default>
+                <label>FOOD GRADE BLENDS</label>
+            </value>
+            <value>
+                <fullName>FOOD GRADE MISC.</fullName>
+                <default>false</default>
+                <label>FOOD GRADE MISC.</label>
+            </value>
+            <value>
+                <fullName>LACTOSE</fullName>
+                <default>false</default>
+                <label>LACTOSE</label>
+            </value>
+            <value>
+                <fullName>LH NFDM - CHSE/SWAP</fullName>
+                <default>false</default>
+                <label>LH NFDM - CHSE/SWAP</label>
+            </value>
+            <value>
+                <fullName>LH NFDM INTERNATION</fullName>
+                <default>false</default>
+                <label>LH NFDM INTERNATION</label>
+            </value>
+            <value>
+                <fullName>MDVA BTR STRGE PRGM</fullName>
+                <default>false</default>
+                <label>MDVA BTR STRGE PRGM</label>
+            </value>
+            <value>
+                <fullName>MH NFDM INTERNATION</fullName>
+                <default>false</default>
+                <label>MH NFDM INTERNATION</label>
+            </value>
+            <value>
+                <fullName>MILK FUTURE / OPTION</fullName>
+                <default>false</default>
+                <label>MILK FUTURE / OPTION</label>
+            </value>
+            <value>
+                <fullName>MISCELLANEOUS</fullName>
+                <default>false</default>
+                <label>MISCELLANEOUS</label>
+            </value>
+            <value>
+                <fullName>MOZZARELLA CHEESE</fullName>
+                <default>false</default>
+                <label>MOZZARELLA CHEESE</label>
+            </value>
+            <value>
+                <fullName>MSG WHEY</fullName>
+                <default>false</default>
+                <label>MSG WHEY</label>
+            </value>
+            <value>
+                <fullName>MULLINS LACTOSE</fullName>
+                <default>false</default>
+                <label>MULLINS LACTOSE</label>
+            </value>
+            <value>
+                <fullName>MULLINS PERMEATE</fullName>
+                <default>false</default>
+                <label>MULLINS PERMEATE</label>
+            </value>
+            <value>
+                <fullName>NFDM HH LSDP</fullName>
+                <default>false</default>
+                <label>NFDM HH LSDP</label>
+            </value>
+            <value>
+                <fullName>NFDM LH CCC</fullName>
+                <default>false</default>
+                <label>NFDM LH CCC</label>
+            </value>
+            <value>
+                <fullName>NFDM LH CCC DOD</fullName>
+                <default>false</default>
+                <label>NFDM LH CCC DOD</label>
+            </value>
+            <value>
+                <fullName>NFDM LH LSDP</fullName>
+                <default>false</default>
+                <label>NFDM LH LSDP</label>
+            </value>
+            <value>
+                <fullName>NFDM LH TACH</fullName>
+                <default>false</default>
+                <label>NFDM LH TACH</label>
+            </value>
+            <value>
+                <fullName>NFDM MH LSDP</fullName>
+                <default>false</default>
+                <label>NFDM MH LSDP</label>
+            </value>
+            <value>
+                <fullName>NONFAT DRY MILK HH</fullName>
+                <default>false</default>
+                <label>NONFAT DRY MILK HH</label>
+            </value>
+            <value>
+                <fullName>NONFAT DRY MILK LH</fullName>
+                <default>false</default>
+                <label>NONFAT DRY MILK LH</label>
+            </value>
+            <value>
+                <fullName>NONFAT DRY MILK MH</fullName>
+                <default>false</default>
+                <label>NONFAT DRY MILK MH</label>
+            </value>
+            <value>
+                <fullName>NONFAT DRY MILK MISC</fullName>
+                <default>false</default>
+                <label>NONFAT DRY MILK MISC</label>
+            </value>
+            <value>
+                <fullName>NONFAT DRY MILK OFF</fullName>
+                <default>false</default>
+                <label>NONFAT DRY MILK OFF</label>
+            </value>
+            <value>
+                <fullName>NONFAT FUTURES</fullName>
+                <default>false</default>
+                <label>NONFAT FUTURES</label>
+            </value>
+            <value>
+                <fullName>NONFAT OPTIONS</fullName>
+                <default>false</default>
+                <label>NONFAT OPTIONS</label>
+            </value>
+            <value>
+                <fullName>PERMEATE</fullName>
+                <default>false</default>
+                <label>PERMEATE</label>
+            </value>
+            <value>
+                <fullName>Pollio Whey</fullName>
+                <default>false</default>
+                <label>Pollio Whey</label>
+            </value>
+            <value>
+                <fullName>SOY ULTIMA</fullName>
+                <default>false</default>
+                <label>SOY ULTIMA</label>
+            </value>
+            <value>
+                <fullName>SWEET WHEY POWDER</fullName>
+                <default>false</default>
+                <label>SWEET WHEY POWDER</label>
+            </value>
+            <value>
+                <fullName>UF MPC &gt; 56%</fullName>
+                <default>false</default>
+                <label>UF MPC &gt; 56%</label>
+            </value>
+            <value>
+                <fullName>UF MPC 56% OR LESS</fullName>
+                <default>false</default>
+                <label>UF MPC 56% OR LESS</label>
+            </value>
+            <value>
+                <fullName>WHEAT GLUTEN</fullName>
+                <default>false</default>
+                <label>WHEAT GLUTEN</label>
+            </value>
+            <value>
+                <fullName>WHEAT GLUTEN, MDFIED</fullName>
+                <default>false</default>
+                <label>WHEAT GLUTEN, MDFIED</label>
+            </value>
+            <value>
+                <fullName>WHEY, AMPI</fullName>
+                <default>false</default>
+                <label>WHEY, AMPI</label>
+            </value>
+            <value>
+                <fullName>WHEY BLENDS</fullName>
+                <default>false</default>
+                <label>WHEY BLENDS</label>
+            </value>
+            <value>
+                <fullName>WHEY FUTURES</fullName>
+                <default>false</default>
+                <label>WHEY FUTURES</label>
+            </value>
+            <value>
+                <fullName>WHEY MISCELLANEOUS</fullName>
+                <default>false</default>
+                <label>WHEY MISCELLANEOUS</label>
+            </value>
+            <value>
+                <fullName>WHEY OFF-SPEC</fullName>
+                <default>false</default>
+                <label>WHEY OFF-SPEC</label>
+            </value>
+            <value>
+                <fullName>WHEY OPTIONS</fullName>
+                <default>false</default>
+                <label>WHEY OPTIONS</label>
+            </value>
+            <value>
+                <fullName>WHOLE MILK</fullName>
+                <default>false</default>
+                <label>WHOLE MILK</label>
+            </value>
+            <value>
+                <fullName>WHOLE MILK INTERNAT</fullName>
+                <default>false</default>
+                <label>WHOLE MILK INTERNAT</label>
+            </value>
+            <value>
+                <fullName>WHOLE MILK   LSDP</fullName>
+                <default>false</default>
+                <label>WHOLE MILK   LSDP</label>
+            </value>
+            <value>
+                <fullName>WHOLE MILK OFF-SPEC</fullName>
+                <default>false</default>
+                <label>WHOLE MILK OFF-SPEC</label>
+            </value>
+            <value>
+                <fullName>WI DAIRY WPC</fullName>
+                <default>false</default>
+                <label>WI DAIRY WPC</label>
+            </value>
+            <value>
+                <fullName>WORLD MARKET NFDM</fullName>
+                <default>false</default>
+                <label>WORLD MARKET NFDM</label>
+            </value>
+            <value>
+                <fullName>WPC, AMPI</fullName>
+                <default>false</default>
+                <label>WPC, AMPI</label>
+            </value>
+            <value>
+                <fullName>WPC = &gt; 50%</fullName>
+                <default>false</default>
+                <label>WPC = &gt; 50%</label>
+            </value>
+            <value>
+                <fullName>WPC 34%</fullName>
+                <default>false</default>
+                <label>WPC 34%</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

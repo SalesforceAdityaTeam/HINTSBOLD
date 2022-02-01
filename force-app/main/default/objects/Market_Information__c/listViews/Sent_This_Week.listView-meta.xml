@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_This_Week</fullName>
+    <columns>NAME</columns>
+    <columns>Dairy_Product_Type__c</columns>
+    <columns>Send_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Send_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>Sending This Week</label>
+</ListView>

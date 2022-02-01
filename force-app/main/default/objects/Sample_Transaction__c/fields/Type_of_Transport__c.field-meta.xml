@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Transport__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>You must fill this out when Sample Goes is one of the following... From supplier to Hoogwegt, From supplier to warehouse,  From warehouse to Hoogwegt to customer</inlineHelpText>
+    <label>Type of Transport</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ambient</fullName>
+                <default>false</default>
+                <label>Ambient</label>
+            </value>
+            <value>
+                <fullName>Chilled</fullName>
+                <default>false</default>
+                <label>Chilled</label>
+            </value>
+            <value>
+                <fullName>Frozen</fullName>
+                <default>false</default>
+                <label>Frozen</label>
+            </value>
+            <value>
+                <fullName>Icepacks</fullName>
+                <default>false</default>
+                <label>Icepacks</label>
+            </value>
+            <value>
+                <fullName>Tempex Box</fullName>
+                <default>false</default>
+                <label>Tempex Box</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

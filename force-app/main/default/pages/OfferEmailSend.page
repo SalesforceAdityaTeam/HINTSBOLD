@@ -1,0 +1,122 @@
+<apex:page standardController="Offer__c" extensions="OfferEmailSendCtrl" lightningStylesheets="true">
+<apex:slds />
+
+<div class="slds-scope" style="padding-left: 10%;padding-right: 10%;padding-top: 2%">
+    <apex:form >
+      <apex:pageMessages ></apex:pageMessages>
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom"  >
+                <apex:commandButton value="Send Email" action="{!sendEmail}" />
+                <apex:commandButton value="Cancel" action="{!Cancel}" />
+            </apex:pageBlockButtons>
+                <table width="70%" style="font-family: Calibiri; font-size: 11pt;">
+                <tr>
+                    <td><b>Offer Name / Subject Line in Email :-</b> {!Offer__c.Name} </td>
+                <td ></td>
+                </tr>
+                </table>
+                <br/>
+                <br/>
+                <table width="70%" style="font-family: Calibiri; font-size: 11pt;">
+                <tr>
+                <td></td>
+                <td style="float: right;"></td>
+                </tr>
+                </table>
+                <apex:outputField value="{!Offer__c.Offer_Introduction__c}" />
+                <center>
+                    <h1><b>OFFER</b></h1>
+                </center>
+                <br/><br/>
+                    <table>
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                           
+                                <th scope="col">
+                                    <div class="slds-truncate" ><b>Volume</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Product</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Brand/Origin</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Spec - ID#</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Period</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Price</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>INCO</b></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Destination</b> </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate"><b>Remark</b> </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <apex:repeat value="{!Offer__c.Offer_Line_Item__r}" var="a">
+                            <tr>
+                                <td>{!a.Volume__c}</td>
+                                <td>{!a.Product__c}</td>
+                                <td>{!a.Brand_Origin__c}</td>
+                                <td>{!a.Spec_ID__c}</td>
+                                <td>{!a.Period__c}</td>
+                                <td>{!a.Price__c}</td>
+                                <td>{!a.INCO__c}</td>                                
+                                <td>{!a.Destination__c}</td>
+                                <td>{!a.Remark__c}</td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                <br/><br/>
+               <apex:outputField value="{!Offer__c.Offer_Close__c} " />
+                <br/><br/>
+                
+               <!-- <b>Volumes are indicative </b>
+                <ul>
+                <li> All prices are based on INCO TERMS 2020, packaging included, wihout taxes</li>
+                <li> Offer is Subject Unsold / Large currency rate differences </li>
+                <li> On all our offers and commitments/agreements our general terms and conditions apply</li>
+                <li>All our customers have to complete our compulsery RFI Compliance Document </li>
+                </ul>-->
+                <br/><br/>
+                With kind regards,<br/>
+                {!Offer__c.Owner.Name}
+                
+        </apex:pageBlock>
+        <apex:inputFile value="{!oFile.Body}" fileName="{!oFile.Name}"></apex:inputFile>
+        <apex:commandButton value="Upload" action="{!addAttachment}"/>
+        <apex:inputHidden value="{!sContentDocumentId}" id="docId"/>
+        <apex:actionFunction name="removeItem" action="{!removeFile}"/>
+        <script>
+          function removeSelectedFile(sDocId){
+            document.getElementById('{!$Component.docId}').value = sDocId;
+            removeItem();
+            return false;
+          }
+        </script>
+        <apex:outputPanel id="fileSection">
+          <table border="1px" style="width:25%">
+          <tr>
+            <th style="text-align: center">Action</th>
+            <th style="text-align: center">File Name</th>
+          </tr>
+          <apex:repeat value="{!lstWrapperFiles}" var="wrap">
+            <tr>
+              <td style="text-align: -webkit-center; padding-top: 3px; padding-bottom: 3px;"> <apex:commandButton value="Remove" onclick="return removeSelectedFile('{!wrap.sId}')"/> </td>
+              <td style="text-align: center;"> {!wrap.sFileName} </td>
+            </tr>
+          </apex:repeat>
+          </table>
+        </apex:outputPanel>
+    </apex:form>
+    
+</div>
+</apex:page>

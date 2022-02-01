@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_growth_promotors__c</fullName>
+    <externalId>false</externalId>
+    <label>No growth promotors</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No requirements on no-growth promotors</fullName>
+                <default>false</default>
+                <label>No requirements on no-growth promotors</label>
+            </value>
+            <value>
+                <fullName>rBST</fullName>
+                <default>false</default>
+                <label>rBST</label>
+            </value>
+            <value>
+                <fullName>rBGH</fullName>
+                <default>false</default>
+                <label>rBGH</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

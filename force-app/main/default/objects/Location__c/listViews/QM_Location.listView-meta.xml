@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QM_Location</fullName>
+    <columns>NAME</columns>
+    <columns>QM_Address_1__c</columns>
+    <columns>QM_Address_2__c</columns>
+    <columns>Certification__c</columns>
+    <columns>Warehouse_Number__c</columns>
+    <columns>Contact__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Mine</filterScope>
+    <label>QM Location</label>
+</ListView>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Item Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Group__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMF 99.9% Butterfat</fullName>
+                <default>false</default>
+                <label>AMF 99.9% Butterfat</label>
+            </value>
+            <value>
+                <fullName>Soft Butteroil Substitute</fullName>
+                <default>false</default>
+                <label>Soft Butteroil Substitute</label>
+            </value>
+            <value>
+                <fullName>Standard Butteroil Substitute</fullName>
+                <default>false</default>
+                <label>Standard Butteroil Substitute</label>
+            </value>
+            <value>
+                <fullName>Concentrated Milk Fat</fullName>
+                <default>false</default>
+                <label>Concentrated Milk Fat</label>
+            </value>
+            <value>
+                <fullName>Salted Butter-80% Fat</fullName>
+                <default>false</default>
+                <label>Salted Butter-80% Fat</label>
+            </value>
+            <value>
+                <fullName>UNSALTED 80 LACTIC BUTTER</fullName>
+                <default>false</default>
+                <label>UNSALTED 80 LACTIC BUTTER</label>
+            </value>
+            <value>
+                <fullName>Unsalted Butter-80% Fat</fullName>
+                <default>false</default>
+                <label>Unsalted Butter-80% Fat</label>
+            </value>
+            <value>
+                <fullName>Buttermilk</fullName>
+                <default>false</default>
+                <label>Buttermilk</label>
+            </value>
+            <value>
+                <fullName>Buttermilk Ex Gr Swt Crm (&gt;30% Prtn)</fullName>
+                <default>false</default>
+                <label>Buttermilk Ex Gr Swt Crm (&gt;30% Prtn)</label>
+            </value>
+            <value>
+                <fullName>Caseinate, Calcium</fullName>
+                <default>false</default>
+                <label>Caseinate, Calcium</label>
+            </value>
+            <value>
+                <fullName>Caseinate, Sodium</fullName>
+                <default>false</default>
+                <label>Caseinate, Sodium</label>
+            </value>
+            <value>
+                <fullName>Rennet Casein</fullName>
+                <default>false</default>
+                <label>Rennet Casein</label>
+            </value>
+            <value>
+                <fullName>ASIAGO</fullName>
+                <default>false</default>
+                <label>ASIAGO</label>
+            </value>
+            <value>
+                <fullName>BLUE CHEESE CRUMBLES</fullName>
+                <default>false</default>
+                <label>BLUE CHEESE CRUMBLES</label>
+            </value>
+            <value>
+                <fullName>BRIE (MISC)</fullName>
+                <default>false</default>
+                <label>BRIE (MISC)</label>
+            </value>
+            <value>
+                <fullName>COLBY</fullName>
+                <default>false</default>
+                <label>COLBY</label>
+            </value>
+            <value>
+                <fullName>COLBY JACK</fullName>
+                <default>false</default>
+                <label>COLBY JACK</label>
+            </value>
+            <value>
+                <fullName>COLORED CHEDDAR</fullName>
+                <default>false</default>
+                <label>COLORED CHEDDAR</label>
+            </value>
+            <value>
+                <fullName>CREAM CHEESE</fullName>
+                <default>false</default>
+                <label>CREAM CHEESE</label>
+            </value>
+            <value>
+                <fullName>EDAM CHEESE</fullName>
+                <default>false</default>
+                <label>EDAM CHEESE</label>
+            </value>
+            <value>
+                <fullName>FETA</fullName>
+                <default>false</default>
+                <label>FETA</label>
+            </value>
+            <value>
+                <fullName>FONTINA</fullName>
+                <default>false</default>
+                <label>FONTINA</label>
+            </value>
+            <value>
+                <fullName>GOUDA</fullName>
+                <default>false</default>
+                <label>GOUDA</label>
+            </value>
+            <value>
+                <fullName>HAVARTI</fullName>
+                <default>false</default>
+                <label>HAVARTI</label>
+            </value>
+            <value>
+                <fullName>MONTEREY JACK</fullName>
+                <default>false</default>
+                <label>MONTEREY JACK</label>
+            </value>
+            <value>
+                <fullName>MOZZARELLA</fullName>
+                <default>false</default>
+                <label>MOZZARELLA</label>
+            </value>
+            <value>
+                <fullName>MUENSTER</fullName>
+                <default>false</default>
+                <label>MUENSTER</label>
+            </value>
+            <value>
+                <fullName>PARMESAN</fullName>
+                <default>false</default>
+                <label>PARMESAN</label>
+            </value>
+            <value>
+                <fullName>PEPPER JACK</fullName>
+                <default>false</default>
+                <label>PEPPER JACK</label>
+            </value>
+            <value>
+                <fullName>PIZZA CHEESE</fullName>
+                <default>false</default>
+                <label>PIZZA CHEESE</label>
+            </value>
+            <value>
+                <fullName>PROVOLONE</fullName>
+                <default>false</default>
+                <label>PROVOLONE</label>
+            </value>
+            <value>
+                <fullName>QUESO BLANCO CHEESE</fullName>
+                <default>false</default>
+                <label>QUESO BLANCO CHEESE</label>
+            </value>
+            <value>
+                <fullName>ROMANO</fullName>
+                <default>false</default>
+                <label>ROMANO</label>
+            </value>
+            <value>
+                <fullName>SHRED SWISS</fullName>
+                <default>false</default>
+                <label>SHRED SWISS</label>
+            </value>
+            <value>
+                <fullName>SWISS CHEESE</fullName>
+                <default>false</default>
+                <label>SWISS CHEESE</label>
+            </value>
+            <value>
+                <fullName>WHITE CHEDDAR</fullName>
+                <default>false</default>
+                <label>WHITE CHEDDAR</label>
+            </value>
+            <value>
+                <fullName>CREAM</fullName>
+                <default>false</default>
+                <label>CREAM</label>
+            </value>
+            <value>
+                <fullName>Lactose</fullName>
+                <default>false</default>
+                <label>Lactose</label>
+            </value>
+            <value>
+                <fullName>MPC-UF</fullName>
+                <default>false</default>
+                <label>MPC-UF</label>
+            </value>
+            <value>
+                <fullName>FAT FILLED MILK POWDER 28% FAT</fullName>
+                <default>false</default>
+                <label>FAT FILLED MILK POWDER 28% FAT</label>
+            </value>
+            <value>
+                <fullName>Malted Powder,</fullName>
+                <default>false</default>
+                <label>Malted Powder,</label>
+            </value>
+            <value>
+                <fullName>Deproteinized Whey</fullName>
+                <default>false</default>
+                <label>Deproteinized Whey</label>
+            </value>
+            <value>
+                <fullName>MILK PERMEATE</fullName>
+                <default>false</default>
+                <label>MILK PERMEATE</label>
+            </value>
+            <value>
+                <fullName>Whey Permeate</fullName>
+                <default>false</default>
+                <label>Whey Permeate</label>
+            </value>
+            <value>
+                <fullName>Sweet Whey Powder</fullName>
+                <default>false</default>
+                <label>Sweet Whey Powder</label>
+            </value>
+            <value>
+                <fullName>Delactosed Whey</fullName>
+                <default>false</default>
+                <label>Delactosed Whey</label>
+            </value>
+            <value>
+                <fullName>Whey Demineralized</fullName>
+                <default>false</default>
+                <label>Whey Demineralized</label>
+            </value>
+            <value>
+                <fullName>WPC 34%</fullName>
+                <default>false</default>
+                <label>WPC 34%</label>
+            </value>
+            <value>
+                <fullName>Pro Cream</fullName>
+                <default>false</default>
+                <label>Pro Cream</label>
+            </value>
+            <value>
+                <fullName>WPC 80%</fullName>
+                <default>false</default>
+                <label>WPC 80%</label>
+            </value>
+            <value>
+                <fullName>WPI 90% Instantized Extra Grade</fullName>
+                <default>false</default>
+                <label>WPI 90% Instantized Extra Grade</label>
+            </value>
+            <value>
+                <fullName>Whole Milk Powder</fullName>
+                <default>false</default>
+                <label>Whole Milk Powder</label>
+            </value>
+            <value>
+                <fullName>TEST VALUE</fullName>
+                <default>false</default>
+                <label>TEST VALUE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Lactose</controllingFieldValue>
+            <valueName>Lactose</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buttermilk</controllingFieldValue>
+            <valueName>Concentrated Milk Fat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buttermilk</controllingFieldValue>
+            <valueName>Salted Butter-80% Fat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buttermilk</controllingFieldValue>
+            <valueName>UNSALTED 80 LACTIC BUTTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buttermilk</controllingFieldValue>
+            <valueName>Unsalted Butter-80% Fat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permeate</controllingFieldValue>
+            <valueName>Deproteinized Whey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permeate</controllingFieldValue>
+            <valueName>MILK PERMEATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permeate</controllingFieldValue>
+            <valueName>Whey Permeate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caseins &amp; Caseinates</controllingFieldValue>
+            <valueName>Caseinate, Calcium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caseins &amp; Caseinates</controllingFieldValue>
+            <valueName>Caseinate, Sodium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caseins &amp; Caseinates</controllingFieldValue>
+            <valueName>Rennet Casein</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Butter Products LSDP</controllingFieldValue>
+            <valueName>Buttermilk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Butter Products LSDP</controllingFieldValue>
+            <valueName>Buttermilk Ex Gr Swt Crm (&gt;30% Prtn)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheat Gluten</controllingFieldValue>
+            <valueName>Sweet Whey Powder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMF / Butteroil</controllingFieldValue>
+            <valueName>AMF 99.9% Butterfat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMF / Butteroil</controllingFieldValue>
+            <valueName>Soft Butteroil Substitute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMF / Butteroil</controllingFieldValue>
+            <valueName>Standard Butteroil Substitute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fluids</controllingFieldValue>
+            <valueName>CREAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whey</controllingFieldValue>
+            <valueName>Delactosed Whey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whey</controllingFieldValue>
+            <valueName>Whey Demineralized</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whey</controllingFieldValue>
+            <valueName>WPC 34%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>ASIAGO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>BLUE CHEESE CRUMBLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>BRIE (MISC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>COLBY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>COLBY JACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>COLORED CHEDDAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>CREAM CHEESE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>EDAM CHEESE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>FETA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>FONTINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>GOUDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>HAVARTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>MONTEREY JACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>MOZZARELLA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>MUENSTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>PARMESAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>PEPPER JACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>PIZZA CHEESE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>PROVOLONE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>QUESO BLANCO CHEESE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>ROMANO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>SHRED SWISS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>SWISS CHEESE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cheeses</controllingFieldValue>
+            <valueName>WHITE CHEDDAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Milk Protein Concentrate</controllingFieldValue>
+            <valueName>MPC-UF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Misc. Blends</controllingFieldValue>
+            <valueName>FAT FILLED MILK POWDER 28% FAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Misc. Blends</controllingFieldValue>
+            <valueName>Malted Powder,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bluegrass and other products</controllingFieldValue>
+            <valueName>TEST VALUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whole Milk</controllingFieldValue>
+            <valueName>Whole Milk Powder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whey Protein Concentrate50+</controllingFieldValue>
+            <valueName>Pro Cream</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whey Protein Concentrate50+</controllingFieldValue>
+            <valueName>WPC 80%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Whey Protein Concentrate50+</controllingFieldValue>
+            <valueName>WPI 90% Instantized Extra Grade</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

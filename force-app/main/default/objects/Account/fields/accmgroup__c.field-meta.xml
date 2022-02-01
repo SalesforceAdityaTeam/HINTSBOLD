@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>accmgroup__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>CustomerGroups: Domestic, Export -- Vendor Groups:  Agent Supplier, Brokerage, Export Supplier, Product Supplier, Railroad Suppliers,  Trucker Supplier, Warehouse Supplier. Are the only types included in this report</inlineHelpText>
+    <label>C &amp; V Groups</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

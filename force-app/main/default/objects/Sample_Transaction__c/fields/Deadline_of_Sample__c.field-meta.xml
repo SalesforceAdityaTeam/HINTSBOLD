@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deadline_of_Sample__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Deadline for sample to be received.</inlineHelpText>
+    <label>Deadline of Sample</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

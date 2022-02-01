@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GFSI_Certificate__c</fullName>
+    <externalId>false</externalId>
+    <label>GFSI Certificate</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IFS</fullName>
+                <default>false</default>
+                <label>IFS</label>
+            </value>
+            <value>
+                <fullName>FSSC22000</fullName>
+                <default>false</default>
+                <label>FSSC22000</label>
+            </value>
+            <value>
+                <fullName>SQF</fullName>
+                <default>false</default>
+                <label>SQF</label>
+            </value>
+            <value>
+                <fullName>Any</fullName>
+                <default>false</default>
+                <label>Any</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

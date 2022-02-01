@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_Customer_Link</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Copy Customer Link</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+var copyText = &quot;https://hoogwegtus.secure.force.com/form/BPFSiteForm?id=&quot;+ &quot;{!BPF__c.Id}&quot;;
+var hiddenInput = document.createElement(&quot;input&quot;);
+hiddenInput.setAttribute(&quot;value&quot;, copyText);
+document.body.appendChild(hiddenInput);
+hiddenInput.select();
+document.execCommand(&quot;copy&quot;);
+document.body.removeChild(hiddenInput);</url>
+</WebLink>

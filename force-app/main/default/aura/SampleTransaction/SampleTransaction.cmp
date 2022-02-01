@@ -1,0 +1,231 @@
+<aura:component controller="SampleTransactionCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride" access="global" >
+	<aura:attribute name="recordId" type="String" />
+    
+    <aura:attribute name="varaccountid" type="String" default="" />
+    <aura:attribute name="varopportunityid" type="String" default="" />
+    
+    <!--- START MULTISELECT Options -->
+    <aura:attribute name="lstSelectedRecords" type="User[]" default="[]" description="Use,for store SELECTED sObject Records"/>
+    <aura:attribute name="listOfSearchRecords" type="List" description="Use,for store the list of search records which returns from apex class"/>
+    <aura:attribute name="SearchKeyWord" type="string"/>
+    <aura:attribute name="objectAPIName" type="string" default="User"/>
+    <aura:attribute name="IconName" type="string" default=""/>
+    <aura:attribute name="label" type="string" default=""/>
+    <aura:attribute name="saved" type="Boolean" default="false" />
+     <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    
+    <!--- END MULTISELECT Options -->
+    
+    <!--declare events hendlers-->  
+    <aura:handler name="oSelectedRecordEvent" event="c:SampleTransactionEvent" action="{!c.handleComponentEvent}"/>
+    <aura:attribute name="Message" type="String" default=""/>
+    <!--declare events hendlers-->
+    
+    <lightning:card iconName="standard:Sample_Transaction__c" title="Sample Transaction">
+        <aura:if isTrue="{!!v.saved}">
+    <lightning:recordEditForm aura:id="form"
+                                  recordId="{!v.recordId}"
+                                  objectApiName="Sample_Transaction__c"
+                                  density ="comfy"
+                                  onsubmit="{!c.handleSubmit}"
+                                  onsuccess="{!c.handleSuccess}"
+                                  class="slds-card__body_inner"
+                              	  onload="{!c.handleCreateLoad}"
+                                  >
+           
+    		<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1"> <lightning:messages aura:id="messageid" />  </div>
+            </div>
+            <hr/>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <b>Information</b></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> 
+                   <div onmouseleave="{!c.onblur}" aura:id="searchRes" class="slds-form-element slds-lookup slds-is-close">
+                        <label class="slds-form-element__label">Request Processor</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                <div aura:id="lookup-pill" class="slds-pill-container">
+                                    <div aura:id="lookupField" class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" style="background: white !important;" >
+                                        <aura:iteration items="{!v.lstSelectedRecords}" var="sr">
+                                            <lightning:pill class="slds-m-around_xx-small" label="{!sr.Name}" name="{!sr.Id}" onremove="{! c.clear }">
+                                                <aura:set attribute="media">
+                                                    <lightning:icon iconName="standard:user" size="x-small" alternativeText="icon"/>
+                                                </aura:set>
+                                            </lightning:pill>
+                                        </aura:iteration>
+                                        <ui:inputText click="{!c.onfocus}" updateOn="keyup" keyup="{!c.keyPressController}" class="slds-lookup__search-input slds-input inputSize" value="{!v.SearchKeyWord}" placeholder="search.." />
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!--This part is for Display typehead lookup result List-->  
+                        <ul style="min-height:40px;margin-top:0px !important" class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu slds" role="listbox">
+                            <lightning:spinner class="slds-hide" variant="brand" size="small" aura:id="mySpinner"/>
+                            <center> {!v.Message}</center>
+                            <aura:iteration items="{!v.listOfSearchRecords}" var="singleRec">
+                                <c:SampleTransactionLookupSearch oRecord="{!singleRec}" IconName="{!v.IconName}"/>
+                            </aura:iteration>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Status__c" fieldName="Status__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Trader__c" fieldName="Trader__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Date_Approved__c" fieldName="Date_Approved__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Opportunity__c" fieldName="Opportunity__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Opportunity_volume__c" fieldName="Opportunity_volume__c" />  </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Product__c" fieldName="Product__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="UnitofMeasure__c" fieldName="UnitofMeasure__c" />  </div>
+            </div>
+        <br/>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <b>Sample sourcing information</b></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+         <hr/>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Sample_sourcing_manager__c" fieldName="Sample_sourcing_manager__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="StageSSI__c" fieldName="StageSSI__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Vendor__c" fieldName="Vendor__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Date_requested__c" fieldName="Date_requested__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Notes__c" fieldName="Notes__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+        <br/>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <b>Documentation Needed</b></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+         <hr/>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Commercial_Invoice__c" fieldName="Commercial_Invoice__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Health_Certificate__c" fieldName="Health_Certificate__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Packing_List__c" fieldName="Packing_List__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Sanitary_Certificate__c" fieldName="Sanitary_Certificate__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Certificate_of_Origin__c" fieldName="Certificate_of_Origin__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Legalization__c" fieldName="Legalization__c" /> </div>
+            </div>
+       
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <b>Shipping Information</b></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+          <hr/>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Courier__c" fieldName="Courier__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Ship_Deadline__c" fieldName="Ship_Deadline__c" /> </div>
+            </div>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Tracking_Number__c" fieldName="Tracking_Number__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Sent_to_Customer__c" fieldName="Sent_to_Customer__c" /> </div>
+            </div>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Sample_Type__c" fieldName="Sample_Type__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Received_by_customer__c" fieldName="Received_by_customer__c" /> </div>
+        </div>             
+       <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Courier_cost__c" fieldName="Courier_cost__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Currency__c" fieldName="Currency__c" /> </div>
+        </div> 
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <b>Product Information</b></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+         <hr/>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Producer__c" fieldName="Producer__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Product_Group__c" fieldName="Product_Group__c" /> </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Product_Details__c" fieldName="Product_Details__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Origin__c" fieldName="Origin__c" /> </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Lot__c" fieldName="Lot__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Quantity_Out__c" fieldName="Quantity_Out__c" /> </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Purpose_of_Sample__c" fieldName="Purpose_of_Sample__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Unit_of_Measure__c" fieldName="Unit_of_Measure__c" /> </div>
+        </div>
+                            
+     
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <b>Related Contact Information</b></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+        </div>
+         <hr/>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Company__c" fieldName="Company__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Phone__c" fieldName="Phone__c" /> </div>
+            </div>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="First_Name__c" fieldName="First_Name__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Recipient_Email__c" fieldName="Recipient_Email__c" /> </div>
+            </div><div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Last_Name__c" fieldName="Last_Name__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Street_1__c" fieldName="Street_1__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="City__c" fieldName="City__c" /> </div>
+            </div>
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Street_2__c" fieldName="Street_2__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="State_Province__c" fieldName="State_Province__c" /> </div>
+            </div>
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Street_3__c" fieldName="Street_3__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Zip_Postal_Code__c" fieldName="Zip_Postal_Code__c" /> </div>
+            </div>
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Country__c" fieldName="Country__c" /> </div>
+            </div>
+                        
+     		<hr/>
+        	<div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:button variant="brand" label="Submit" type="submit"  /><lightning:button variant="brand" label="Cancel" type="Cancel" onclick="{! c.handleCancel }" /> </div>
+            </div>
+    
+        </lightning:recordEditForm>
+        <aura:set attribute="else">
+            <div class="slds-card__body_inner">
+            	<div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-small-size_1-of-1"> UPLOAD FILE </div>
+                </div>    
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-small-size_1-of-1"> 
+                        <lightning:fileUpload  name="fileUploader"  multiple="true"  recordId="{!v.recordId}"  onuploadfinished="{!c.handleUploadFinished}" />
+                    </div>
+            	</div>
+                <div class="slds-grid slds-wrap">
+                	<div class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-small-size_1-of-1"> 
+                        	<lightning:button variant="brand" label="Submit" type="Submit" onclick="{!c.handleUploadFinished}" /> </div>
+            	</div>
+            </div>
+        </aura:set>
+     </aura:if>   
+	</lightning:card>
+    <aura:if isTrue="{!v.showSpinner}">
+            <lightning:spinner />
+        </aura:if>        
+</aura:component>

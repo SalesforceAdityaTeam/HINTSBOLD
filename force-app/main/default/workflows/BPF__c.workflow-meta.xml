@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>BPF_Customer_Input_Complet</fullName>
+        <description>BPF Customer Input Complet</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_Customer_Input_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>BPF_Customer_Input_WIP</fullName>
+        <description>BPF Customer Input WIP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_Customer_Input_WIP</template>
+    </alerts>
+    <alerts>
+        <fullName>BPF_Renewal</fullName>
+        <description>BPF Renewal</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_Renewal</template>
+    </alerts>
+    <alerts>
+        <fullName>BPF_Stage_Customer</fullName>
+        <description>BPF Stage Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Trader</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_Stage_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>BPF_Trader_In_Process</fullName>
+        <description>BPF Trader In Process</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_Trader_In_Process</template>
+    </alerts>
+    <alerts>
+        <fullName>BPF_World_Check_In_Review</fullName>
+        <description>BPF World Check In Review</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>d.hedlund@hoogwegtus.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_World_Check_In_Review</template>
+    </alerts>
+    <alerts>
+        <fullName>BPF_World_Check_Passed</fullName>
+        <description>BPF World Check Passed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/BPF_World_Check_Passed</template>
+    </alerts>
+    <alerts>
+        <fullName>Bpf_Signed</fullName>
+        <description>Bpf Signed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>a.pearce@hoogwegtus.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>b.birkenheier@hoogwegtus.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Hoogwegtus_Templates/Bpf_Signed</template>
+    </alerts>
+    <alerts>
+        <fullName>Prospect_Info_Reviewed_by_CreditSafe</fullName>
+        <description>Prospect Info Reviewed by CreditSafe</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Prospect_Info_Reviewed_by_CreditSafe</template>
+    </alerts>
+    <alerts>
+        <fullName>Trader_Approval</fullName>
+        <description>Trader Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>t.knegtel@hoogwegtus.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Trader_Approval</template>
+    </alerts>
+</Workflow>

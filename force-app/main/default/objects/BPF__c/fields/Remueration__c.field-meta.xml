@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remueration__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If the remuneration is based on a percentage relating to sales or purchases made by agent what is the percentage?&quot;</inlineHelpText>
+    <label>Remueration % ?</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

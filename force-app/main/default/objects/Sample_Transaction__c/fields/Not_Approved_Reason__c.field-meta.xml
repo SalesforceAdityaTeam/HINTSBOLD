@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Approved_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide the customer&apos;s reason for rejecting the product.  Only answer if they did not approve.</inlineHelpText>
+    <label>Not Approved Reason</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage10_BPF_Expired</fullName>
+    <columns>NAME</columns>
+    <columns>ExpirationDate__c</columns>
+    <columns>Legalentitytype__c</columns>
+    <columns>LineofBusiness__c</columns>
+    <columns>Methodofpayment__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>BPF Expired</value>
+    </filters>
+    <label>Stage10: BPF Expired</label>
+</ListView>

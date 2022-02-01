@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WIP_can_Not_have_SO</fullName>
+    <active>true</active>
+    <description>WIP - required fields need to be completed to submit. An SO# cannot be part of Opportunity if trying to submit. Validation rule would prevent saving OPP with SO#.</description>
+    <errorConditionFormula>AND( OR( ISPICKVAL(Stage__c ,&apos;WIP&apos;),ISPICKVAL(Stage__c ,&apos;Quoted&apos;)), NOT(ISBLANK(Sales_Order_Num__c)))</errorConditionFormula>
+    <errorDisplayField>Stage__c</errorDisplayField>
+    <errorMessage>This Opportunity cannot have a Sales Order # while it&apos;s in the WIP OR Quoted.</errorMessage>
+</ValidationRule>

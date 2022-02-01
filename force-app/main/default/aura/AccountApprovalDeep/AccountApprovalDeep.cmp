@@ -1,0 +1,113 @@
+<aura:component controller="AccountApprovalDeep" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:hasSObjectName" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="Account" type="Account" />
+    <aura:attribute name="Message" type="String" default=""/>
+    <aura:attribute name="showForm" type="Boolean" default=""/>
+    <aura:attribute name="accApproval" type="Account_Approval_Deep__c"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card Title="Customer Deep Dive Info">
+        <div class="slds-page-header slds-page-header_related-list">
+  <div class="slds-page-header__row">
+    <div class="slds-page-header__col-title">
+      <div class="slds-media">
+        <div class="slds-media__body">
+          <div class="slds-page-header__name">
+            <div class="slds-page-header__name-title">
+             
+                <span class="slds-page-header__title slds-truncate" title="">Customer Deep Dive Info</span>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+        <br/>
+    <lightning:recordEditForm aura:id="myRecordForm"
+                              recordId="{!v.recordId}"
+                              objectApiName="Account_Approval_Deep__c" 
+                              onload="{!c.handleCreateLoad}"
+                              >
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2">
+                
+                <lightning:inputField fieldName="GFSI_Certificate_Required__c" aura:id="GFSI_Certificate_Required__c" name="GFSI_Certificate_Required__c" required="true"/>
+                
+                <lightning:inputField fieldName="GFSI_Certificate__c" aura:id="GFSI_Certificate__c" required="true"/>
+                
+                
+                <lightning:inputField fieldName="GMP_Certificate_Required__c" aura:id="GMP_Certificate_Required__c"  required="true"/>
+                
+                <lightning:inputField fieldName="GMP__c" aura:id="GMP__c" required="true" />
+                
+                
+                <lightning:inputField fieldName="Halal_Certificate_Required__c" aura:id="Halal_Certificate_Required__c"  required="true"/>
+                
+                <lightning:inputField fieldName="Halal__c" aura:id="Halal__c" required="true"/>
+                <lightning:inputField fieldName="Additional_Info_on_Halal_Certificate__c" required="true"/>
+                
+                
+                <lightning:inputField fieldName="Kosher_Certificate_Required__c" aura:id="Kosher_Certificate_Required__c" required="true"/>
+                
+                <lightning:inputField fieldName="Kosher__c" aura:id="Kosher__c" required="true"/>
+                
+                
+                <lightning:inputField fieldName="Organic_Certificate_Required__c" aura:id="Organic_Certificate_Required__c"  required="true"/>
+                
+                <lightning:inputField fieldName="Organic__c" aura:id="Organic" required="true"/>
+                
+                <lightning:inputField fieldName="Vlog_Certificate_Required__c" aura:id="Vlog_Certificate_Required__c"  required="true"/>
+                
+                <lightning:inputField fieldName="VLOG__c" aura:id="VLOG__c" required="true"/>
+                
+                <lightning:inputField fieldName="Ethical__c" required="true"/>
+                <lightning:inputField fieldName="Environmental_Sustainable_Requirements__c" required="true"/>
+                <lightning:inputField fieldName="Packaging_compliance_food_grade__c" required="true"/>
+                <lightning:inputField fieldName="GMO_Free_statement__c" required="true"/>
+                <lightning:inputField fieldName="Free_from_irradiation__c" required="true"/>
+                <lightning:inputField fieldName="Origin_Certificate_Required__c" aura:id="Origin_Certificate_Required__c"  required="true"/>
+                
+                <lightning:inputField fieldName="Origin_requirement__c" aura:id="Origin_requirement" required="true"/>
+                
+                <lightning:inputField fieldName="Free_from_veterinary_disease__c" required="true"/>
+                <lightning:inputField fieldName="No_growth_promotors__c" required="true"/>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:inputField fieldName="Specimen_CoA__c" aura:id="Specimen_CoA__c" required="true" />
+                
+                <lightning:inputField fieldName="Where_can_we_find_a_copy_of_the_specimen__c" required="true"/>
+                
+                <td/>
+                <lightning:inputField fieldName="HACCP_Flow_diagram_incl_CCP__c" required="true"/>
+                <lightning:inputField fieldName="Allergen_declaration__c" required="true"/>
+                <lightning:inputField fieldName="Heavy_metals__c" required="true"/>
+                <lightning:inputField fieldName="Antibiotics__c" required="true"/>
+                <lightning:inputField fieldName="Pesticides_incl_dioxins__c" required="true"/>
+                <lightning:inputField fieldName="Aflatoxin_M1__c" required="true"/>
+                <lightning:inputField fieldName="Melamine__c" required="true"/>
+                <lightning:inputField fieldName="Vegetarian__c" required="true"/>
+                <lightning:inputField fieldName="Partly_hydrogenated_oils__c" required="true"/>
+                <lightning:inputField fieldName="Additives__c" aura:id="Additives__c"  required="true"/>
+                
+                <lightning:inputField fieldName="Additional_Info_on_additive_requirement__c" required="true"/>
+                
+                <lightning:inputField fieldName="Photo_s_item_unit_incl_prints__c" required="true"/>
+                <lightning:inputField fieldName="MSDS_Item__c" required="true"/>
+                <lightning:inputField fieldName="Microbiological_control_plan__c" required="true"/>
+                <lightning:inputField fieldName="Traceability_control_plan__c" required="true"/>
+                <lightning:inputField fieldName="Customer_Buying_Specification_Present__c" aura:id="Customer_Buying_Specification_Present__c" required="true"/>
+                
+                <lightning:inputField fieldName="Where_Can_I_find_Copy_of_It__c" required="true"/>
+                
+            </div>
+        </div>
+        <center>
+            
+            <lightning:button class="slds-m-top_small customButton" name="Update" type="submit" label="Update"/>
+            
+        </center>
+    </lightning:recordEditForm>
+    </lightning:card>
+</aura:component>

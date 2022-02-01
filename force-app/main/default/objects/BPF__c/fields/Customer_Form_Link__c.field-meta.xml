@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Form_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;https://ismdev2-hoogdev2.cs1.force.com/form/BPFSiteForm?id=&apos;&amp; Id , &apos;Click Here&apos;,&apos;_self&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Customer Form Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

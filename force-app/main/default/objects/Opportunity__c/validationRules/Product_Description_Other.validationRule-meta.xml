@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Description_Other</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(TEXT(Item_Description__c))),
+NOT(ISBLANK(Item_Description_Other__c))
+)</errorConditionFormula>
+    <errorMessage>Please only populate the &apos;Product Description&apos; or the &apos;Product Description - Other&apos; field. Both fields cannot be populated.</errorMessage>
+</ValidationRule>

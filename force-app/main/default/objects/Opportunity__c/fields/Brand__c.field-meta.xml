@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand__c</fullName>
+    <externalId>false</externalId>
+    <label>Brand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AGRIMARK</fullName>
+                <default>false</default>
+                <label>AGRIMARK</label>
+            </value>
+            <value>
+                <fullName>AGROCOMERICA</fullName>
+                <default>false</default>
+                <label>AGROCOMERICA</label>
+            </value>
+            <value>
+                <fullName>AGROPUR</fullName>
+                <default>false</default>
+                <label>AGROPUR</label>
+            </value>
+            <value>
+                <fullName>ALIMENTA</fullName>
+                <default>false</default>
+                <label>ALIMENTA</label>
+            </value>
+            <value>
+                <fullName>AMPI</fullName>
+                <default>false</default>
+                <label>AMPI</label>
+            </value>
+            <value>
+                <fullName>APPROVED BRANDS</fullName>
+                <default>false</default>
+                <label>APPROVED BRANDS</label>
+            </value>
+            <value>
+                <fullName>ARLA</fullName>
+                <default>false</default>
+                <label>ARLA</label>
+            </value>
+            <value>
+                <fullName>BELGIOIOSO</fullName>
+                <default>false</default>
+                <label>BELGIOIOSO</label>
+            </value>
+            <value>
+                <fullName>BINCO</fullName>
+                <default>false</default>
+                <label>BINCO</label>
+            </value>
+            <value>
+                <fullName>BLUEGRASS</fullName>
+                <default>false</default>
+                <label>BLUEGRASS</label>
+            </value>
+            <value>
+                <fullName>BONGARDS</fullName>
+                <default>false</default>
+                <label>BONGARDS</label>
+            </value>
+            <value>
+                <fullName>BORDEN</fullName>
+                <default>false</default>
+                <label>BORDEN</label>
+            </value>
+            <value>
+                <fullName>BREWSTER</fullName>
+                <default>false</default>
+                <label>BREWSTER</label>
+            </value>
+            <value>
+                <fullName>BRIESS</fullName>
+                <default>false</default>
+                <label>BRIESS</label>
+            </value>
+            <value>
+                <fullName>CAYUGA MILK</fullName>
+                <default>false</default>
+                <label>CAYUGA MILK</label>
+            </value>
+            <value>
+                <fullName>CDC</fullName>
+                <default>false</default>
+                <label>CDC</label>
+            </value>
+            <value>
+                <fullName>CDI</fullName>
+                <default>false</default>
+                <label>CDI</label>
+            </value>
+            <value>
+                <fullName>CEDAR VALLEY</fullName>
+                <default>false</default>
+                <label>CEDAR VALLEY</label>
+            </value>
+            <value>
+                <fullName>CHALLENGE</fullName>
+                <default>false</default>
+                <label>CHALLENGE</label>
+            </value>
+            <value>
+                <fullName>CLALDY</fullName>
+                <default>false</default>
+                <label>CLALDY</label>
+            </value>
+            <value>
+                <fullName>COLUN</fullName>
+                <default>false</default>
+                <label>COLUN</label>
+            </value>
+            <value>
+                <fullName>CONAPROLE</fullName>
+                <default>false</default>
+                <label>CONAPROLE</label>
+            </value>
+            <value>
+                <fullName>CONTINENTAL</fullName>
+                <default>false</default>
+                <label>CONTINENTAL</label>
+            </value>
+            <value>
+                <fullName>COOPERATIVA</fullName>
+                <default>false</default>
+                <label>COOPERATIVA</label>
+            </value>
+            <value>
+                <fullName>CORLASA</fullName>
+                <default>false</default>
+                <label>CORLASA</label>
+            </value>
+            <value>
+                <fullName>CROPP</fullName>
+                <default>false</default>
+                <label>CROPP</label>
+            </value>
+            <value>
+                <fullName>DA</fullName>
+                <default>false</default>
+                <label>DA</label>
+            </value>
+            <value>
+                <fullName>DAITANVET</fullName>
+                <default>false</default>
+                <label>DAITANVET</label>
+            </value>
+            <value>
+                <fullName>DANONE</fullName>
+                <default>false</default>
+                <label>DANONE</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD</fullName>
+                <default>false</default>
+                <label>DARIGOLD</label>
+            </value>
+            <value>
+                <fullName>DAVISCO</fullName>
+                <default>false</default>
+                <label>DAVISCO</label>
+            </value>
+            <value>
+                <fullName>DFA</fullName>
+                <default>false</default>
+                <label>DFA</label>
+            </value>
+            <value>
+                <fullName>ELLSWORTH</fullName>
+                <default>false</default>
+                <label>ELLSWORTH</label>
+            </value>
+            <value>
+                <fullName>EMMI ROTH</fullName>
+                <default>false</default>
+                <label>EMMI ROTH</label>
+            </value>
+            <value>
+                <fullName>EMPIRE</fullName>
+                <default>false</default>
+                <label>EMPIRE</label>
+            </value>
+            <value>
+                <fullName>ES FOODS</fullName>
+                <default>false</default>
+                <label>ES FOODS</label>
+            </value>
+            <value>
+                <fullName>ETIKA DAIRIE</fullName>
+                <default>false</default>
+                <label>ETIKA DAIRIE</label>
+            </value>
+            <value>
+                <fullName>F&amp;A</fullName>
+                <default>false</default>
+                <label>F&amp;A</label>
+            </value>
+            <value>
+                <fullName>FABRICA</fullName>
+                <default>false</default>
+                <label>FABRICA</label>
+            </value>
+            <value>
+                <fullName>FAMILY FRESH</fullName>
+                <default>false</default>
+                <label>FAMILY FRESH</label>
+            </value>
+            <value>
+                <fullName>First District</fullName>
+                <default>false</default>
+                <label>First District</label>
+            </value>
+            <value>
+                <fullName>FONTERRA</fullName>
+                <default>false</default>
+                <label>FONTERRA</label>
+            </value>
+            <value>
+                <fullName>FOOD INGREDI</fullName>
+                <default>false</default>
+                <label>FOOD INGREDI</label>
+            </value>
+            <value>
+                <fullName>FOODLINK</fullName>
+                <default>false</default>
+                <label>FOODLINK</label>
+            </value>
+            <value>
+                <fullName>FOODTEC CANA</fullName>
+                <default>false</default>
+                <label>FOODTEC CANA</label>
+            </value>
+            <value>
+                <fullName>FOREMOST</fullName>
+                <default>false</default>
+                <label>FOREMOST</label>
+            </value>
+            <value>
+                <fullName>FOSTER FARMS</fullName>
+                <default>false</default>
+                <label>FOSTER FARMS</label>
+            </value>
+            <value>
+                <fullName>FRIESLAND</fullName>
+                <default>false</default>
+                <label>FRIESLAND</label>
+            </value>
+            <value>
+                <fullName>GARCIA HERMA</fullName>
+                <default>false</default>
+                <label>GARCIA HERMA</label>
+            </value>
+            <value>
+                <fullName>GLANBIA</fullName>
+                <default>false</default>
+                <label>GLANBIA</label>
+            </value>
+            <value>
+                <fullName>GRANDE</fullName>
+                <default>false</default>
+                <label>GRANDE</label>
+            </value>
+            <value>
+                <fullName>GRASSLAND</fullName>
+                <default>false</default>
+                <label>GRASSLAND</label>
+            </value>
+            <value>
+                <fullName>HAPRO</fullName>
+                <default>false</default>
+                <label>HAPRO</label>
+            </value>
+            <value>
+                <fullName>HAVERO</fullName>
+                <default>false</default>
+                <label>HAVERO</label>
+            </value>
+            <value>
+                <fullName>HIGH DESERT</fullName>
+                <default>false</default>
+                <label>HIGH DESERT</label>
+            </value>
+            <value>
+                <fullName>HILLMAR</fullName>
+                <default>false</default>
+                <label>HILLMAR</label>
+            </value>
+            <value>
+                <fullName>HUMBOLDT</fullName>
+                <default>false</default>
+                <label>HUMBOLDT</label>
+            </value>
+            <value>
+                <fullName>IDAHO MILK</fullName>
+                <default>false</default>
+                <label>IDAHO MILK</label>
+            </value>
+            <value>
+                <fullName>IMP</fullName>
+                <default>false</default>
+                <label>IMP</label>
+            </value>
+            <value>
+                <fullName>INDULACSA</fullName>
+                <default>false</default>
+                <label>INDULACSA</label>
+            </value>
+            <value>
+                <fullName>INGREDIENT E</fullName>
+                <default>false</default>
+                <label>INGREDIENT E</label>
+            </value>
+            <value>
+                <fullName>INT MT DAIRY</fullName>
+                <default>false</default>
+                <label>INT MT DAIRY</label>
+            </value>
+            <value>
+                <fullName>JVM SALES</fullName>
+                <default>false</default>
+                <label>JVM SALES</label>
+            </value>
+            <value>
+                <fullName>KERRY</fullName>
+                <default>false</default>
+                <label>KERRY</label>
+            </value>
+            <value>
+                <fullName>KRAFT</fullName>
+                <default>false</default>
+                <label>KRAFT</label>
+            </value>
+            <value>
+                <fullName>LACTALIS</fullName>
+                <default>false</default>
+                <label>LACTALIS</label>
+            </value>
+            <value>
+                <fullName>LACTOGAL</fullName>
+                <default>false</default>
+                <label>LACTOGAL</label>
+            </value>
+            <value>
+                <fullName>LAKEVIEW CHE</fullName>
+                <default>false</default>
+                <label>LAKEVIEW CHE</label>
+            </value>
+            <value>
+                <fullName>LANDOLAKES</fullName>
+                <default>false</default>
+                <label>LANDOLAKES</label>
+            </value>
+            <value>
+                <fullName>LAUBSCHER</fullName>
+                <default>false</default>
+                <label>LAUBSCHER</label>
+            </value>
+            <value>
+                <fullName>LEAD</fullName>
+                <default>false</default>
+                <label>LEAD</label>
+            </value>
+            <value>
+                <fullName>LEPRINO</fullName>
+                <default>false</default>
+                <label>LEPRINO</label>
+            </value>
+            <value>
+                <fullName>LIMELCO</fullName>
+                <default>false</default>
+                <label>LIMELCO</label>
+            </value>
+            <value>
+                <fullName>LITTLE LADY</fullName>
+                <default>false</default>
+                <label>LITTLE LADY</label>
+            </value>
+            <value>
+                <fullName>LONESTAR</fullName>
+                <default>false</default>
+                <label>LONESTAR</label>
+            </value>
+            <value>
+                <fullName>LYNN</fullName>
+                <default>false</default>
+                <label>LYNN</label>
+            </value>
+            <value>
+                <fullName>MANFREY</fullName>
+                <default>false</default>
+                <label>MANFREY</label>
+            </value>
+            <value>
+                <fullName>MAPLE</fullName>
+                <default>false</default>
+                <label>MAPLE</label>
+            </value>
+            <value>
+                <fullName>MAPLE GROVE</fullName>
+                <default>false</default>
+                <label>MAPLE GROVE</label>
+            </value>
+            <value>
+                <fullName>MAPLE ISLAND</fullName>
+                <default>false</default>
+                <label>MAPLE ISLAND</label>
+            </value>
+            <value>
+                <fullName>MARQUEZ BROTHERS</fullName>
+                <default>false</default>
+                <label>MARQUEZ BROTHERS</label>
+            </value>
+            <value>
+                <fullName>MARRON FOODS</fullName>
+                <default>false</default>
+                <label>MARRON FOODS</label>
+            </value>
+            <value>
+                <fullName>MASTELLONE</fullName>
+                <default>false</default>
+                <label>MASTELLONE</label>
+            </value>
+            <value>
+                <fullName>MASTERS</fullName>
+                <default>false</default>
+                <label>MASTERS</label>
+            </value>
+            <value>
+                <fullName>MDVA</fullName>
+                <default>false</default>
+                <label>MDVA</label>
+            </value>
+            <value>
+                <fullName>MICHIGAN MIL</fullName>
+                <default>false</default>
+                <label>MICHIGAN MIL</label>
+            </value>
+            <value>
+                <fullName>MILK SPECIAL</fullName>
+                <default>false</default>
+                <label>MILK SPECIAL</label>
+            </value>
+            <value>
+                <fullName>MILKY WHEY</fullName>
+                <default>false</default>
+                <label>MILKY WHEY</label>
+            </value>
+            <value>
+                <fullName>Millanos</fullName>
+                <default>false</default>
+                <label>Millanos</label>
+            </value>
+            <value>
+                <fullName>MILLHAVEN</fullName>
+                <default>false</default>
+                <label>MILLHAVEN</label>
+            </value>
+            <value>
+                <fullName>MINERVA DAIR</fullName>
+                <default>false</default>
+                <label>MINERVA DAIR</label>
+            </value>
+            <value>
+                <fullName>MULLINS</fullName>
+                <default>false</default>
+                <label>MULLINS</label>
+            </value>
+            <value>
+                <fullName>Nasonville</fullName>
+                <default>false</default>
+                <label>Nasonville</label>
+            </value>
+            <value>
+                <fullName>NELSON-JAMES</fullName>
+                <default>false</default>
+                <label>NELSON-JAMES</label>
+            </value>
+            <value>
+                <fullName>NESTLE</fullName>
+                <default>false</default>
+                <label>NESTLE</label>
+            </value>
+            <value>
+                <fullName>NUMIDIA</fullName>
+                <default>false</default>
+                <label>NUMIDIA</label>
+            </value>
+            <value>
+                <fullName>O-AT-KA MILK</fullName>
+                <default>false</default>
+                <label>O-AT-KA MILK</label>
+            </value>
+            <value>
+                <fullName>Oberfranken</fullName>
+                <default>false</default>
+                <label>Oberfranken</label>
+            </value>
+            <value>
+                <fullName>OCEANIA DAIRIES</fullName>
+                <default>false</default>
+                <label>OCEANIA DAIRIES</label>
+            </value>
+            <value>
+                <fullName>OLAM</fullName>
+                <default>false</default>
+                <label>OLAM</label>
+            </value>
+            <value>
+                <fullName>OLD COUNTRY</fullName>
+                <default>false</default>
+                <label>OLD COUNTRY</label>
+            </value>
+            <value>
+                <fullName>OPEN COUNTRY</fullName>
+                <default>false</default>
+                <label>OPEN COUNTRY</label>
+            </value>
+            <value>
+                <fullName>ORGANIC</fullName>
+                <default>false</default>
+                <label>ORGANIC</label>
+            </value>
+            <value>
+                <fullName>ORNUA INGRED</fullName>
+                <default>false</default>
+                <label>ORNUA INGRED</label>
+            </value>
+            <value>
+                <fullName>OSAGE</fullName>
+                <default>false</default>
+                <label>OSAGE</label>
+            </value>
+            <value>
+                <fullName>PARAG</fullName>
+                <default>false</default>
+                <label>PARAG</label>
+            </value>
+            <value>
+                <fullName>PARMALAT</fullName>
+                <default>false</default>
+                <label>PARMALAT</label>
+            </value>
+            <value>
+                <fullName>PRAIRIE FARMS</fullName>
+                <default>false</default>
+                <label>PRAIRIE FARMS</label>
+            </value>
+            <value>
+                <fullName>PRAIRIE-SWIS</fullName>
+                <default>false</default>
+                <label>PRAIRIE-SWIS</label>
+            </value>
+            <value>
+                <fullName>QUALITY INGR</fullName>
+                <default>false</default>
+                <label>QUALITY INGR</label>
+            </value>
+            <value>
+                <fullName>RED CEDAR</fullName>
+                <default>false</default>
+                <label>RED CEDAR</label>
+            </value>
+            <value>
+                <fullName>RENY PICOT</fullName>
+                <default>false</default>
+                <label>RENY PICOT</label>
+            </value>
+            <value>
+                <fullName>SANTA CLARA</fullName>
+                <default>false</default>
+                <label>SANTA CLARA</label>
+            </value>
+            <value>
+                <fullName>SAPUTO</fullName>
+                <default>false</default>
+                <label>SAPUTO</label>
+            </value>
+            <value>
+                <fullName>SENSORY EFFE</fullName>
+                <default>false</default>
+                <label>SENSORY EFFE</label>
+            </value>
+            <value>
+                <fullName>SOC</fullName>
+                <default>false</default>
+                <label>SOC</label>
+            </value>
+            <value>
+                <fullName>SPECIALTYCHE</fullName>
+                <default>false</default>
+                <label>SPECIALTYCHE</label>
+            </value>
+            <value>
+                <fullName>SUN OPTA</fullName>
+                <default>false</default>
+                <label>SUN OPTA</label>
+            </value>
+            <value>
+                <fullName>SWISS COLONY</fullName>
+                <default>false</default>
+                <label>SWISS COLONY</label>
+            </value>
+            <value>
+                <fullName>SYNLAIT</fullName>
+                <default>false</default>
+                <label>SYNLAIT</label>
+            </value>
+            <value>
+                <fullName>TATUA</fullName>
+                <default>false</default>
+                <label>TATUA</label>
+            </value>
+            <value>
+                <fullName>TEUNISSEN RA</fullName>
+                <default>false</default>
+                <label>TEUNISSEN RA</label>
+            </value>
+            <value>
+                <fullName>TILLAMOOK</fullName>
+                <default>false</default>
+                <label>TILLAMOOK</label>
+            </value>
+            <value>
+                <fullName>TITAN</fullName>
+                <default>false</default>
+                <label>TITAN</label>
+            </value>
+            <value>
+                <fullName>TUSCANY CHEE</fullName>
+                <default>false</default>
+                <label>TUSCANY CHEE</label>
+            </value>
+            <value>
+                <fullName>UDA</fullName>
+                <default>false</default>
+                <label>UDA</label>
+            </value>
+            <value>
+                <fullName>UELZENA</fullName>
+                <default>false</default>
+                <label>UELZENA</label>
+            </value>
+            <value>
+                <fullName>VALLEY MILK</fullName>
+                <default>false</default>
+                <label>VALLEY MILK</label>
+            </value>
+            <value>
+                <fullName>VALLEY QUEEN</fullName>
+                <default>false</default>
+                <label>VALLEY QUEEN</label>
+            </value>
+            <value>
+                <fullName>WAPSIE VALLE</fullName>
+                <default>false</default>
+                <label>WAPSIE VALLE</label>
+            </value>
+            <value>
+                <fullName>WHITEHALL</fullName>
+                <default>false</default>
+                <label>WHITEHALL</label>
+            </value>
+            <value>
+                <fullName>WHITE RIVER</fullName>
+                <default>false</default>
+                <label>WHITE RIVER</label>
+            </value>
+            <value>
+                <fullName>WINONA FOODS</fullName>
+                <default>false</default>
+                <label>WINONA FOODS</label>
+            </value>
+            <value>
+                <fullName>WISCONSIN DA</fullName>
+                <default>false</default>
+                <label>WISCONSIN DA</label>
+            </value>
+            <value>
+                <fullName>WISKERCHEN</fullName>
+                <default>false</default>
+                <label>WISKERCHEN</label>
+            </value>
+            <value>
+                <fullName>WIS WHEY PRO</fullName>
+                <default>false</default>
+                <label>WIS WHEY PRO</label>
+            </value>
+            <value>
+                <fullName>WP DAIRY UT</fullName>
+                <default>false</default>
+                <label>WP DAIRY UT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

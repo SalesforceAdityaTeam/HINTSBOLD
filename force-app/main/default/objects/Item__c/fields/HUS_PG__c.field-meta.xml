@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HUS_PG__c</fullName>
+    <externalId>false</externalId>
+    <label>HUS_PG</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMF / Butteroil</fullName>
+                <default>false</default>
+                <label>AMF / Butteroil</label>
+            </value>
+            <value>
+                <fullName>Bluegrass and other products</fullName>
+                <default>false</default>
+                <label>Bluegrass and other products</label>
+            </value>
+            <value>
+                <fullName>Buttermilk</fullName>
+                <default>false</default>
+                <label>Buttermilk</label>
+            </value>
+            <value>
+                <fullName>Butter Products</fullName>
+                <default>false</default>
+                <label>Butter Products</label>
+            </value>
+            <value>
+                <fullName>Butter Products LSDP</fullName>
+                <default>false</default>
+                <label>Butter Products LSDP</label>
+            </value>
+            <value>
+                <fullName>Caseins &amp; Caseinates</fullName>
+                <default>false</default>
+                <label>Caseins &amp; Caseinates</label>
+            </value>
+            <value>
+                <fullName>Cheeses</fullName>
+                <default>false</default>
+                <label>Cheeses</label>
+            </value>
+            <value>
+                <fullName>Cocoa</fullName>
+                <default>false</default>
+                <label>Cocoa</label>
+            </value>
+            <value>
+                <fullName>Cream Products LSDP</fullName>
+                <default>false</default>
+                <label>Cream Products LSDP</label>
+            </value>
+            <value>
+                <fullName>Fluids</fullName>
+                <default>false</default>
+                <label>Fluids</label>
+            </value>
+            <value>
+                <fullName>Fluids LSDP</fullName>
+                <default>false</default>
+                <label>Fluids LSDP</label>
+            </value>
+            <value>
+                <fullName>Lactose</fullName>
+                <default>false</default>
+                <label>Lactose</label>
+            </value>
+            <value>
+                <fullName>Milk Protein Concentrate</fullName>
+                <default>false</default>
+                <label>Milk Protein Concentrate</label>
+            </value>
+            <value>
+                <fullName>Misc. Blends</fullName>
+                <default>false</default>
+                <label>Misc. Blends</label>
+            </value>
+            <value>
+                <fullName>Misc. Blends LSDP</fullName>
+                <default>false</default>
+                <label>Misc. Blends LSDP</label>
+            </value>
+            <value>
+                <fullName>Nonfat Dry Milk</fullName>
+                <default>false</default>
+                <label>Nonfat Dry Milk</label>
+            </value>
+            <value>
+                <fullName>Nonfat Dry Milk LSDP</fullName>
+                <default>false</default>
+                <label>Nonfat Dry Milk LSDP</label>
+            </value>
+            <value>
+                <fullName>Permeate</fullName>
+                <default>false</default>
+                <label>Permeate</label>
+            </value>
+            <value>
+                <fullName>Wheat Gluten</fullName>
+                <default>false</default>
+                <label>Wheat Gluten</label>
+            </value>
+            <value>
+                <fullName>Whey</fullName>
+                <default>false</default>
+                <label>Whey</label>
+            </value>
+            <value>
+                <fullName>Whey Protein Concentrate34</fullName>
+                <default>false</default>
+                <label>Whey Protein Concentrate34</label>
+            </value>
+            <value>
+                <fullName>Whey Protein Concentrate50+</fullName>
+                <default>false</default>
+                <label>Whey Protein Concentrate50+</label>
+            </value>
+            <value>
+                <fullName>Whole Milk</fullName>
+                <default>false</default>
+                <label>Whole Milk</label>
+            </value>
+            <value>
+                <fullName>WHOLE MILK LSDP</fullName>
+                <default>false</default>
+                <label>WHOLE MILK LSDP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

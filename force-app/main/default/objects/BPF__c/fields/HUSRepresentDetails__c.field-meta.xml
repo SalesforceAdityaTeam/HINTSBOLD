@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HUSRepresentDetails__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If client will represent Hoogwegt in front of government or regulatory authorities, entities or officials please describe below.</inlineHelpText>
+    <label>HUS Represent Details ?</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

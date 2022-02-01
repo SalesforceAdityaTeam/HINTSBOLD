@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_to_Trader_creator_once_sample_processor_has_input_send_date</fullName>
+        <description>Email to Trader/creator once sample processor has input send date</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Trader__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Email_to_Trader_creator_once_sample_processor_has_input_send_date</template>
+    </alerts>
+    <alerts>
+        <fullName>Sample_Transaction_Alert</fullName>
+        <description>Sample Transaction Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Trader__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Email_to_Trader_creator_30_days_after_sample_sent_date</template>
+    </alerts>
+    <alerts>
+        <fullName>Sample_Transaction_Alert_On_Create_To_Request_Processor</fullName>
+        <description>Sample Transaction Alert On Create To Request Processor</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Request_Processor__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Sample_Transaction_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Sample_approved_rejected</fullName>
+        <description>Sample approved _rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Trader__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Sample_approved_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Sample_lead_dead</fullName>
+        <description>Sample_lead_dead</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Trader__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Sample_lead_dead</template>
+    </alerts>
+    <alerts>
+        <fullName>Sample_sourcing_Manager</fullName>
+        <description>Sample sourcing Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Sample_sourcing_manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Hoogwegtus_Templates/Sample_sourcing_Manager</template>
+    </alerts>
+</Workflow>

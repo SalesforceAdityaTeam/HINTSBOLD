@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Factcode__c</fullName>
+    <externalId>false</externalId>
+    <label>Factcode</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALL</fullName>
+                <default>false</default>
+                <label>ALL</label>
+            </value>
+            <value>
+                <fullName>AB VÄSTGÖTA MJÖLKFÖRÄDLING</fullName>
+                <default>false</default>
+                <label>AB VÄSTGÖTA MJÖLKFÖRÄDLING</label>
+            </value>
+            <value>
+                <fullName>AC PIENAS KAUNAS</fullName>
+                <default>false</default>
+                <label>AC PIENAS KAUNAS</label>
+            </value>
+            <value>
+                <fullName>AGGLOMIX TILBURG</fullName>
+                <default>false</default>
+                <label>AGGLOMIX TILBURG</label>
+            </value>
+            <value>
+                <fullName>AGRI-MARK WEST SPRINGFIELD</fullName>
+                <default>false</default>
+                <label>AGRI-MARK WEST SPRINGFIELD</label>
+            </value>
+            <value>
+                <fullName>AGROPUR IDAHO JEROME</fullName>
+                <default>false</default>
+                <label>AGROPUR IDAHO JEROME</label>
+            </value>
+            <value>
+                <fullName>AGROPUR LAKE NORDEN</fullName>
+                <default>false</default>
+                <label>AGROPUR LAKE NORDEN</label>
+            </value>
+            <value>
+                <fullName>ALFÖLDI TEJ KFT. DEBRECEN</fullName>
+                <default>false</default>
+                <label>ALFÖLDI TEJ KFT. DEBRECEN</label>
+            </value>
+            <value>
+                <fullName>ALIMA GORA</fullName>
+                <default>false</default>
+                <label>ALIMA GORA</label>
+            </value>
+            <value>
+                <fullName>ALIMENTOS FRAY BENTOS</fullName>
+                <default>false</default>
+                <label>ALIMENTOS FRAY BENTOS</label>
+            </value>
+            <value>
+                <fullName>ALL-IMPEX PARDUBICE</fullName>
+                <default>false</default>
+                <label>ALL-IMPEX PARDUBICE</label>
+            </value>
+            <value>
+                <fullName>ALMIL BÜTZOW</fullName>
+                <default>false</default>
+                <label>ALMIL BÜTZOW</label>
+            </value>
+            <value>
+                <fullName>ALPAVIT ALLGÄU</fullName>
+                <default>false</default>
+                <label>ALPAVIT ALLGÄU</label>
+            </value>
+            <value>
+                <fullName>ALPAVIT LAUBEN/HEISING, ALLGÄU</fullName>
+                <default>false</default>
+                <label>ALPAVIT LAUBEN/HEISING, ALLGÄU</label>
+            </value>
+            <value>
+                <fullName>ALPI MILCHVERARBEITUNG RIED</fullName>
+                <default>false</default>
+                <label>ALPI MILCHVERARBEITUNG RIED</label>
+            </value>
+            <value>
+                <fullName>ALTMARK-KÄSEREI BISMARK</fullName>
+                <default>false</default>
+                <label>ALTMARK-KÄSEREI BISMARK</label>
+            </value>
+            <value>
+                <fullName>AMMERLAND ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>AMMERLAND ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>AMMERLAND DRINGENBURG</fullName>
+                <default>false</default>
+                <label>AMMERLAND DRINGENBURG</label>
+            </value>
+            <value>
+                <fullName>AMMERLAND ELSDORF</fullName>
+                <default>false</default>
+                <label>AMMERLAND ELSDORF</label>
+            </value>
+            <value>
+                <fullName>AMMERLAND WIEFELSTEDE</fullName>
+                <default>false</default>
+                <label>AMMERLAND WIEFELSTEDE</label>
+            </value>
+            <value>
+                <fullName>AMPI WISCONSIN</fullName>
+                <default>false</default>
+                <label>AMPI WISCONSIN</label>
+            </value>
+            <value>
+                <fullName>ARLA AKAFA SVENSTRUP</fullName>
+                <default>false</default>
+                <label>ARLA AKAFA SVENSTRUP</label>
+            </value>
+            <value>
+                <fullName>ARLA ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>ARLA ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>ARLA FOOD GÖTENE</fullName>
+                <default>false</default>
+                <label>ARLA FOOD GÖTENE</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS PRONSFELD</fullName>
+                <default>false</default>
+                <label>ARLA FOODS PRONSFELD</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS HOLSTEBRO</fullName>
+                <default>false</default>
+                <label>ARLA FOODS HOLSTEBRO</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS TINE BRUMUNDDAL</fullName>
+                <default>false</default>
+                <label>ARLA FOODS TINE BRUMUNDDAL</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS UPAHL</fullName>
+                <default>false</default>
+                <label>ARLA FOODS UPAHL</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS VIMMERBY</fullName>
+                <default>false</default>
+                <label>ARLA FOODS VIMMERBY</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS VISBY</fullName>
+                <default>false</default>
+                <label>ARLA FOODS VISBY</label>
+            </value>
+            <value>
+                <fullName>ARLA FOODS WESTBURY</fullName>
+                <default>false</default>
+                <label>ARLA FOODS WESTBURY</label>
+            </value>
+            <value>
+                <fullName>ARLA KARSTÄDT</fullName>
+                <default>false</default>
+                <label>ARLA KARSTÄDT</label>
+            </value>
+            <value>
+                <fullName>ARLA SVENTRUP</fullName>
+                <default>false</default>
+                <label>ARLA SVENTRUP</label>
+            </value>
+            <value>
+                <fullName>ARLA TINE BRUMUNDDAL</fullName>
+                <default>false</default>
+                <label>ARLA TINE BRUMUNDDAL</label>
+            </value>
+            <value>
+                <fullName>ARMOR ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>ARMOR ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>ARMOR SOFIVO CHAMPDENIERS</fullName>
+                <default>false</default>
+                <label>ARMOR SOFIVO CHAMPDENIERS</label>
+            </value>
+            <value>
+                <fullName>ARMOR SOFIVO LOUDEAC</fullName>
+                <default>false</default>
+                <label>ARMOR SOFIVO LOUDEAC</label>
+            </value>
+            <value>
+                <fullName>ARMOR SOFIVO PONTMAIN</fullName>
+                <default>false</default>
+                <label>ARMOR SOFIVO PONTMAIN</label>
+            </value>
+            <value>
+                <fullName>ARMOR SOFIVO ST BRICE N COGLES</fullName>
+                <default>false</default>
+                <label>ARMOR SOFIVO ST BRICE N COGLES</label>
+            </value>
+            <value>
+                <fullName>ARRABAWN NENAGH</fullName>
+                <default>false</default>
+                <label>ARRABAWN NENAGH</label>
+            </value>
+            <value>
+                <fullName>ASTOSAN GONEN</fullName>
+                <default>false</default>
+                <label>ASTOSAN GONEN</label>
+            </value>
+            <value>
+                <fullName>AYNES DENIZLI</fullName>
+                <default>false</default>
+                <label>AYNES DENIZLI</label>
+            </value>
+            <value>
+                <fullName>BABUSHKINA MOGILEV</fullName>
+                <default>false</default>
+                <label>BABUSHKINA MOGILEV</label>
+            </value>
+            <value>
+                <fullName>BALTIMA WLOSZCZOWE</fullName>
+                <default>false</default>
+                <label>BALTIMA WLOSZCZOWE</label>
+            </value>
+            <value>
+                <fullName>BAYERNLAND AMBERG</fullName>
+                <default>false</default>
+                <label>BAYERNLAND AMBERG</label>
+            </value>
+            <value>
+                <fullName>BAYERNLAND REGENSBURG</fullName>
+                <default>false</default>
+                <label>BAYERNLAND REGENSBURG</label>
+            </value>
+            <value>
+                <fullName>BEGA CHEESE BEGA</fullName>
+                <default>false</default>
+                <label>BEGA CHEESE BEGA</label>
+            </value>
+            <value>
+                <fullName>BEL INDUSTRIES MAYENNE</fullName>
+                <default>false</default>
+                <label>BEL INDUSTRIES MAYENNE</label>
+            </value>
+            <value>
+                <fullName>BMI ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>BMI ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>BMI JESSEN</fullName>
+                <default>false</default>
+                <label>BMI JESSEN</label>
+            </value>
+            <value>
+                <fullName>BMI JESSEN FK</fullName>
+                <default>false</default>
+                <label>BMI JESSEN FK</label>
+            </value>
+            <value>
+                <fullName>BMI JESSEN TP POEDER</fullName>
+                <default>false</default>
+                <label>BMI JESSEN TP POEDER</label>
+            </value>
+            <value>
+                <fullName>BMI LIQUID ZAPFENDORF</fullName>
+                <default>false</default>
+                <label>BMI LIQUID ZAPFENDORF</label>
+            </value>
+            <value>
+                <fullName>BMI PEITING</fullName>
+                <default>false</default>
+                <label>BMI PEITING</label>
+            </value>
+            <value>
+                <fullName>BMI WINZER</fullName>
+                <default>false</default>
+                <label>BMI WINZER</label>
+            </value>
+            <value>
+                <fullName>BMI ZAPFENDORF</fullName>
+                <default>false</default>
+                <label>BMI ZAPFENDORF</label>
+            </value>
+            <value>
+                <fullName>BOLAIDOR ST HIL DE BRIOUZE</fullName>
+                <default>false</default>
+                <label>BOLAIDOR ST HIL DE BRIOUZE</label>
+            </value>
+            <value>
+                <fullName>BONILAIR ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>BONILAIR ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>BONILAIT CHASSENEUIL DU POITOU</fullName>
+                <default>false</default>
+                <label>BONILAIT CHASSENEUIL DU POITOU</label>
+            </value>
+            <value>
+                <fullName>BUISMAN ZWOLLE</fullName>
+                <default>false</default>
+                <label>BUISMAN ZWOLLE</label>
+            </value>
+            <value>
+                <fullName>CALIFORNIA DAIR. ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>CALIFORNIA DAIR. ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>CALIFORNIA DAIRIES TURLOCK</fullName>
+                <default>false</default>
+                <label>CALIFORNIA DAIRIES TURLOCK</label>
+            </value>
+            <value>
+                <fullName>CALIFORNIA DAIRIES VISALIA</fullName>
+                <default>false</default>
+                <label>CALIFORNIA DAIRIES VISALIA</label>
+            </value>
+            <value>
+                <fullName>CAPSA</fullName>
+                <default>false</default>
+                <label>CAPSA</label>
+            </value>
+            <value>
+                <fullName>CAPSA FOOD ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>CAPSA FOOD ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>CAPSA FOOD GRANDA</fullName>
+                <default>false</default>
+                <label>CAPSA FOOD GRANDA</label>
+            </value>
+            <value>
+                <fullName>CAPSA FOOD OUTEIRO DE REI</fullName>
+                <default>false</default>
+                <label>CAPSA FOOD OUTEIRO DE REI</label>
+            </value>
+            <value>
+                <fullName>CARBERY CORK</fullName>
+                <default>false</default>
+                <label>CARBERY CORK</label>
+            </value>
+            <value>
+                <fullName>CARGILL MECHELEN</fullName>
+                <default>false</default>
+                <label>CARGILL MECHELEN</label>
+            </value>
+            <value>
+                <fullName>COLUN LA UNIÓN</fullName>
+                <default>false</default>
+                <label>COLUN LA UNIÓN</label>
+            </value>
+            <value>
+                <fullName>CONAPROLE ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>CONAPROLE ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>CONAPROLE MERCEDES</fullName>
+                <default>false</default>
+                <label>CONAPROLE MERCEDES</label>
+            </value>
+            <value>
+                <fullName>CONAPROLE MONTEVIDEO</fullName>
+                <default>false</default>
+                <label>CONAPROLE MONTEVIDEO</label>
+            </value>
+            <value>
+                <fullName>CONAPROLE RINCON DEL PINO</fullName>
+                <default>false</default>
+                <label>CONAPROLE RINCON DEL PINO</label>
+            </value>
+            <value>
+                <fullName>CONAPROLE VILLA RODRIGUEZ</fullName>
+                <default>false</default>
+                <label>CONAPROLE VILLA RODRIGUEZ</label>
+            </value>
+            <value>
+                <fullName>CONO KAASMAKERS WESTBEEMSTER</fullName>
+                <default>false</default>
+                <label>CONO KAASMAKERS WESTBEEMSTER</label>
+            </value>
+            <value>
+                <fullName>COOPERATIVA CHORTITZER ACUNCIO</fullName>
+                <default>false</default>
+                <label>COOPERATIVA CHORTITZER ACUNCIO</label>
+            </value>
+            <value>
+                <fullName>DAIRY AMERICA FRESNO</fullName>
+                <default>false</default>
+                <label>DAIRY AMERICA FRESNO</label>
+            </value>
+            <value>
+                <fullName>DAIRY CREST DAVIDSTOW</fullName>
+                <default>false</default>
+                <label>DAIRY CREST DAVIDSTOW</label>
+            </value>
+            <value>
+                <fullName>DAIRYFOOD RIEDLINGEN</fullName>
+                <default>false</default>
+                <label>DAIRYFOOD RIEDLINGEN</label>
+            </value>
+            <value>
+                <fullName>DAIRYGOLD ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>DAIRYGOLD ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>DAIRYGOLD CASTELFARM CORK</fullName>
+                <default>false</default>
+                <label>DAIRYGOLD CASTELFARM CORK</label>
+            </value>
+            <value>
+                <fullName>DAIRYGOLD CLONMEL ROAD CORK</fullName>
+                <default>false</default>
+                <label>DAIRYGOLD CLONMEL ROAD CORK</label>
+            </value>
+            <value>
+                <fullName>DAIRYGOLD MALLOW CORK</fullName>
+                <default>false</default>
+                <label>DAIRYGOLD MALLOW CORK</label>
+            </value>
+            <value>
+                <fullName>DALEFARM UK NI 209M</fullName>
+                <default>false</default>
+                <label>DALEFARM UK NI 209M</label>
+            </value>
+            <value>
+                <fullName>DALEFARM UK NI 210M</fullName>
+                <default>false</default>
+                <label>DALEFARM UK NI 210M</label>
+            </value>
+            <value>
+                <fullName>DANONE BALCLUTHA</fullName>
+                <default>false</default>
+                <label>DANONE BALCLUTHA</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>DARIGOLD ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD CALDWELL</fullName>
+                <default>false</default>
+                <label>DARIGOLD CALDWELL</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD CHEHALIS</fullName>
+                <default>false</default>
+                <label>DARIGOLD CHEHALIS</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD JEROME</fullName>
+                <default>false</default>
+                <label>DARIGOLD JEROME</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD LYNDEN</fullName>
+                <default>false</default>
+                <label>DARIGOLD LYNDEN</label>
+            </value>
+            <value>
+                <fullName>DARIGOLD SUNNYSIDE</fullName>
+                <default>false</default>
+                <label>DARIGOLD SUNNYSIDE</label>
+            </value>
+            <value>
+                <fullName>DAVIDSTOW CAMELFORD</fullName>
+                <default>false</default>
+                <label>DAVIDSTOW CAMELFORD</label>
+            </value>
+            <value>
+                <fullName>DELICELAIT MOYON</fullName>
+                <default>false</default>
+                <label>DELICELAIT MOYON</label>
+            </value>
+            <value>
+                <fullName>DMK ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>DMK ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>DMK EDEWECHT</fullName>
+                <default>false</default>
+                <label>DMK EDEWECHT</label>
+            </value>
+            <value>
+                <fullName>DMK HOHENWESTEDT</fullName>
+                <default>false</default>
+                <label>DMK HOHENWESTEDT</label>
+            </value>
+            <value>
+                <fullName>DMK NORDMILCH BEESTEN</fullName>
+                <default>false</default>
+                <label>DMK NORDMILCH BEESTEN</label>
+            </value>
+            <value>
+                <fullName>DMK ZEVEN</fullName>
+                <default>false</default>
+                <label>DMK ZEVEN</label>
+            </value>
+            <value>
+                <fullName>DOC KAAS ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>DOC KAAS ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>DOC KAAS HOOGEVEEN</fullName>
+                <default>false</default>
+                <label>DOC KAAS HOOGEVEEN</label>
+            </value>
+            <value>
+                <fullName>DOC KAAS HOOGEVEEN BUITENVAART</fullName>
+                <default>false</default>
+                <label>DOC KAAS HOOGEVEEN BUITENVAART</label>
+            </value>
+            <value>
+                <fullName>DOLOMITES MILK RENON</fullName>
+                <default>false</default>
+                <label>DOLOMITES MILK RENON</label>
+            </value>
+            <value>
+                <fullName>EC FEED ORIGIN, GMP + FSA ASSU</fullName>
+                <default>false</default>
+                <label>EC FEED ORIGIN, GMP + FSA ASSU</label>
+            </value>
+            <value>
+                <fullName>ELCOR CÓRDOBA</fullName>
+                <default>false</default>
+                <label>ELCOR CÓRDOBA</label>
+            </value>
+            <value>
+                <fullName>ELIGO BRNO</fullName>
+                <default>false</default>
+                <label>ELIGO BRNO</label>
+            </value>
+            <value>
+                <fullName>ELLSWORTH WISCONSIN</fullName>
+                <default>false</default>
+                <label>ELLSWORTH WISCONSIN</label>
+            </value>
+            <value>
+                <fullName>EMMI SCHWEIZ DAGMERSELLEN</fullName>
+                <default>false</default>
+                <label>EMMI SCHWEIZ DAGMERSELLEN</label>
+            </value>
+            <value>
+                <fullName>EMPIRE CHEESE NEW YORK</fullName>
+                <default>false</default>
+                <label>EMPIRE CHEESE NEW YORK</label>
+            </value>
+            <value>
+                <fullName>EPI ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>EPI ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>EPI INGREDIENTS ANCENIS</fullName>
+                <default>false</default>
+                <label>EPI INGREDIENTS ANCENIS</label>
+            </value>
+            <value>
+                <fullName>EPI INGREDIENTS LANDERNEAU</fullName>
+                <default>false</default>
+                <label>EPI INGREDIENTS LANDERNEAU</label>
+            </value>
+            <value>
+                <fullName>EPI LAIT NOUVELLE CRÉHEN</fullName>
+                <default>false</default>
+                <label>EPI LAIT NOUVELLE CRÉHEN</label>
+            </value>
+            <value>
+                <fullName>EPI PENCRAN</fullName>
+                <default>false</default>
+                <label>EPI PENCRAN</label>
+            </value>
+            <value>
+                <fullName>EPI YFFINIAC</fullName>
+                <default>false</default>
+                <label>EPI YFFINIAC</label>
+            </value>
+            <value>
+                <fullName>E-PIIM JÄRVA JAANI</fullName>
+                <default>false</default>
+                <label>E-PIIM JÄRVA JAANI</label>
+            </value>
+            <value>
+                <fullName>ESTANCIAS DEL LAGO DURAZNO</fullName>
+                <default>false</default>
+                <label>ESTANCIAS DEL LAGO DURAZNO</label>
+            </value>
+            <value>
+                <fullName>EURIAL HERBIGNAC</fullName>
+                <default>false</default>
+                <label>EURIAL HERBIGNAC</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>EUROSERUM ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM BENESTROFF</fullName>
+                <default>false</default>
+                <label>EUROSERUM BENESTROFF</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM CARHAIX</fullName>
+                <default>false</default>
+                <label>EUROSERUM CARHAIX</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM CARHAIX-PLOUGUER</fullName>
+                <default>false</default>
+                <label>EUROSERUM CARHAIX-PLOUGUER</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM GUINGAMP</fullName>
+                <default>false</default>
+                <label>EUROSERUM GUINGAMP</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM IBERICA SA IBERICA</fullName>
+                <default>false</default>
+                <label>EUROSERUM IBERICA SA IBERICA</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM MALESTROIT-MISSIRIAC</fullName>
+                <default>false</default>
+                <label>EUROSERUM MALESTROIT-MISSIRIAC</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM MONTAUBAN</fullName>
+                <default>false</default>
+                <label>EUROSERUM MONTAUBAN</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM ONET LE CHATEAU</fullName>
+                <default>false</default>
+                <label>EUROSERUM ONET LE CHATEAU</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM PORT SUR SAONE</fullName>
+                <default>false</default>
+                <label>EUROSERUM PORT SUR SAONE</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM QUIMPER</fullName>
+                <default>false</default>
+                <label>EUROSERUM QUIMPER</label>
+            </value>
+            <value>
+                <fullName>EUROSERUM SAINT MARTIN</fullName>
+                <default>false</default>
+                <label>EUROSERUM SAINT MARTIN</label>
+            </value>
+            <value>
+                <fullName>FC AALTER</fullName>
+                <default>false</default>
+                <label>FC AALTER</label>
+            </value>
+            <value>
+                <fullName>FC ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>FC ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>FC BEDUM</fullName>
+                <default>false</default>
+                <label>FC BEDUM</label>
+            </value>
+            <value>
+                <fullName>FC BEILEN</fullName>
+                <default>false</default>
+                <label>FC BEILEN</label>
+            </value>
+            <value>
+                <fullName>FC BORCULO</fullName>
+                <default>false</default>
+                <label>FC BORCULO</label>
+            </value>
+            <value>
+                <fullName>FC DEN BOSCH</fullName>
+                <default>false</default>
+                <label>FC DEN BOSCH</label>
+            </value>
+            <value>
+                <fullName>FC DMV VEGHEL</fullName>
+                <default>false</default>
+                <label>FC DMV VEGHEL</label>
+            </value>
+            <value>
+                <fullName>FC GERKESKLST.</fullName>
+                <default>false</default>
+                <label>FC GERKESKLST.</label>
+            </value>
+            <value>
+                <fullName>FC LEEUWARDEN</fullName>
+                <default>false</default>
+                <label>FC LEEUWARDEN</label>
+            </value>
+            <value>
+                <fullName>FC LOCHEM</fullName>
+                <default>false</default>
+                <label>FC LOCHEM</label>
+            </value>
+            <value>
+                <fullName>FC NOORDWIJK</fullName>
+                <default>false</default>
+                <label>FC NOORDWIJK</label>
+            </value>
+            <value>
+                <fullName>FIRST MILK ASPATRIA WIGTON</fullName>
+                <default>false</default>
+                <label>FIRST MILK ASPATRIA WIGTON</label>
+            </value>
+            <value>
+                <fullName>FLÉCHARD LA CHAPELLE D&apos;ANDAINE</fullName>
+                <default>false</default>
+                <label>FLÉCHARD LA CHAPELLE D&apos;ANDAINE</label>
+            </value>
+            <value>
+                <fullName>FONTERRA ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>FONTERRA ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>FONTERRA AUCKLAND</fullName>
+                <default>false</default>
+                <label>FONTERRA AUCKLAND</label>
+            </value>
+            <value>
+                <fullName>FONTERRA CLANDEBOYE</fullName>
+                <default>false</default>
+                <label>FONTERRA CLANDEBOYE</label>
+            </value>
+            <value>
+                <fullName>FONTERRA CLANDEBOYE CANTERBURY</fullName>
+                <default>false</default>
+                <label>FONTERRA CLANDEBOYE CANTERBURY</label>
+            </value>
+            <value>
+                <fullName>FONTERRA EDENDALE</fullName>
+                <default>false</default>
+                <label>FONTERRA EDENDALE</label>
+            </value>
+            <value>
+                <fullName>FONTERRA HAMILTON</fullName>
+                <default>false</default>
+                <label>FONTERRA HAMILTON</label>
+            </value>
+            <value>
+                <fullName>FONTERRA HEERENVEEN</fullName>
+                <default>false</default>
+                <label>FONTERRA HEERENVEEN</label>
+            </value>
+            <value>
+                <fullName>FONTERRA LICHFIELD</fullName>
+                <default>false</default>
+                <label>FONTERRA LICHFIELD</label>
+            </value>
+            <value>
+                <fullName>FONTERRA TE AWAMUTU</fullName>
+                <default>false</default>
+                <label>FONTERRA TE AWAMUTU</label>
+            </value>
+            <value>
+                <fullName>FONTERRA TE AWANUTU</fullName>
+                <default>false</default>
+                <label>FONTERRA TE AWANUTU</label>
+            </value>
+            <value>
+                <fullName>FRISCHLI REHBURG</fullName>
+                <default>false</default>
+                <label>FRISCHLI REHBURG</label>
+            </value>
+            <value>
+                <fullName>FUDE &amp; SERRAHN ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>FUDE &amp; SERRAHN ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>FUDE &amp; SERRAHN BERLIN</fullName>
+                <default>false</default>
+                <label>FUDE &amp; SERRAHN BERLIN</label>
+            </value>
+            <value>
+                <fullName>FUDE &amp; SERRAHN ERFURT</fullName>
+                <default>false</default>
+                <label>FUDE &amp; SERRAHN ERFURT</label>
+            </value>
+            <value>
+                <fullName>FUDE &amp; SERRAHN GRANSEE</fullName>
+                <default>false</default>
+                <label>FUDE &amp; SERRAHN GRANSEE</label>
+            </value>
+            <value>
+                <fullName>GARCIA BAQUERO ALCAZAR</fullName>
+                <default>false</default>
+                <label>GARCIA BAQUERO ALCAZAR</label>
+            </value>
+            <value>
+                <fullName>GARWOLIN WOLA RĘBKOWSKA</fullName>
+                <default>false</default>
+                <label>GARWOLIN WOLA RĘBKOWSKA</label>
+            </value>
+            <value>
+                <fullName>GIZYCKO (OSM GIZYCKU)</fullName>
+                <default>false</default>
+                <label>GIZYCKO (OSM GIZYCKU)</label>
+            </value>
+            <value>
+                <fullName>GLANBIA ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>GLANBIA ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>GLANBIA BALLYRAGGET</fullName>
+                <default>false</default>
+                <label>GLANBIA BALLYRAGGET</label>
+            </value>
+            <value>
+                <fullName>GLANBIA BELVIEW</fullName>
+                <default>false</default>
+                <label>GLANBIA BELVIEW</label>
+            </value>
+            <value>
+                <fullName>GRUDZIADZ (POLMLEK)</fullName>
+                <default>false</default>
+                <label>GRUDZIADZ (POLMLEK)</label>
+            </value>
+            <value>
+                <fullName>HAVERO APPROVED FACTORIES</fullName>
+                <default>false</default>
+                <label>HAVERO APPROVED FACTORIES</label>
+            </value>
+            <value>
+                <fullName>HEIDEBLUME MOLKEREI ELSDORF</fullName>
+                <default>false</default>
+                <label>HEIDEBLUME MOLKEREI ELSDORF</label>
+            </value>
+            <value>
+                <fullName>HOCHDORF</fullName>
+                <default>false</default>
+                <label>HOCHDORF</label>
+            </value>
+            <value>
+                <fullName>HOCHDORF ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>HOCHDORF ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>HOCHDORF SULGEN</fullName>
+                <default>false</default>
+                <label>HOCHDORF SULGEN</label>
+            </value>
+            <value>
+                <fullName>HOCHLAND WEGROW</fullName>
+                <default>false</default>
+                <label>HOCHLAND WEGROW</label>
+            </value>
+            <value>
+                <fullName>HOCHWALD ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>HOCHWALD ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>HOCHWALD HUNFELD WHEY INGR</fullName>
+                <default>false</default>
+                <label>HOCHWALD HUNFELD WHEY INGR</label>
+            </value>
+            <value>
+                <fullName>HOCHWALD THALFANG</fullName>
+                <default>false</default>
+                <label>HOCHWALD THALFANG</label>
+            </value>
+            <value>
+                <fullName>IDH HEINO</fullName>
+                <default>false</default>
+                <label>IDH HEINO</label>
+            </value>
+            <value>
+                <fullName>ILAS ANLEO</fullName>
+                <default>false</default>
+                <label>ILAS ANLEO</label>
+            </value>
+            <value>
+                <fullName>INSULAC RIBEIRA SECA</fullName>
+                <default>false</default>
+                <label>INSULAC RIBEIRA SECA</label>
+            </value>
+            <value>
+                <fullName>ISIGNY STE MERE SAINTE MERE</fullName>
+                <default>false</default>
+                <label>ISIGNY STE MERE SAINTE MERE</label>
+            </value>
+            <value>
+                <fullName>JONKER &amp; SCHUT</fullName>
+                <default>false</default>
+                <label>JONKER &amp; SCHUT</label>
+            </value>
+            <value>
+                <fullName>JONKER &amp; SCHUT BARNEVELD</fullName>
+                <default>false</default>
+                <label>JONKER &amp; SCHUT BARNEVELD</label>
+            </value>
+            <value>
+                <fullName>KALINKOVICHI KALIKOVICHI</fullName>
+                <default>false</default>
+                <label>KALINKOVICHI KALIKOVICHI</label>
+            </value>
+            <value>
+                <fullName>KARWENDEL-WERKE BUCHLOE</fullName>
+                <default>false</default>
+                <label>KARWENDEL-WERKE BUCHLOE</label>
+            </value>
+            <value>
+                <fullName>KERRY ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>KERRY ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>KERRY CHARLEVILLE</fullName>
+                <default>false</default>
+                <label>KERRY CHARLEVILLE</label>
+            </value>
+            <value>
+                <fullName>KERRY LISTOWEL (YELLOW FATS)</fullName>
+                <default>false</default>
+                <label>KERRY LISTOWEL (YELLOW FATS)</label>
+            </value>
+            <value>
+                <fullName>KERRY LISTOWEL IE 1060</fullName>
+                <default>false</default>
+                <label>KERRY LISTOWEL IE 1060</label>
+            </value>
+            <value>
+                <fullName>KERRY LISTOWEL IE 1096</fullName>
+                <default>false</default>
+                <label>KERRY LISTOWEL IE 1096</label>
+            </value>
+            <value>
+                <fullName>KERRY NEWMARKET</fullName>
+                <default>false</default>
+                <label>KERRY NEWMARKET</label>
+            </value>
+            <value>
+                <fullName>KNOLTON OVERTON</fullName>
+                <default>false</default>
+                <label>KNOLTON OVERTON</label>
+            </value>
+            <value>
+                <fullName>KUTNO (ZORINA KUTNO)</fullName>
+                <default>false</default>
+                <label>KUTNO (ZORINA KUTNO)</label>
+            </value>
+            <value>
+                <fullName>LACPOL PIOTRKOW KUJAWSKI</fullName>
+                <default>false</default>
+                <label>LACPOL PIOTRKOW KUJAWSKI</label>
+            </value>
+            <value>
+                <fullName>LACTALIS ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>LACTALIS ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>LACTALIS MAYENNE</fullName>
+                <default>false</default>
+                <label>LACTALIS MAYENNE</label>
+            </value>
+            <value>
+                <fullName>LACTALIS MENEHOULD</fullName>
+                <default>false</default>
+                <label>LACTALIS MENEHOULD</label>
+            </value>
+            <value>
+                <fullName>LACTALIS PONTIVY</fullName>
+                <default>false</default>
+                <label>LACTALIS PONTIVY</label>
+            </value>
+            <value>
+                <fullName>LACTALIS ROUVROY</fullName>
+                <default>false</default>
+                <label>LACTALIS ROUVROY</label>
+            </value>
+            <value>
+                <fullName>LACTALIS VERDUN</fullName>
+                <default>false</default>
+                <label>LACTALIS VERDUN</label>
+            </value>
+            <value>
+                <fullName>LACTALIS VILLAROBLEDO</fullName>
+                <default>false</default>
+                <label>LACTALIS VILLAROBLEDO</label>
+            </value>
+            <value>
+                <fullName>LACTALIS VIMOUTIERS</fullName>
+                <default>false</default>
+                <label>LACTALIS VIMOUTIERS</label>
+            </value>
+            <value>
+                <fullName>LACTALIS WALHORN</fullName>
+                <default>false</default>
+                <label>LACTALIS WALHORN</label>
+            </value>
+            <value>
+                <fullName>LACTOGAL AGRA DO HEROÍSMO</fullName>
+                <default>false</default>
+                <label>LACTOGAL AGRA DO HEROÍSMO</label>
+            </value>
+            <value>
+                <fullName>LACTOGAL ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>LACTOGAL ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>LACTOGAL UNIDADE FABRIL</fullName>
+                <default>false</default>
+                <label>LACTOGAL UNIDADE FABRIL</label>
+            </value>
+            <value>
+                <fullName>LACTOVOSGES SAULXURE</fullName>
+                <default>false</default>
+                <label>LACTOVOSGES SAULXURE</label>
+            </value>
+            <value>
+                <fullName>LAITERIE DE MONTAIGU</fullName>
+                <default>false</default>
+                <label>LAITERIE DE MONTAIGU</label>
+            </value>
+            <value>
+                <fullName>LAITIERE DE PONTIVY LE SOURN</fullName>
+                <default>false</default>
+                <label>LAITIERE DE PONTIVY LE SOURN</label>
+            </value>
+            <value>
+                <fullName>LAKELAND BANBRIDGE</fullName>
+                <default>false</default>
+                <label>LAKELAND BANBRIDGE</label>
+            </value>
+            <value>
+                <fullName>LAKELAND DAIRIES MONAGHAN</fullName>
+                <default>false</default>
+                <label>LAKELAND DAIRIES MONAGHAN</label>
+            </value>
+            <value>
+                <fullName>LAKELAND DARIES BAILIEBOROUGH</fullName>
+                <default>false</default>
+                <label>LAKELAND DARIES BAILIEBOROUGH</label>
+            </value>
+            <value>
+                <fullName>LAKTOPOL ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>LAKTOPOL ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>LAKTOPOL LOSICE</fullName>
+                <default>false</default>
+                <label>LAKTOPOL LOSICE</label>
+            </value>
+            <value>
+                <fullName>LAKTOPOL SUWALKI</fullName>
+                <default>false</default>
+                <label>LAKTOPOL SUWALKI</label>
+            </value>
+            <value>
+                <fullName>LECHE CELTA</fullName>
+                <default>false</default>
+                <label>LECHE CELTA</label>
+            </value>
+            <value>
+                <fullName>LECHE CELTA PONTEDEUME</fullName>
+                <default>false</default>
+                <label>LECHE CELTA PONTEDEUME</label>
+            </value>
+            <value>
+                <fullName>LIMELCO ZONHOVEN</fullName>
+                <default>false</default>
+                <label>LIMELCO ZONHOVEN</label>
+            </value>
+            <value>
+                <fullName>LLC ZOLOTONOSHA</fullName>
+                <default>false</default>
+                <label>LLC ZOLOTONOSHA</label>
+            </value>
+            <value>
+                <fullName>LONE STAR CANYON</fullName>
+                <default>false</default>
+                <label>LONE STAR CANYON</label>
+            </value>
+            <value>
+                <fullName>LUMIKO LUKÓW</fullName>
+                <default>false</default>
+                <label>LUMIKO LUKÓW</label>
+            </value>
+            <value>
+                <fullName>MAJAN FOOD INDUSTRIES DUBAI</fullName>
+                <default>false</default>
+                <label>MAJAN FOOD INDUSTRIES DUBAI</label>
+            </value>
+            <value>
+                <fullName>MANFREY SANTA FE</fullName>
+                <default>false</default>
+                <label>MANFREY SANTA FE</label>
+            </value>
+            <value>
+                <fullName>MARIJAMPOLES</fullName>
+                <default>false</default>
+                <label>MARIJAMPOLES</label>
+            </value>
+            <value>
+                <fullName>MARIJAMPOLES (LT 18-01P EB)</fullName>
+                <default>false</default>
+                <label>MARIJAMPOLES (LT 18-01P EB)</label>
+            </value>
+            <value>
+                <fullName>MASTELLONE GENERAL RODRÍGUEZ</fullName>
+                <default>false</default>
+                <label>MASTELLONE GENERAL RODRÍGUEZ</label>
+            </value>
+            <value>
+                <fullName>MASTELLONE HNOS S.A. RODRÍGUEZ</fullName>
+                <default>false</default>
+                <label>MASTELLONE HNOS S.A. RODRÍGUEZ</label>
+            </value>
+            <value>
+                <fullName>MATAURA VALLEY MILK GORE</fullName>
+                <default>false</default>
+                <label>MATAURA VALLEY MILK GORE</label>
+            </value>
+            <value>
+                <fullName>MEGGLE WASSERBURG</fullName>
+                <default>false</default>
+                <label>MEGGLE WASSERBURG</label>
+            </value>
+            <value>
+                <fullName>MILCHWERK JÄGER HAAG</fullName>
+                <default>false</default>
+                <label>MILCHWERK JÄGER HAAG</label>
+            </value>
+            <value>
+                <fullName>MILCHWERKE SCHWABEN NEU ULM</fullName>
+                <default>false</default>
+                <label>MILCHWERKE SCHWABEN NEU ULM</label>
+            </value>
+            <value>
+                <fullName>MILCOBEL ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>MILCOBEL ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>MILCOBEL BELGOMILK KALLO</fullName>
+                <default>false</default>
+                <label>MILCOBEL BELGOMILK KALLO</label>
+            </value>
+            <value>
+                <fullName>MILCOBEL BELGOMILK LANGEMARK</fullName>
+                <default>false</default>
+                <label>MILCOBEL BELGOMILK LANGEMARK</label>
+            </value>
+            <value>
+                <fullName>MJÓLKURSAMLAG KS SAUOARKROKUR</fullName>
+                <default>false</default>
+                <label>MJÓLKURSAMLAG KS SAUOARKROKUR</label>
+            </value>
+            <value>
+                <fullName>MLECZARSKA LOWICZ</fullName>
+                <default>false</default>
+                <label>MLECZARSKA LOWICZ</label>
+            </value>
+            <value>
+                <fullName>MLEKOVITA ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>MLEKOVITA ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>MLEKOVITA LUBAWA</fullName>
+                <default>false</default>
+                <label>MLEKOVITA LUBAWA</label>
+            </value>
+            <value>
+                <fullName>MLEKOVITA WYSOKIE MAZOWIECKIE</fullName>
+                <default>false</default>
+                <label>MLEKOVITA WYSOKIE MAZOWIECKIE</label>
+            </value>
+            <value>
+                <fullName>MLEKPOL ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>MLEKPOL ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>MLEKPOL GRAJEWIE</fullName>
+                <default>false</default>
+                <label>MLEKPOL GRAJEWIE</label>
+            </value>
+            <value>
+                <fullName>MLEKPOL GRAJEWO</fullName>
+                <default>false</default>
+                <label>MLEKPOL GRAJEWO</label>
+            </value>
+            <value>
+                <fullName>MLEKPOL MRAGOWO</fullName>
+                <default>false</default>
+                <label>MLEKPOL MRAGOWO</label>
+            </value>
+            <value>
+                <fullName>MLEKPOL ZAMBROW</fullName>
+                <default>false</default>
+                <label>MLEKPOL ZAMBROW</label>
+            </value>
+            <value>
+                <fullName>MOLKEREI WAGENFELD</fullName>
+                <default>false</default>
+                <label>MOLKEREI WAGENFELD</label>
+            </value>
+            <value>
+                <fullName>MOLKEREI WALHORN</fullName>
+                <default>false</default>
+                <label>MOLKEREI WALHORN</label>
+            </value>
+            <value>
+                <fullName>MONKI</fullName>
+                <default>false</default>
+                <label>MONKI</label>
+            </value>
+            <value>
+                <fullName>MS AKUREYRI</fullName>
+                <default>false</default>
+                <label>MS AKUREYRI</label>
+            </value>
+            <value>
+                <fullName>MS AKUREYRI AKUREYRI</fullName>
+                <default>false</default>
+                <label>MS AKUREYRI AKUREYRI</label>
+            </value>
+            <value>
+                <fullName>MS ICELAND DARIES SELFOSS</fullName>
+                <default>false</default>
+                <label>MS ICELAND DARIES SELFOSS</label>
+            </value>
+            <value>
+                <fullName>MTW NEUMÜNSTER</fullName>
+                <default>false</default>
+                <label>MTW NEUMÜNSTER</label>
+            </value>
+            <value>
+                <fullName>MULLER ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>MULLER ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>MULLER SHROPSHIRE</fullName>
+                <default>false</default>
+                <label>MULLER SHROPSHIRE</label>
+            </value>
+            <value>
+                <fullName>MULLER STONEHOUSE</fullName>
+                <default>false</default>
+                <label>MULLER STONEHOUSE</label>
+            </value>
+            <value>
+                <fullName>NAARMANN NEUENKIRCHEN</fullName>
+                <default>false</default>
+                <label>NAARMANN NEUENKIRCHEN</label>
+            </value>
+            <value>
+                <fullName>NESTLE CÓRDOBA</fullName>
+                <default>false</default>
+                <label>NESTLE CÓRDOBA</label>
+            </value>
+            <value>
+                <fullName>NOAL SA CORDOBA</fullName>
+                <default>false</default>
+                <label>NOAL SA CORDOBA</label>
+            </value>
+            <value>
+                <fullName>NORTH CORK CREAMERIES KANTURK</fullName>
+                <default>false</default>
+                <label>NORTH CORK CREAMERIES KANTURK</label>
+            </value>
+            <value>
+                <fullName>OBERSTEIRISCHE MOLKEREI</fullName>
+                <default>false</default>
+                <label>OBERSTEIRISCHE MOLKEREI</label>
+            </value>
+            <value>
+                <fullName>OCD ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>OCD ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>OCD INVERCARGILL</fullName>
+                <default>false</default>
+                <label>OCD INVERCARGILL</label>
+            </value>
+            <value>
+                <fullName>OCD WAHAROA</fullName>
+                <default>false</default>
+                <label>OCD WAHAROA</label>
+            </value>
+            <value>
+                <fullName>OCD WANGANUI</fullName>
+                <default>false</default>
+                <label>OCD WANGANUI</label>
+            </value>
+            <value>
+                <fullName>OJSC LUNINETS MILK</fullName>
+                <default>false</default>
+                <label>OJSC LUNINETS MILK</label>
+            </value>
+            <value>
+                <fullName>OKREGOWA WOLSZTYN</fullName>
+                <default>false</default>
+                <label>OKREGOWA WOLSZTYN</label>
+            </value>
+            <value>
+                <fullName>OLMA OLOMOUC</fullName>
+                <default>false</default>
+                <label>OLMA OLOMOUC</label>
+            </value>
+            <value>
+                <fullName>OMIRA</fullName>
+                <default>false</default>
+                <label>OMIRA</label>
+            </value>
+            <value>
+                <fullName>OSC SKIERNIEWICE</fullName>
+                <default>false</default>
+                <label>OSC SKIERNIEWICE</label>
+            </value>
+            <value>
+                <fullName>OSM GIZYCKU</fullName>
+                <default>false</default>
+                <label>OSM GIZYCKU</label>
+            </value>
+            <value>
+                <fullName>OSM RADOMSKO</fullName>
+                <default>false</default>
+                <label>OSM RADOMSKO</label>
+            </value>
+            <value>
+                <fullName>OSM SKIERNIEWICE</fullName>
+                <default>false</default>
+                <label>OSM SKIERNIEWICE</label>
+            </value>
+            <value>
+                <fullName>PBS FOOD HEERENVEEN</fullName>
+                <default>false</default>
+                <label>PBS FOOD HEERENVEEN</label>
+            </value>
+            <value>
+                <fullName>PETIFOOD VEENENDAAL</fullName>
+                <default>false</default>
+                <label>PETIFOOD VEENENDAAL</label>
+            </value>
+            <value>
+                <fullName>PIATNICA OSTROLEKA</fullName>
+                <default>false</default>
+                <label>PIATNICA OSTROLEKA</label>
+            </value>
+            <value>
+                <fullName>PIENOS ZVAIGZDES PASVALYS</fullName>
+                <default>false</default>
+                <label>PIENOS ZVAIGZDES PASVALYS</label>
+            </value>
+            <value>
+                <fullName>PINAR IZMIR</fullName>
+                <default>false</default>
+                <label>PINAR IZMIR</label>
+            </value>
+            <value>
+                <fullName>PM PIOTRKOW KUJAWSKI</fullName>
+                <default>false</default>
+                <label>PM PIOTRKOW KUJAWSKI</label>
+            </value>
+            <value>
+                <fullName>POLMLEK ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>POLMLEK ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>POLMLEK LIDZBARK</fullName>
+                <default>false</default>
+                <label>POLMLEK LIDZBARK</label>
+            </value>
+            <value>
+                <fullName>POLMLEK PIOTRKOW KUJAWSKI</fullName>
+                <default>false</default>
+                <label>POLMLEK PIOTRKOW KUJAWSKI</label>
+            </value>
+            <value>
+                <fullName>POLMLEK RACIAZ</fullName>
+                <default>false</default>
+                <label>POLMLEK RACIAZ</label>
+            </value>
+            <value>
+                <fullName>POLSER OSNO</fullName>
+                <default>false</default>
+                <label>POLSER OSNO</label>
+            </value>
+            <value>
+                <fullName>PREILU SIERS</fullName>
+                <default>false</default>
+                <label>PREILU SIERS</label>
+            </value>
+            <value>
+                <fullName>PROLACTAL HARTBERG</fullName>
+                <default>false</default>
+                <label>PROLACTAL HARTBERG</label>
+            </value>
+            <value>
+                <fullName>PROLACTEA VILALBA</fullName>
+                <default>false</default>
+                <label>PROLACTEA VILALBA</label>
+            </value>
+            <value>
+                <fullName>QUESERIA LAFUENTE</fullName>
+                <default>false</default>
+                <label>QUESERIA LAFUENTE</label>
+            </value>
+            <value>
+                <fullName>QUESOS DEL DUERO</fullName>
+                <default>false</default>
+                <label>QUESOS DEL DUERO</label>
+            </value>
+            <value>
+                <fullName>QUESOS DEL DUERO TORO</fullName>
+                <default>false</default>
+                <label>QUESOS DEL DUERO TORO</label>
+            </value>
+            <value>
+                <fullName>RAVENSBURG MILCHWERKE</fullName>
+                <default>false</default>
+                <label>RAVENSBURG MILCHWERKE</label>
+            </value>
+            <value>
+                <fullName>ROSHEN VINNITSA</fullName>
+                <default>false</default>
+                <label>ROSHEN VINNITSA</label>
+            </value>
+            <value>
+                <fullName>ROYAL VIV BUISMAN ZELHEM</fullName>
+                <default>false</default>
+                <label>ROYAL VIV BUISMAN ZELHEM</label>
+            </value>
+            <value>
+                <fullName>RÜCKER GMBH AURICH</fullName>
+                <default>false</default>
+                <label>RÜCKER GMBH AURICH</label>
+            </value>
+            <value>
+                <fullName>SACHSENMILCH LEPPERSDORF</fullName>
+                <default>false</default>
+                <label>SACHSENMILCH LEPPERSDORF</label>
+            </value>
+            <value>
+                <fullName>SANCOR CORDOBA CORDOBA</fullName>
+                <default>false</default>
+                <label>SANCOR CORDOBA CORDOBA</label>
+            </value>
+            <value>
+                <fullName>SANTA CLARA CÓRDOBA</fullName>
+                <default>false</default>
+                <label>SANTA CLARA CÓRDOBA</label>
+            </value>
+            <value>
+                <fullName>SAVUSHKIN ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>SAVUSHKIN ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>SAVUSHKIN BREST</fullName>
+                <default>false</default>
+                <label>SAVUSHKIN BREST</label>
+            </value>
+            <value>
+                <fullName>SAVUSHKIN PINSK</fullName>
+                <default>false</default>
+                <label>SAVUSHKIN PINSK</label>
+            </value>
+            <value>
+                <fullName>SCHWARZWALDMILCH OFFENBURG</fullName>
+                <default>false</default>
+                <label>SCHWARZWALDMILCH OFFENBURG</label>
+            </value>
+            <value>
+                <fullName>SIEROLAT FRANCOLISE</fullName>
+                <default>false</default>
+                <label>SIEROLAT FRANCOLISE</label>
+            </value>
+            <value>
+                <fullName>SLUTSK KLETSK</fullName>
+                <default>false</default>
+                <label>SLUTSK KLETSK</label>
+            </value>
+            <value>
+                <fullName>SOBRERO Y CAGNOLO CORDOBA</fullName>
+                <default>false</default>
+                <label>SOBRERO Y CAGNOLO CORDOBA</label>
+            </value>
+            <value>
+                <fullName>SOC. LAITERIE DE RETIERS</fullName>
+                <default>false</default>
+                <label>SOC. LAITERIE DE RETIERS</label>
+            </value>
+            <value>
+                <fullName>SOLAREC RECOGNE</fullName>
+                <default>false</default>
+                <label>SOLAREC RECOGNE</label>
+            </value>
+            <value>
+                <fullName>SPOLDZIELNIA GOSTYN</fullName>
+                <default>false</default>
+                <label>SPOLDZIELNIA GOSTYN</label>
+            </value>
+            <value>
+                <fullName>SPOLDZIELNIA MLECZARSKA RYKI</fullName>
+                <default>false</default>
+                <label>SPOLDZIELNIA MLECZARSKA RYKI</label>
+            </value>
+            <value>
+                <fullName>SPOLDZIELNIA WIELUNIU</fullName>
+                <default>false</default>
+                <label>SPOLDZIELNIA WIELUNIU</label>
+            </value>
+            <value>
+                <fullName>SPOMLEK RADZYN PODLASKI</fullName>
+                <default>false</default>
+                <label>SPOMLEK RADZYN PODLASKI</label>
+            </value>
+            <value>
+                <fullName>SUCESORES DE ALFREDO WILLINER</fullName>
+                <default>false</default>
+                <label>SUCESORES DE ALFREDO WILLINER</label>
+            </value>
+            <value>
+                <fullName>SYNLAIT</fullName>
+                <default>false</default>
+                <label>SYNLAIT</label>
+            </value>
+            <value>
+                <fullName>SYNTURA CARHAIX PLOGUER</fullName>
+                <default>false</default>
+                <label>SYNTURA CARHAIX PLOGUER</label>
+            </value>
+            <value>
+                <fullName>TATUA MORRINSVILLE</fullName>
+                <default>false</default>
+                <label>TATUA MORRINSVILLE</label>
+            </value>
+            <value>
+                <fullName>TERE AS POLVA</fullName>
+                <default>false</default>
+                <label>TERE AS POLVA</label>
+            </value>
+            <value>
+                <fullName>TERE AS PÕLVA</fullName>
+                <default>false</default>
+                <label>TERE AS PÕLVA</label>
+            </value>
+            <value>
+                <fullName>THE UNION DAIRY COMPAGNY PENOL</fullName>
+                <default>false</default>
+                <label>THE UNION DAIRY COMPAGNY PENOL</label>
+            </value>
+            <value>
+                <fullName>TIPPERARY</fullName>
+                <default>false</default>
+                <label>TIPPERARY</label>
+            </value>
+            <value>
+                <fullName>TMC STRABANE</fullName>
+                <default>false</default>
+                <label>TMC STRABANE</label>
+            </value>
+            <value>
+                <fullName>TOLNATEJ SZEKSZARD</fullName>
+                <default>false</default>
+                <label>TOLNATEJ SZEKSZARD</label>
+            </value>
+            <value>
+                <fullName>UCKERMÄRKER MILCH PRENZLAU</fullName>
+                <default>false</default>
+                <label>UCKERMÄRKER MILCH PRENZLAU</label>
+            </value>
+            <value>
+                <fullName>UCLAB / EPI PENCRAN</fullName>
+                <default>false</default>
+                <label>UCLAB / EPI PENCRAN</label>
+            </value>
+            <value>
+                <fullName>UDC PENOLA</fullName>
+                <default>false</default>
+                <label>UDC PENOLA</label>
+            </value>
+            <value>
+                <fullName>UELZENA ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>UELZENA ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>UELZENA UELZEN</fullName>
+                <default>false</default>
+                <label>UELZENA UELZEN</label>
+            </value>
+            <value>
+                <fullName>VALIO SEINÄJOKI</fullName>
+                <default>false</default>
+                <label>VALIO SEINÄJOKI</label>
+            </value>
+            <value>
+                <fullName>VALMIERAS PIENS</fullName>
+                <default>false</default>
+                <label>VALMIERAS PIENS</label>
+            </value>
+            <value>
+                <fullName>VDH GORINCHEM</fullName>
+                <default>false</default>
+                <label>VDH GORINCHEM</label>
+            </value>
+            <value>
+                <fullName>VILKYSKIU TAURAGE</fullName>
+                <default>false</default>
+                <label>VILKYSKIU TAURAGE</label>
+            </value>
+            <value>
+                <fullName>VREUGDENHIL ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>VREUGDENHIL ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>VREUGDENHIL ALL FFP FACTORIES</fullName>
+                <default>false</default>
+                <label>VREUGDENHIL ALL FFP FACTORIES</label>
+            </value>
+            <value>
+                <fullName>VREUGDENHIL BARNEVELD</fullName>
+                <default>false</default>
+                <label>VREUGDENHIL BARNEVELD</label>
+            </value>
+            <value>
+                <fullName>VREUGDENHIL GORINCHEM</fullName>
+                <default>false</default>
+                <label>VREUGDENHIL GORINCHEM</label>
+            </value>
+            <value>
+                <fullName>VREUGDENHIL SCHARSTERBRUG</fullName>
+                <default>false</default>
+                <label>VREUGDENHIL SCHARSTERBRUG</label>
+            </value>
+            <value>
+                <fullName>WESTLAND HOKITIKA</fullName>
+                <default>false</default>
+                <label>WESTLAND HOKITIKA</label>
+            </value>
+            <value>
+                <fullName>YEW TREE DAIRY SKELMERSDALE</fullName>
+                <default>false</default>
+                <label>YEW TREE DAIRY SKELMERSDALE</label>
+            </value>
+            <value>
+                <fullName>YOG BOJKOVICE</fullName>
+                <default>false</default>
+                <label>YOG BOJKOVICE</label>
+            </value>
+            <value>
+                <fullName>ZEMAITIJOS PIENAS TELSIAI</fullName>
+                <default>false</default>
+                <label>ZEMAITIJOS PIENAS TELSIAI</label>
+            </value>
+            <value>
+                <fullName>ZOMA ALL FACTORIES</fullName>
+                <default>false</default>
+                <label>ZOMA ALL FACTORIES</label>
+            </value>
+            <value>
+                <fullName>ZOMA GÜNZBURG</fullName>
+                <default>false</default>
+                <label>ZOMA GÜNZBURG</label>
+            </value>
+            <value>
+                <fullName>ZOMA MILCH &amp; MOLKE GÜNZBURG</fullName>
+                <default>false</default>
+                <label>ZOMA MILCH &amp; MOLKE GÜNZBURG</label>
+            </value>
+            <value>
+                <fullName>ZORINA KUTNO</fullName>
+                <default>false</default>
+                <label>ZORINA KUTNO</label>
+            </value>
+            <value>
+                <fullName>ZVOLENSKA</fullName>
+                <default>false</default>
+                <label>ZVOLENSKA</label>
+            </value>
+            <value>
+                <fullName>ZWOLEN (MLEKPOL ZWOLENIU)</fullName>
+                <default>false</default>
+                <label>ZWOLEN (MLEKPOL ZWOLENIU)</label>
+            </value>
+            <value>
+                <fullName>ZZZ (WASHOUT ONLY)</fullName>
+                <default>false</default>
+                <label>ZZZ (WASHOUT ONLY)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

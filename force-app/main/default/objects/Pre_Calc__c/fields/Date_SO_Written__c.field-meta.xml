@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_SO_Written__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>System date when HW and Customer come to agreement and data is sent to JDE, in MTMS phase, SO date could also be sent from MTMS to SF</inlineHelpText>
+    <label>Date SO Written</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

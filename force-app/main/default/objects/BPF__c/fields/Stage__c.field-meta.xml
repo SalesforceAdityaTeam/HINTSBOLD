@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BPF Renewal</fullName>
+                <default>false</default>
+                <label>BPF Renewal</label>
+            </value>
+            <value>
+                <fullName>BPF Trader In Process</fullName>
+                <default>true</default>
+                <label>BPF Trader In Process</label>
+            </value>
+            <value>
+                <fullName>BPF Trader Completed</fullName>
+                <default>false</default>
+                <label>BPF Trader Completed</label>
+            </value>
+            <value>
+                <fullName>BPF Customer Input WIP</fullName>
+                <default>false</default>
+                <label>BPF Customer Input WIP</label>
+            </value>
+            <value>
+                <fullName>BPF Customer Input Completed</fullName>
+                <default>false</default>
+                <label>BPF Customer Input Completed</label>
+            </value>
+            <value>
+                <fullName>BPF World Check In Review</fullName>
+                <default>false</default>
+                <label>BPF World Check In Review</label>
+            </value>
+            <value>
+                <fullName>BPF World Check Passed</fullName>
+                <default>false</default>
+                <label>BPF World Check Passed</label>
+            </value>
+            <value>
+                <fullName>Trader Approval</fullName>
+                <default>false</default>
+                <label>Trader Approval</label>
+            </value>
+            <value>
+                <fullName>BPF Signed</fullName>
+                <default>false</default>
+                <label>BPF Signed</label>
+            </value>
+            <value>
+                <fullName>BPF Archived</fullName>
+                <default>false</default>
+                <label>BPF Archived</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

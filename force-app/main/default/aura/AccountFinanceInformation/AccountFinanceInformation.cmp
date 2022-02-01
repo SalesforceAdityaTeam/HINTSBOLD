@@ -1,0 +1,24 @@
+<aura:component controller="AccountFinanceInfoCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="objData" type="Account_Opco_Info__c" />
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+    <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Account" density="compact" onload="{!c.handleCreateLoad}">
+        <lightning:inputField fieldName="EntityCompany__c" aura:Id="EntityCompany__c" />
+        <lightning:inputField fieldName="Related_AddressNumber__c"  aura:Id="Related_AddressNumber__c"  />
+        <lightning:inputField fieldName="accmcredit_limit__c"  aura:Id="accmcredit_limit__c"   />
+        <lightning:inputField fieldName="BillingAddressType__c"  aura:Id="BillingAddressType__c"   />
+        <lightning:inputField fieldName="HoldInvoices__c"  aura:Id="HoldInvoices__c"   />
+        <lightning:inputField fieldName="CreditHoldExempt__c"  aura:Id="CreditHoldExempt__c"   />
+        <lightning:inputField fieldName="AR_Terms__c"   aura:Id="AR_Terms__c"  />
+        <lightning:inputField fieldName="FreightHandlingCode__c"   aura:Id="FreightHandlingCode__c"  />
+        <lightning:inputField fieldName="AlternatePayor__c"  aura:Id="AlternatePayor__c"   />
+        <lightning:inputField fieldName="Ext_SFAccCusNum__c"  aura:Id="Ext_SFAccCusNum__c"   />
+        <lightning:inputField fieldName="Date_LastCreditReview__c"  aura:Id="Date_LastCreditReview__c"   />
+        <lightning:inputField fieldName="DefaultAddress__c"  aura:Id="DefaultAddress__c"   />
+        <lightning:inputField fieldName="CustomerCurrencyCode_ABAmounts__c"  aura:Id="CustomerCurrencyCode_ABAmounts__c"   />
+        <lightning:inputField fieldName="PaymentTermsCode__c"  aura:Id="PaymentTermsCode__c"   />
+        <lightning:inputField fieldName="accmdate_created__c"  aura:Id="accmdate_created__c"   />
+        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+    </lightning:recordEditForm>
+   </div>
+</aura:component>

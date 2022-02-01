@@ -1,0 +1,57 @@
+<aura:component controller="AddNewLocationCtrl" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:attribute name="parentAccount" type="sObject" default="{'sobjectType': 'Account'}"/>
+    <aura:attribute name="searchLocation" type="sObject" default="{'sobjectType': 'Location__c'}"/>
+    <aura:attribute name="objLocation" type="Location__c" default="{'sobjectType': 'Location__c'}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="city" type="String" default=""/>
+    <aura:attribute name="state" type="String" default=""/>
+    <aura:attribute name="recordId" type="String" />
+
+    
+    
+    <lightning:card iconName="standard:Location__c" title="">
+    	<aura:set attribute="footer">
+            	<lightning:button label="Save" onclick="{!c.save}" />
+                <lightning:button label="Cancel" onclick="{!c.cancel}" />
+        </aura:set>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1"> <lightning:messages aura:id="messageid" />  </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <abbr lightning-input_input="" title="required" class="slds-required">*</abbr> Existing Prospect 
+                <lightning:helptext content="Select a parent account if they already exist or cancel and select Add New Prospect before this step" />
+                <br/>
+                <div aura:id="lookupacc" class="slds-show">
+                	<c:customLookup recordId="searchParentOnly" objectAPIName="Account" IconName="standard:Account" selectedRecord="{!v.parentAccount}"/> 
+                </div>
+                <div aura:id="textacc" class="slds-hide" >
+                	<div class="slds-input-has-icon slds-input-has-icon--right" style="border: 1px solid lightgray;"> 
+                    		<lightning:pill class="pillSize" label="{!v.parentAccount.LookupValue__c}" name="{!v.parentAccount.LookupValue__c}" onremove="{!c.handleRemove }"/>
+                     </div>
+                </div>
+                <div lightning-input_input="" aura:id="required1" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;">Complete this field.</div>
+            </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> Existing Location 
+                <lightning:helptext content="Select an existing location if they already exist or leave blank and type in the address info below" />
+                	 <br/><c:customLookup recordId="searchLocationOnly" objectAPIName="Location__c" IconName="standard:Account" selectedRecord="{!v.searchLocation}"/>   
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="Address Line 1" value="{!v.objLocation.addrline2__c}"  /><div lightning-input_input="" aura:id="required2" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="Address Line 2" value="{!v.objLocation.addrline3__c}"  /><div lightning-input_input="" aura:id="required3" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div> </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="City" value="{!v.city}"   /><div lightning-input_input="" aura:id="required4" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="State" value="{!v.state}" /><div lightning-input_input="" aura:id="required5" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div> </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="Postal Code" value="{!v.objLocation.addrpost_code__c}"   /><div lightning-input_input="" aura:id="required6" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="Country" value="{!v.objLocation.addrline5__c}"  /> <div lightning-input_input="" aura:id="required7" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div></div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:input type="Text" label="UN Code" value="{!v.objLocation.UNCode__c}"   /><div lightning-input_input="" aura:id="required6" data-help-message="true" role="alert" class="slds-form-element__help" style="color: crimson;"></div> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> </div>
+        </div>
+    </lightning:card>
+</aura:component>

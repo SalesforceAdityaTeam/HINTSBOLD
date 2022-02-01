@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Compact_Layout</fullName>
+    <fields>accm1_rec_type__c</fields>
+    <fields>ShippingAddress</fields>
+    <fields>BillingAddress</fields>
+    <fields>Website</fields>
+    <fields>Phone</fields>
+    <fields>Industry</fields>
+    <label>Agent Compact Layout</label>
+</CompactLayout>

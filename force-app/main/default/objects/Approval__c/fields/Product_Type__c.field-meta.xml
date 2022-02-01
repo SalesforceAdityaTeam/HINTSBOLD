@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AR</fullName>
+                <default>false</default>
+                <label>AR</label>
+            </value>
+            <value>
+                <fullName>AT EU15</fullName>
+                <default>false</default>
+                <label>AT EU15</label>
+            </value>
+            <value>
+                <fullName>AU</fullName>
+                <default>false</default>
+                <label>AU</label>
+            </value>
+            <value>
+                <fullName>BE EU15</fullName>
+                <default>false</default>
+                <label>BE EU15</label>
+            </value>
+            <value>
+                <fullName>BR</fullName>
+                <default>false</default>
+                <label>BR</label>
+            </value>
+            <value>
+                <fullName>BY</fullName>
+                <default>false</default>
+                <label>BY</label>
+            </value>
+            <value>
+                <fullName>CA</fullName>
+                <default>false</default>
+                <label>CA</label>
+            </value>
+            <value>
+                <fullName>CH</fullName>
+                <default>false</default>
+                <label>CH</label>
+            </value>
+            <value>
+                <fullName>CL</fullName>
+                <default>false</default>
+                <label>CL</label>
+            </value>
+            <value>
+                <fullName>CZ EU</fullName>
+                <default>false</default>
+                <label>CZ EU</label>
+            </value>
+            <value>
+                <fullName>DE EU15</fullName>
+                <default>false</default>
+                <label>DE EU15</label>
+            </value>
+            <value>
+                <fullName>DK EU15</fullName>
+                <default>false</default>
+                <label>DK EU15</label>
+            </value>
+            <value>
+                <fullName>EC FEED ORIGIN, GMP + FSA ASSU</fullName>
+                <default>false</default>
+                <label>EC FEED ORIGIN, GMP + FSA ASSU</label>
+            </value>
+            <value>
+                <fullName>EE  EU</fullName>
+                <default>false</default>
+                <label>EE  EU</label>
+            </value>
+            <value>
+                <fullName>ES EU15</fullName>
+                <default>false</default>
+                <label>ES EU15</label>
+            </value>
+            <value>
+                <fullName>FI EU15</fullName>
+                <default>false</default>
+                <label>FI EU15</label>
+            </value>
+            <value>
+                <fullName>FR EU15</fullName>
+                <default>false</default>
+                <label>FR EU15</label>
+            </value>
+            <value>
+                <fullName>GB</fullName>
+                <default>false</default>
+                <label>GB</label>
+            </value>
+            <value>
+                <fullName>HU  EU</fullName>
+                <default>false</default>
+                <label>HU  EU</label>
+            </value>
+            <value>
+                <fullName>IE EU15</fullName>
+                <default>false</default>
+                <label>IE EU15</label>
+            </value>
+            <value>
+                <fullName>IL</fullName>
+                <default>false</default>
+                <label>IL</label>
+            </value>
+            <value>
+                <fullName>IN</fullName>
+                <default>false</default>
+                <label>IN</label>
+            </value>
+            <value>
+                <fullName>IS</fullName>
+                <default>false</default>
+                <label>IS</label>
+            </value>
+            <value>
+                <fullName>IT EU15</fullName>
+                <default>false</default>
+                <label>IT EU15</label>
+            </value>
+            <value>
+                <fullName>LT  EU</fullName>
+                <default>false</default>
+                <label>LT  EU</label>
+            </value>
+            <value>
+                <fullName>LU EU15</fullName>
+                <default>false</default>
+                <label>LU EU15</label>
+            </value>
+            <value>
+                <fullName>LV  EU</fullName>
+                <default>false</default>
+                <label>LV  EU</label>
+            </value>
+            <value>
+                <fullName>MY</fullName>
+                <default>false</default>
+                <label>MY</label>
+            </value>
+            <value>
+                <fullName>NL EU15</fullName>
+                <default>false</default>
+                <label>NL EU15</label>
+            </value>
+            <value>
+                <fullName>NO</fullName>
+                <default>false</default>
+                <label>NO</label>
+            </value>
+            <value>
+                <fullName>NZ</fullName>
+                <default>false</default>
+                <label>NZ</label>
+            </value>
+            <value>
+                <fullName>PE</fullName>
+                <default>false</default>
+                <label>PE</label>
+            </value>
+            <value>
+                <fullName>PL  EU</fullName>
+                <default>false</default>
+                <label>PL  EU</label>
+            </value>
+            <value>
+                <fullName>PT EU15</fullName>
+                <default>false</default>
+                <label>PT EU15</label>
+            </value>
+            <value>
+                <fullName>PY</fullName>
+                <default>false</default>
+                <label>PY</label>
+            </value>
+            <value>
+                <fullName>SE EU15</fullName>
+                <default>false</default>
+                <label>SE EU15</label>
+            </value>
+            <value>
+                <fullName>SK EU</fullName>
+                <default>false</default>
+                <label>SK EU</label>
+            </value>
+            <value>
+                <fullName>TH</fullName>
+                <default>false</default>
+                <label>TH</label>
+            </value>
+            <value>
+                <fullName>TR</fullName>
+                <default>false</default>
+                <label>TR</label>
+            </value>
+            <value>
+                <fullName>UA</fullName>
+                <default>false</default>
+                <label>UA</label>
+            </value>
+            <value>
+                <fullName>US</fullName>
+                <default>false</default>
+                <label>US</label>
+            </value>
+            <value>
+                <fullName>UY</fullName>
+                <default>false</default>
+                <label>UY</label>
+            </value>
+            <value>
+                <fullName>ZA</fullName>
+                <default>false</default>
+                <label>ZA</label>
+            </value>
+            <value>
+                <fullName>ZAN</fullName>
+                <default>false</default>
+                <label>ZAN</label>
+            </value>
+            <value>
+                <fullName>ZBEDEFRNL EU15</fullName>
+                <default>false</default>
+                <label>ZBEDEFRNL EU15</label>
+            </value>
+            <value>
+                <fullName>ZBEDENL EU15</fullName>
+                <default>false</default>
+                <label>ZBEDENL EU15</label>
+            </value>
+            <value>
+                <fullName>ZBEFR EU15</fullName>
+                <default>false</default>
+                <label>ZBEFR EU15</label>
+            </value>
+            <value>
+                <fullName>ZCHDE EU15</fullName>
+                <default>false</default>
+                <label>ZCHDE EU15</label>
+            </value>
+            <value>
+                <fullName>ZCL/EU15 /NZ</fullName>
+                <default>false</default>
+                <label>ZCL/EU15 /NZ</label>
+            </value>
+            <value>
+                <fullName>ZDKSE EU15</fullName>
+                <default>false</default>
+                <label>ZDKSE EU15</label>
+            </value>
+            <value>
+                <fullName>ZEU</fullName>
+                <default>false</default>
+                <label>ZEU</label>
+            </value>
+            <value>
+                <fullName>ZEU15</fullName>
+                <default>false</default>
+                <label>ZEU15</label>
+            </value>
+            <value>
+                <fullName>ZEU15CH</fullName>
+                <default>false</default>
+                <label>ZEU15CH</label>
+            </value>
+            <value>
+                <fullName>ZEUCAUS</fullName>
+                <default>false</default>
+                <label>ZEUCAUS</label>
+            </value>
+            <value>
+                <fullName>ZEUOCUS</fullName>
+                <default>false</default>
+                <label>ZEUOCUS</label>
+            </value>
+            <value>
+                <fullName>ZEUUS</fullName>
+                <default>false</default>
+                <label>ZEUUS</label>
+            </value>
+            <value>
+                <fullName>ZNEU</fullName>
+                <default>false</default>
+                <label>ZNEU</label>
+            </value>
+            <value>
+                <fullName>ZNLBE EU15</fullName>
+                <default>false</default>
+                <label>ZNLBE EU15</label>
+            </value>
+            <value>
+                <fullName>ZNLDE EU15</fullName>
+                <default>false</default>
+                <label>ZNLDE EU15</label>
+            </value>
+            <value>
+                <fullName>ZNLEU15/NZ</fullName>
+                <default>false</default>
+                <label>ZNLEU15/NZ</label>
+            </value>
+            <value>
+                <fullName>ZOC</fullName>
+                <default>false</default>
+                <label>ZOC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

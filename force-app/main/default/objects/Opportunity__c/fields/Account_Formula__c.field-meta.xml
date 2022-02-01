@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Account__c),
+HYPERLINK(&apos;https://hoogwegt--ismdev--c.visualforce.com/apex/ChildAccountLookupPage?id=&apos; &amp; Id ,&apos;SELECT Account&apos;,&apos;_self&apos;),
+
+HYPERLINK(&apos;/lightning/r/Account/&apos; &amp; Account__r.Id &amp; &apos;/view&apos;,Account__r.Name,&apos;_self&apos;)
+&amp;&quot; &quot;&amp;
+HYPERLINK(&apos;https://hoogwegt--ismdev--c.visualforce.com/apex/ChildAccountLookupPage?id=&apos; &amp; Id ,&apos;(change)&apos;,&apos;_self&apos;)
+)
+
+
+/*
+IF(ISBLANK( Account__c ) , HYPERLINK(&apos;https://hoogwegt--ismdev--c.visualforce.com/apex/ChildAccountLookupPage?id=&apos; &amp; Id , &apos;SELECT Account&apos;,&apos;_self&apos;),
+HYPERLINK(&apos;https://hoogwegt--ismdev--c.visualforce.com/apex/ChildAccountLookupPage?id=&apos; &amp; Id , Account__r.Name,&apos;_self&apos;))
+*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

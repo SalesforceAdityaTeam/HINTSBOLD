@@ -1,0 +1,12 @@
+<apex:page standardController="Account" showHeader="true">
+    <apex:includeLightning />
+    <div id="lightninglayout" />
+    <script>
+ $Lightning.use("c:AddNewLocationApp", function() {
+ $Lightning.createComponent("c:AddNewLocation",{"recordId":"{!$CurrentPage.parameters.Id}"},
+ "lightninglayout",
+ function(cmp) {
+    console.log('Component created, do something cool here');
+ });
+ });
+ </script></apex:page>

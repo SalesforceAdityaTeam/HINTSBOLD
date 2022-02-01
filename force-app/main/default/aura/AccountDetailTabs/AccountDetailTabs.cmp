@@ -1,0 +1,941 @@
+<aura:component controller="AccountProductCtrl"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="tabSelected" type="string" default="Trade"/>
+    <aura:attribute name="oldtabSelected" type="string" default=""/>
+    <aura:attribute name="IsChanged" type="string" default="true"/>
+    <aura:attribute name="IsEdit" type="boolean" default="false"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute type="List" name="lstProducts"/>
+    <aura:handler name="init" action="{!c.presetData}" value="{!this}"/> 
+    
+    
+    <aura:attribute name="fields" type="String[]" />
+    <aura:attribute name="variable1" type="boolean" default="true"/>
+    <aura:attribute name="variable2" type="boolean" default="true"/>	
+    <aura:attribute name="variable3" type="boolean" default="true"/>
+    <aura:attribute name="variable4" type="boolean" default="true"/>
+    <aura:attribute name="variable5" type="boolean" default="true"/>
+    <aura:attribute name="variable6" type="boolean" default="true"/>
+    <aura:attribute name="variable7" type="boolean" default="true"/>
+    <aura:attribute name="variable8" type="boolean" default="true"/>
+    <aura:attribute name="variable9" type="boolean" default="true"/>
+    <aura:attribute name="logvar" type="boolean" default="true"/>
+    <aura:attribute name="var1" type="boolean" default="true"/>
+    <aura:attribute name="var2" type="boolean" default="true"/>
+    <aura:attribute name="other" type="boolean" default="true"/>
+    <aura:attribute name="logsv" type="boolean" default="true"/>
+    <aura:attribute name="var3" type="boolean" default="true"/>
+    <aura:attribute name="var4" type="boolean" default="true"/>
+    <aura:attribute name="var5" type="boolean" default="true"/>
+    <aura:attribute name="var6" type="boolean" default="true"/>
+    <aura:attribute name="var7" type="boolean" default="true"/>
+    <aura:attribute name="var8" type="boolean" default="true"/>
+    <aura:attribute name="var9" type="boolean" default="true"/>
+    <aura:attribute name="var10" type="boolean" default="true"/>
+    <aura:attribute name="var11" type="boolean" default="true"/>
+    <aura:attribute name="var12" type="boolean" default="true"/>
+    <aura:attribute name="var13" type="boolean" default="true"/>
+    
+    
+    <aura:if isTrue="{!v.IsEdit}">
+    	<lightning:recordEditForm aura:id="myRecordForm"
+                              recordId="{!v.recordId}"
+                              objectApiName="Account" 
+                              onload="{!c.handleCreateLoad}"
+                              onsuccess="{!c.handleSuccess}"
+                              >
+            <center>
+           <lightning:button class="slds-m-top_small customButton" name="Cancel" label="Cancel" onclick="{! c.cancel }"/>
+        	<lightning:button class="slds-m-top_small customButton" type="submit" name="Save" label="Save"/>
+      </center> 
+            <br/>
+        <lightning:messages />
+        <lightning:tabset  selectedTabId="{!v.tabSelected}" variant="scoped">
+            <lightning:tab  label="Trade" id="Trade" onactive="{!c.tabHandler}" >
+            <!--    <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="AllTraders__c" aura:Id="AllTraders__c"/>
+                        <lightning:inputField fieldName="Pending_Offers__c" aura:Id="Pending_Offers__c"/>
+                        <lightning:inputField fieldName="Outstanding_Contracts__c" aura:Id="Outstanding_Contracts__c"/>
+                        <lightning:inputField fieldName="Status_Outstanding_Contracts__c" aura:Id="Status_Outstanding_Contracts__c"/>
+                        <lightning:inputField fieldName="Payment_Term__c" aura:Id="Payment_Term__c" />
+                        <lightning:inputField fieldName="Outstanding_Payments__c" aura:Id="Outstanding_Payments__c" />
+                        <lightning:inputField fieldName="Max_Credit_Limit__c" aura:Id="Max_Credit_Limit__c" />
+                        <lightning:inputField fieldName="Secondary_Trader_1__c" aura:Id="Secondary_Trader_1__c" />
+                        <lightning:inputField fieldName="Secondary_Trader_2__c" aura:Id="Secondary_Trader_2__c" />
+                        <lightning:inputField fieldName="Secondary_Trader_3__c" aura:Id="Secondary_Trader_3__c" />
+                        <lightning:inputField fieldName="Industry__c" aura:Id="Industry__c" />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Trader_user__c" aura:Id="Trader_user__c" />
+                        <lightning:inputField fieldName="Total_Credit_Available__c" aura:Id="Total_Credit_Available__c" />
+                        <lightning:inputField fieldName="Past_Due_Total__c" aura:Id="Past_Due_Total__c" />
+                        <lightning:inputField fieldName="Past_Due_30__c" aura:Id="Past_Due_30__c" />
+                        <lightning:inputField fieldName="Past_Due_60__c" aura:Id="Past_Due_60__c" />
+                        <lightning:inputField fieldName="Secondary_Trader_4__c" aura:Id="Secondary_Trader_4__c" />
+                        <lightning:inputField fieldName="Secondary_Trader_5__c" aura:Id="Secondary_Trader_5__c" />
+                        <lightning:inputField fieldName="Agent__c" aura:Id="Agent__c" />
+                        <lightning:inputField fieldName="Priority_Level__c" aura:Id="Priority_Level__c" />
+                        <lightning:inputField fieldName="Type" aura:Id="Type" />
+                        <lightning:inputField fieldName="Comment__c" aura:Id="Comment__c" />
+                    </div>
+                </div>-->
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> Trading information </h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Pending_Offers__c" aura:Id="Pending_Offers__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Outstanding_Contracts__c" aura:Id="Outstanding_Contracts__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Status_Outstanding_Contracts__c" aura:Id="Status_Outstanding_Contracts__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Payment_Term__c" aura:Id="Payment_Term__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Max_Credit_Limit__c" aura:Id="Max_Credit_Limit__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Total_Credit_Available__c" aura:Id="Total_Credit_Available__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Outstanding_Payments__c" aura:Id="Outstanding_Payments__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Due_Payments__c" aura:Id="Due_Payments__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Sold_Bought_volume_FY_YTD_per_product__c" aura:Id="Sold_Bought_volume_FY_YTD_per_product__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Budget_FY_per_product__c" aura:Id="Budget_FY_per_product__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Sold_Bought_vol_previous_FY_per_product__c" aura:Id="Sold_Bought_vol_previous_FY_per_product__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Pending_Approvals__c" aura:Id="Pending_Approvals__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Pending_projects__c" aura:Id="Pending_projects__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Pending_claims__c" aura:Id="Pending_claims__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Others_Pending__c" aura:Id="Others_Pending__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Agent__c" aura:Id="Agent__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="General_Remark__c" aura:Id="General_Remark__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> Account information </h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Child_Name_Account__c" aura:Id="Child_Name_Account__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Parent_Account__c" aura:Id="Parent_Account__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Short_name__c" aura:Id="Short_name__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Account_Level__c" aura:Id="Account_Level__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="RecordType" aura:Id="RecordType"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Traders_Involved__c" aura:Id="Traders_Involved__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="accmaccm_region__c" aura:Id="accmaccm_region__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="BillingStreet" aura:Id="BillingStreet"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="BillingCity" aura:Id="BillingCity"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="BillingState" aura:Id="BillingState"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="BillingPostalCode" aura:Id="BillingPostalCode"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="BillingCountry" aura:Id="BillingCountry"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Website" aura:Id="Website"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Phone" aura:Id="Phone"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Industry__c" aura:Id="Industry__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Customer_Priority_Level__c" aura:Id="Customer_Priority_Level__c"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade">More information</h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="CreatedDate" aura:Id="CreatedDate"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="Account_Status__c" aura:Id="Account_Status__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="JDE_Counterparty_Number__c" aura:Id="JDE_Counterparty_Number__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="LastModifiedById" aura:Id="LastModifiedById"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:inputField fieldName="CRM_ID__c" aura:Id="CRM_ID__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </lightning:tab>
+            
+            <lightning:tab label="Logistics" id="Logistics" onactive="{!c.tabHandler}" >
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <lightning:inputField fieldName="Logistics_Category__c" aura:id="Logistics_Category__c"  onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.logvar}">
+                            <lightning:inputField fieldName="Samples_Required__c" aura:id="Samples_Required__c"/>
+                            <lightning:inputField fieldName="Loading_Requirements2__c" aura:id="Loading_Requirements2__c"  />
+                            <lightning:inputField fieldName="Any_Storage_Transport_Conditions__c" aura:id="Any_Storage_Transport_Conditions__c" onchange="{!c.onClick}"/>
+                            <aura:if isTrue="{!v.var5}">
+                                <lightning:inputField fieldName="Special_Storage_Transport_Conditions__c"/>
+                            </aura:if>
+                            <lightning:inputField fieldName="Requirements_on_Un_loading_Hrs__c" aura:id="Requirements_on_Un_loading_Hrs__c" onchange="{!c.onClick}"/>
+                            <aura:if isTrue="{!v.var6}">
+                                <lightning:inputField fieldName="Instructions_for_Un_loading_hours__c"/>
+                            </aura:if>
+                            <lightning:inputField fieldName="Required_Documents_for_this_Customer__c" />
+                            <lightning:inputField fieldName="Additional_Document_Information__c" aura:Id = 'Additional_Document_Information__c' />
+                        </aura:if>
+                        
+                        
+                        <aura:if isTrue="{!v.logsv}">
+                            <lightning:inputField fieldName="Country_Requirements__c" aura:id="Country_Requirements__c" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var7}">
+                                <lightning:inputField fieldName="Applicable_Country_Requirements__c"/>
+                                <lightning:inputField fieldName="Other_Country_Requirements__c"/>
+                            </aura:if>
+                            <lightning:inputField fieldName="Legalizations_by_CoC__c" aura:id="Legalizations_by_CoC__c" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var8}">
+                                <lightning:inputField fieldName="Legalization_Whom_Where__c" />
+                                <lightning:inputField fieldName="Which_Documents__c"/>
+                            </aura:if>
+                            <lightning:inputField fieldName="Bank_approval_LOI_Required__c"/>
+                            <lightning:inputField fieldName="Samples_Required__c"/>
+                            <lightning:inputField fieldName="Loading_Requirements2__c"/>
+                            <lightning:inputField fieldName="Required_Items_Inside_Container__c" aura:id="Required_Items_Inside_Container__c" onchange="{!c.onClick}" />
+                            
+                            <aura:if isTrue="{!v.var10}">
+                                <lightning:inputField fieldName="Additional_items_inside_container__c"/>
+                                <lightning:inputField fieldName="Special_Instructions_for_additional_Item__c"/>
+                            </aura:if>
+                            <lightning:inputField fieldName="Required_Documents_for_this_Customer_Exp__c"/>
+                            <lightning:inputField fieldName="Additional_Document_Information__c" aura:Id = 'Additional_Document_Information__c' />
+                            <lightning:inputField fieldName="Special_Shipping_Line_Requirements__c" aura:id="Special_Shipping_Line_Requirements__c" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var11}">
+                                <lightning:inputField fieldName="Special_Shipping_Line_Instruction__c"/>
+                            </aura:if>
+                            <lightning:inputField fieldName="Free_time_at_POD_for_this_customer__c" aura:id="Free_time_at_POD_for_this_customer__c" onchange="{!c.onClick}"/>
+                            <aura:if isTrue="{!v.var9}">
+                                <lightning:inputField fieldName="Required_No_of_Days__c"/>
+                            </aura:if>        
+                        </aura:if>
+                        
+                        <lightning:inputField fieldName="Additional_Label_each_Package__c" aura:id="Additional_Label_each_Package__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.var1}">
+                            <lightning:inputField fieldName="Package_Label_Language__c"/>
+                            <lightning:inputField fieldName="Special_Instruction__c"/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.var2}">
+                            <lightning:inputField fieldName="Special_Instruction__c"/>
+                        </aura:if>
+                        <lightning:inputField fieldName="Additional_Label_each_Pallet__c" aura:id="Additional_Label_each_Pallet__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.var3}">
+                            <lightning:inputField fieldName="Pallet_Label_Language__c"/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.var4||v.var3}">
+                            <lightning:inputField fieldName="Special_Pallet_Instruction__c"/>
+                        </aura:if>	
+                        
+                         
+                        <lightning:inputField fieldName="Any_Technical_Document_for_each_Loading__c" aura:Id = 'Any_Technical_Document_for_each_Loading__c' onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.other}">
+                             <lightning:inputField fieldName="Any_Technical_Document_Other__c" aura:Id = 'Any_Technical_Document_Other__c'  />
+                        </aura:if>
+                        <lightning:inputField fieldName="Additional_Instruction_for_Technical_Doc__c" />
+                    </div>
+                    
+                </div>
+                
+                
+            </lightning:tab>
+            
+            <lightning:tab label="Techno" id="Techno" onactive="{!c.tabHandler}" >
+                
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:inputField fieldName="GFSI_Certificate_Required__c" aura:id="GFSI_Certificate_Required__c" name="GFSI_Certificate_Required__c" onchange="{!c.onClick}"/>
+                        <aura:if isTrue="{!v.variable1}">
+                            <lightning:inputField fieldName="GFSI_Certificate__c" aura:id="GFSI_Certificate__c"/>
+                        </aura:if>
+                        
+                        <lightning:inputField fieldName="GMP_Certificate_Required__c" aura:id="GMP_Certificate_Required__c" onchange="{!c.onClick}"/>
+                        <aura:if isTrue="{!v.variable2}">
+                            <lightning:inputField fieldName="GMP__c" aura:id="GMP__c"/>
+                        </aura:if>
+                        
+                        <lightning:inputField fieldName="Halal_Certificate_Required__c" aura:id="Halal_Certificate_Required__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable3}">
+                            <lightning:inputField fieldName="Halal__c" aura:id="Halal__c"/>
+                            <lightning:inputField fieldName="Additional_Info_on_Halal_Certificate__c"/>
+                        </aura:if>
+                        
+                        <lightning:inputField fieldName="Kosher_Certificate_Required__c" aura:id="Kosher_Certificate_Required__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable4}">
+                            <lightning:inputField fieldName="Kosher__c" aura:id="Kosher__c"/>
+                        </aura:if>
+                        
+                        <lightning:inputField fieldName="Organic_Certificate_Required__c" aura:id="Organic_Certificate_Required__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable5}">
+                            <lightning:inputField fieldName="Organic__c" aura:id="Organic"/>
+                        </aura:if>
+                        <lightning:inputField fieldName="Vlog_Certificate_Required__c" aura:id="Vlog_Certificate_Required__c" onchange="{!c.onClick}"/>
+                        <aura:if isTrue="{!v.variable6}">
+                            <lightning:inputField fieldName="VLOG__c" aura:id="VLOG__c"/>
+                        </aura:if>
+                        <lightning:inputField fieldName="Ethical__c"/>
+                        <lightning:inputField fieldName="Environmental_Sustainable_Requirements__c"/>
+                        <lightning:inputField fieldName="Packaging_compliance_food_grade__c"/>
+                        <lightning:inputField fieldName="GMO_Free_statement__c"/>
+                        <lightning:inputField fieldName="Free_from_irradiation__c"/>
+                        <lightning:inputField fieldName="Origin_Certificate_Required__c" aura:id="Origin_Certificate_Required__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable7}">
+                            <lightning:inputField fieldName="Origin_requirement__c" aura:id="Origin_requirement"/>
+                        </aura:if>
+                        <lightning:inputField fieldName="Free_from_veterinary_disease__c"/>
+                        <lightning:inputField fieldName="No_growth_promotors__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Specimen_CoA__c" aura:id="Specimen_CoA__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable9}">
+                            <lightning:inputField fieldName="Where_can_we_find_a_copy_of_the_specimen__c"/>
+                        </aura:if>
+                        <td/>
+                        <lightning:inputField fieldName="HACCP_Flow_diagram_incl_CCP__c" />
+                        <lightning:inputField fieldName="Allergen_declaration__c" />
+                        <lightning:inputField fieldName="Heavy_metals__c" />
+                        <lightning:inputField fieldName="Antibiotics__c" />
+                        <lightning:inputField fieldName="Pesticides_incl_dioxins__c" />
+                        <lightning:inputField fieldName="Aflatoxin_M1__c" />
+                        <lightning:inputField fieldName="Melamine__c" />
+                        <lightning:inputField fieldName="Vegetarian__c" />
+                        <lightning:inputField fieldName="Partly_hydrogenated_oils__c" />
+                        <lightning:inputField fieldName="Additives__c" aura:id="Additives__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.var12}">
+                            <lightning:inputField fieldName="Additional_Info_on_additive_requirement__c" />
+                        </aura:if>
+                        <lightning:inputField fieldName="Photo_s_item_unit_incl_prints__c" />
+                        <lightning:inputField fieldName="MSDS_Item__c" />
+                        <lightning:inputField fieldName="Microbiological_control_plan__c" />
+                        <lightning:inputField fieldName="Traceability_control_plan__c" />
+                        <lightning:inputField fieldName="Customer_Buying_Specification_Present__c" aura:id="Customer_Buying_Specification_Present__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable8}">
+                            <lightning:inputField fieldName="Where_Can_I_find_Copy_of_It__c" />
+                        </aura:if>
+                    </div>
+                </div>
+                
+                
+            </lightning:tab>
+            
+            <lightning:tab  label="Finance" id="Finance" onactive="{!c.tabHandler}">
+                
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="EntityCompany__c"/>
+                        <lightning:inputField fieldName="accmcredit_limit__c"/>
+                        <lightning:inputField fieldName="HoldInvoices__c"/>
+                        <lightning:inputField fieldName="AR_Terms__c"/>
+                        <lightning:inputField fieldName="AlternatePayor__c"/>
+                        <lightning:inputField fieldName="Date_LastCreditReview__c"/>
+                        <lightning:inputField fieldName="CustomerCurrencyCode_ABAmounts__c"/>
+                        <lightning:inputField fieldName="accmdate_created__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Related_AddressNumber__c"/>
+                        <lightning:inputField fieldName="BillingAddressType__c"/>
+                        <lightning:inputField fieldName="CreditHoldExempt__c"/>
+                        <lightning:inputField fieldName="FreightHandlingCode__c"/>
+                        <lightning:inputField fieldName="Ext_SFAccCusNum__c"/>
+                        <lightning:inputField fieldName="DefaultAddress__c"/>
+                        <lightning:inputField fieldName="PaymentTermsCode__c"/>
+                    </div>
+                </div>
+                
+            </lightning:tab>
+            
+            <lightning:tab label="Summary" id="Summary" onactive="{!c.tabHandler}" >
+                <!--
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Name"/>
+                        <lightning:inputField fieldName="accmShortName__c"/>
+                        <lightning:inputField fieldName="Account_Level__c"/>
+                        <lightning:inputField fieldName="Website"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="RecordTypeId"/>
+                        <lightning:inputField fieldName="JDE_Counterparty_Number__c"/>
+                        <lightning:inputField fieldName="Phone"/>
+                        <lightning:inputField fieldName="JDE_Status__c"/>                     
+                    </div>
+                </div>
+                -->
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> Company description </h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-1"><lightning:inputField fieldName="Description" aura:Id="Description"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade">Products </h3>
+                   
+                       
+                    		<div class="slds-table--header-fixed_container" style="height:350px;">
+                             <!--   <center>
+                                    <lightning:button onclick="{!c.savedata}" variant="brand" label="Save" title="Save" />
+                                </center>
+                               --> <div class="slds-scrollable_y" style="height:100%;">
+                                    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                        <thead>
+                                            <tr class="slds-text-title_caps">
+                                                <th scope="col">
+                                                    <div class="slds-truncate">PRODUCT</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">PURCHASE VOLUME</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">APPLICATION</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">General Comments</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">Action </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <aura:iteration items="{!v.lstProducts}" var="a">
+                                                <tr>
+                                                    <td data-label="PRODUCT">
+                                                        <lightning:input type="text"  value="{!a.Name}" name="{!a.Sequence__c}" aura:id="Name" default="English" />
+                                                    </td>
+                                                    <td data-label="PURCHASE VOLUME">
+                                                        <lightning:input type="text" value="{!a.Purchase_Volume__c}"  name="{!a.Sequence__c}" aura:id="Purchase_Volume__c" />    
+                                                    </td>
+                                                    <td data-label="APPLICATION">
+                                                        <lightning:input type="text" value="{!a.Application__c}"  name="{!a.Sequence__c}" aura:id="Application__c" />
+                                                    </td>
+                                                    <td data-label="General Comments">
+                                                        <lightning:input type="text"  value="{!a.General_Connents__c}" name="{!a.Sequence__c}" aura:id="General_Connents__c"/>
+                                                    </td>
+                                                    <td data-label="Action">
+                                                        <lightning:button onclick="{!c.removedata}" variant="destructive" iconPosition="right" name="{!a.Sequence__c}" iconName="utility:close" />
+                                                        <lightning:button onclick="{!c.addOnedata}" variant="success" iconPosition="right" name="{!a.Sequence__c}"  iconName="utility:add"/>    
+                                                    </td>
+                                                </tr>
+                                            </aura:iteration> 
+                                        </tbody>
+                                    </table>  
+                                </div>
+                    
+                            </div>
+                        </div>
+                    
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> General remarks</h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-1"><lightning:inputField fieldName="General_Remark__c" aura:Id="General_Remark__c"/></div>
+                        </div>
+                    </div>
+                </div>
+            </lightning:tab>
+            
+            <lightning:tab label="Address" id="Address" onactive="{!c.tabHandler}" >
+                
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                        <lightning:inputField fieldName="Office_Address__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="BillingAddress"/>
+                    </div>
+                </div>
+                
+            </lightning:tab>
+        </lightning:tabset>
+       <center>
+           <lightning:button class="slds-m-top_small customButton" name="Cancel" label="Cancel" onclick="{! c.cancel }"/>
+        	<lightning:button class="slds-m-top_small customButton" type="submit" name="Save" label="Save"/>
+      </center> 
+    </lightning:recordEditForm>
+    <aura:set attribute="else">
+      <lightning:recordEditForm aura:id="myRecordForm"
+                              recordId="{!v.recordId}"
+                              objectApiName="Account" 
+                              onload="{!c.handleCreateLoad}"
+                              onsuccess="{!c.handleSuccess}"
+                              >
+          <center>
+        	<lightning:button class="slds-m-top_small customButton" name="Edit" label="Edit" onclick="{! c.handleClick }" />
+      	</center> 
+          <br/>
+        <lightning:messages />
+        <lightning:tabset  selectedTabId="Trade" variant="scoped">
+            <lightning:tab  label="Trade" id="Trade" onactive="{!c.tabHandler}" >
+              <!--  <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedById"/>
+                        <lightning:outputField fieldName="AllTraders__c" aura:Id="AllTraders__c"/>
+                        <lightning:outputField fieldName="Pending_Offers__c" aura:Id="Pending_Offers__c"/>
+                        <lightning:outputField fieldName="Outstanding_Contracts__c" aura:Id="Outstanding_Contracts__c"/>
+                        <lightning:outputField fieldName="Status_Outstanding_Contracts__c" aura:Id="Status_Outstanding_Contracts__c"/>
+                        <lightning:outputField fieldName="Payment_Term__c" aura:Id="Payment_Term__c" />
+                        <lightning:outputField fieldName="Outstanding_Payments__c" aura:Id="Outstanding_Payments__c" />
+                        <lightning:outputField fieldName="Max_Credit_Limit__c" aura:Id="Max_Credit_Limit__c" />
+                        <lightning:outputField fieldName="Secondary_Trader_1__c" aura:Id="Secondary_Trader_1__c" />
+                        <lightning:outputField fieldName="Secondary_Trader_2__c" aura:Id="Secondary_Trader_2__c" />
+                        <lightning:outputField fieldName="Secondary_Trader_3__c" aura:Id="Secondary_Trader_3__c" />
+                        <lightning:outputField fieldName="Industry__c" aura:Id="Industry__c" />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedDate" aura:Id="LastModifiedDate"  />
+                        <lightning:outputField fieldName="Trader_user__c" aura:Id="Trader_user__c" />
+                        <lightning:outputField fieldName="Total_Credit_Available__c" aura:Id="Total_Credit_Available__c" />
+                        <lightning:outputField fieldName="Past_Due_Total__c" aura:Id="Past_Due_Total__c" />
+                        <lightning:outputField fieldName="Past_Due_30__c" aura:Id="Past_Due_30__c" />
+                        <lightning:outputField fieldName="Past_Due_60__c" aura:Id="Past_Due_60__c" />
+                        <lightning:outputField fieldName="Secondary_Trader_4__c" aura:Id="Secondary_Trader_4__c" />
+                        <lightning:outputField fieldName="Secondary_Trader_5__c" aura:Id="Secondary_Trader_5__c" />
+                        <lightning:outputField fieldName="Agent__c" aura:Id="Agent__c" />
+                        <lightning:outputField fieldName="Priority_Level__c" aura:Id="Priority_Level__c" />
+                        <lightning:outputField fieldName="Type" aura:Id="Type" />
+                        <lightning:outputField fieldName="Comment__c" aura:Id="Comment__c" />
+                    </div>
+                </div> -->
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> Trading information </h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Pending_Offers__c" aura:Id="Pending_Offers__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Outstanding_Contracts__c" aura:Id="Outstanding_Contracts__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Status_Outstanding_Contracts__c" aura:Id="Status_Outstanding_Contracts__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Payment_Term__c" aura:Id="Payment_Term__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Max_Credit_Limit__c" aura:Id="Max_Credit_Limit__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Total_Credit_Available__c" aura:Id="Total_Credit_Available__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Outstanding_Payments__c" aura:Id="Outstanding_Payments__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Due_Payments__c" aura:Id="Due_Payments__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Sold_Bought_volume_FY_YTD_per_product__c" aura:Id="Sold_Bought_volume_FY_YTD_per_product__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Budget_FY_per_product__c" aura:Id="Budget_FY_per_product__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Sold_Bought_vol_previous_FY_per_product__c" aura:Id="Sold_Bought_vol_previous_FY_per_product__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Pending_Approvals__c" aura:Id="Pending_Approvals__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Pending_projects__c" aura:Id="Pending_projects__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Pending_claims__c" aura:Id="Pending_claims__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Others_Pending__c" aura:Id="Others_Pending__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Agent__c" aura:Id="Agent__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="General_Remark__c" aura:Id="General_Remark__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> Account information </h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Child_Name_Account__c" aura:Id="Child_Name_Account__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Parent_Account__c" aura:Id="Parent_Account__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Short_name__c" aura:Id="Short_name__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Account_Level__c" aura:Id="Account_Level__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="RecordType" aura:Id="RecordType"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Traders_Involved__c" aura:Id="Traders_Involved__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="accmaccm_region__c" aura:Id="accmaccm_region__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="BillingStreet" aura:Id="BillingStreet"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="BillingCity" aura:Id="BillingCity"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="BillingState" aura:Id="BillingState"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="BillingPostalCode" aura:Id="BillingPostalCode"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="BillingCountry" aura:Id="BillingCountry"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Website" aura:Id="Website"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Phone" aura:Id="Phone"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Industry__c" aura:Id="Industry__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Customer_Priority_Level__c" aura:Id="Customer_Priority_Level__c"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade">More information</h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="CreatedDate" aura:Id="CreatedDate"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="Account_Status__c" aura:Id="Account_Status__c"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="JDE_Counterparty_Number__c" aura:Id="JDE_Counterparty_Number__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="LastModifiedById" aura:Id="LastModifiedById"/></div>
+                        </div>
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-2"><lightning:outputField fieldName="CRM_ID__c" aura:Id="CRM_ID__c"/></div>
+                            <div class="slds-col slds-size_1-of-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </lightning:tab>
+            
+            <lightning:tab label="Logistics" id="Logistics" onactive="{!c.tabHandler}" >
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <lightning:outputField fieldName="LastModifiedById"/>
+                        <lightning:outputField fieldName="LastModifiedDate"  aura:Id="LastModifiedDate" />
+                        <lightning:inputField fieldName="Logistics_Category__c" aura:id="Logistics_Category__c"  style="display:none;"  />
+                        <lightning:outputField fieldName="Logistics_Category__c" aura:id="Logistics_Category__cRead"   />
+                        <aura:if isTrue="{!v.logvar}">
+                            <lightning:outputField fieldName="Samples_Required__c" aura:id="Samples_Required__c" />
+                            <lightning:outputField fieldName="Loading_Requirements2__c" aura:id="Loading_Requirements2__c"  />
+                            <lightning:inputField fieldName="Any_Storage_Transport_Conditions__c" aura:id="Any_Storage_Transport_Conditions__c"  style="display:none;"  />
+                            <lightning:outputField fieldName="Any_Storage_Transport_Conditions__c" aura:id="Any_Storage_Transport_Conditions__c_read"  onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var5}">
+                                <lightning:outputField fieldName="Special_Storage_Transport_Conditions__c" />
+                            </aura:if>
+                            <lightning:inputField fieldName="Requirements_on_Un_loading_Hrs__c" aura:id="Requirements_on_Un_loading_Hrs__c"   style="display:none;"  />
+                            <lightning:outputField fieldName="Requirements_on_Un_loading_Hrs__c" aura:id="Requirements_on_Un_loading_Hrs__c_read" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var6}">
+                                <lightning:outputField fieldName="Instructions_for_Un_loading_hours__c" />
+                            </aura:if>
+                            <lightning:outputField fieldName="Required_Documents_for_this_Customer__c" />
+                            <lightning:outputField fieldName="Additional_Document_Information__c" aura:Id = "Additional_Document_Information__c" />
+                        </aura:if>
+                        
+                        
+                        <aura:if isTrue="{!v.logsv}">
+                            <lightning:inputField fieldName="Country_Requirements__c" aura:id="Country_Requirements__c"   style="display:none;" />
+                            <lightning:outputField fieldName="Country_Requirements__c" aura:id="Country_Requirements__c_read" onchange="{!c.onClick}"  />
+                            <aura:if isTrue="{!v.var7}">
+                                <lightning:outputField fieldName="Applicable_Country_Requirements__c" />
+                                <lightning:outputField fieldName="Other_Country_Requirements__c"/>
+                            </aura:if>
+                             <lightning:inputField fieldName="Legalizations_by_CoC__c" aura:id="Legalizations_by_CoC__c"   style="display:none;" />
+                            <lightning:outputField fieldName="Legalizations_by_CoC__c" aura:id="Legalizations_by_CoC__c_read" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var8}">
+                                <lightning:outputField fieldName="Legalization_Whom_Where__c" />
+                                <lightning:outputField fieldName="Which_Documents__c"/>
+                            </aura:if>
+                            <lightning:outputField fieldName="Bank_approval_LOI_Required__c"/>
+                            <lightning:outputField fieldName="Samples_Required__c" />
+                            <lightning:outputField fieldName="Loading_Requirements2__c" />
+                            <lightning:inputField fieldName="Required_Items_Inside_Container__c" aura:id="Required_Items_Inside_Container__c"   style="display:none;" />
+                            <lightning:outputField fieldName="Required_Items_Inside_Container__c" aura:id="Required_Items_Inside_Container__c_read" onchange="{!c.onClick}" />
+                            
+                            <aura:if isTrue="{!v.var10}">
+                                <lightning:outputField fieldName="Additional_items_inside_container__c" />
+                                <lightning:outputField fieldName="Special_Instructions_for_additional_Item__c" />
+                            </aura:if>
+                            <lightning:outputField fieldName="Required_Documents_for_this_Customer_Exp__c" />
+                            <lightning:outputField fieldName="Additional_Document_Information__c" aura:Id = "Additional_Document_Information__c" />
+                            <lightning:inputField fieldName="Special_Shipping_Line_Requirements__c" aura:id="Special_Shipping_Line_Requirements__c"   style="display:none;" />
+                            <lightning:outputField fieldName="Special_Shipping_Line_Requirements__c" aura:id="Special_Shipping_Line_Requirements__c_read" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var11}">
+                                <lightning:outputField fieldName="Special_Shipping_Line_Instruction__c" />
+                            </aura:if>
+                            <lightning:inputField fieldName="Free_time_at_POD_for_this_customer__c" aura:id="Free_time_at_POD_for_this_customer__c"   style="display:none;" />
+                            <lightning:outputField fieldName="Free_time_at_POD_for_this_customer__c" aura:id="Free_time_at_POD_for_this_customer__c_read" onchange="{!c.onClick}" />
+                            <aura:if isTrue="{!v.var9}">
+                                <lightning:outputField fieldName="Required_No_of_Days__c" />
+                            </aura:if>        
+                        </aura:if>
+                        
+                         <lightning:inputField fieldName="Additional_Label_each_Package__c" aura:id="Additional_Label_each_Package__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Additional_Label_each_Package__c" aura:id="Additional_Label_each_Package__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.var1}">
+                            <lightning:outputField fieldName="Package_Label_Language__c" />
+                            <lightning:outputField fieldName="Special_Instruction__c" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.var2}">
+                            <lightning:outputField fieldName="Special_Instruction__c" />
+                        </aura:if>
+                        <lightning:inputField fieldName="Additional_Label_each_Pallet__c" aura:id="Additional_Label_each_Pallet__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Additional_Label_each_Pallet__c" aura:id="Additional_Label_each_Pallet__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.var3}">
+                            <lightning:outputField fieldName="Pallet_Label_Language__c" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.var4||v.var3}">
+                            <lightning:outputField fieldName="Special_Pallet_Instruction__c" />
+                        </aura:if>	
+                        
+                        <lightning:outputField fieldName="Any_Technical_Document_for_each_Loading__c" aura:Id = "Any_Technical_Document_for_each_Loading__c_read" />
+                        <lightning:inputField fieldName="Any_Technical_Document_for_each_Loading__c" aura:Id = "Any_Technical_Document_for_each_Loading__c"  style="display:none;"/>
+                        <aura:if isTrue="{!v.other}">
+                             <lightning:outputField fieldName="Any_Technical_Document_Other__c" aura:Id = 'Any_Technical_Document_Other__c'  />
+                        </aura:if>
+                        <lightning:outputField fieldName="Additional_Instruction_for_Technical_Doc__c" />
+                    </div>
+                    
+                </div>
+                
+                
+            </lightning:tab>
+            
+            <lightning:tab label="Techno" id="Techno" onactive="{!c.tabHandler}" >
+                
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedById"/>
+                        <lightning:outputField fieldName="LastModifiedDate"  />
+                        <lightning:inputField fieldName="GFSI_Certificate_Required__c" aura:id="GFSI_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="GFSI_Certificate_Required__c" aura:id="GFSI_Certificate_Required__c_read" name="GFSI_Certificate_Required__c" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable1}">
+                            <lightning:outputField fieldName="GFSI_Certificate__c" aura:id="GFSI_Certificate__c" />
+                        </aura:if>
+                        <lightning:inputField fieldName="GMP_Certificate_Required__c" aura:id="GMP_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="GMP_Certificate_Required__c" aura:id="GMP_Certificate_Required__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable2}">
+                            <lightning:outputField fieldName="GMP__c" aura:id="GMP__c" />
+                        </aura:if>
+                        <lightning:inputField fieldName="Halal_Certificate_Required__c" aura:id="Halal_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Halal_Certificate_Required__c" aura:id="Halal_Certificate_Required__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable3}">
+                            <lightning:outputField fieldName="Halal__c" aura:id="Halal__c" />
+                            <lightning:outputField fieldName="Additional_Info_on_Halal_Certificate__c" />
+                        </aura:if>
+                        <lightning:inputField fieldName="Kosher_Certificate_Required__c" aura:id="Kosher_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Kosher_Certificate_Required__c" aura:id="Kosher_Certificate_Required__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable4}">
+                            <lightning:outputField fieldName="Kosher__c" aura:id="Kosher__c" />
+                        </aura:if>
+                        <lightning:inputField fieldName="Organic_Certificate_Required__c" aura:id="Organic_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Organic_Certificate_Required__c" aura:id="Organic_Certificate_Required__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable5}">
+                            <lightning:outputField fieldName="Organic__c" aura:id="Organic" />
+                        </aura:if>
+                        <lightning:inputField fieldName="Vlog_Certificate_Required__c" aura:id="Vlog_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Vlog_Certificate_Required__c" aura:id="Vlog_Certificate_Required__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable6}">
+                            <lightning:outputField fieldName="VLOG__c" aura:id="VLOG__c" />
+                        </aura:if>
+                        <lightning:outputField fieldName="Ethical__c" />
+                        <lightning:outputField fieldName="Environmental_Sustainable_Requirements__c" />
+                        <lightning:outputField fieldName="Packaging_compliance_food_grade__c" />
+                        <lightning:outputField fieldName="GMO_Free_statement__c" />
+                        <lightning:outputField fieldName="Free_from_irradiation__c" />
+                        <lightning:inputField fieldName="Origin_Certificate_Required__c" aura:id="Origin_Certificate_Required__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Origin_Certificate_Required__c" aura:id="Origin_Certificate_Required__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable7}">
+                            <lightning:outputField fieldName="Origin_requirement__c" aura:id="Origin_requirement" />
+                        </aura:if>
+                        <lightning:outputField fieldName="Free_from_veterinary_disease__c" />
+                        <lightning:outputField fieldName="No_growth_promotors__c" />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Specimen_CoA__c" aura:id="Specimen_CoA__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Specimen_CoA__c" aura:id="Specimen_CoA__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable9}">
+                            <lightning:outputField fieldName="Where_can_we_find_a_copy_of_the_specimen__c" />
+                        </aura:if>
+                        <td/>
+                        <lightning:outputField fieldName="HACCP_Flow_diagram_incl_CCP__c" />
+                        <lightning:outputField fieldName="Allergen_declaration__c" />
+                        <lightning:outputField fieldName="Heavy_metals__c" />
+                        <lightning:outputField fieldName="Antibiotics__c" />
+                        <lightning:outputField fieldName="Pesticides_incl_dioxins__c" />
+                        <lightning:outputField fieldName="Aflatoxin_M1__c" />
+                        <lightning:outputField fieldName="Melamine__c" />
+                        <lightning:outputField fieldName="Vegetarian__c" />
+                        <lightning:outputField fieldName="Partly_hydrogenated_oils__c" />
+                        <lightning:inputField fieldName="Additives__c" aura:id="Additives__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Additives__c" aura:id="Additives__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.var12}">
+                            <lightning:outputField fieldName="Additional_Info_on_additive_requirement__c" />
+                        </aura:if>
+                        <lightning:outputField fieldName="Photo_s_item_unit_incl_prints__c" />
+                        <lightning:outputField fieldName="MSDS_Item__c" />
+                        <lightning:outputField fieldName="Microbiological_control_plan__c" />
+                        <lightning:outputField fieldName="Traceability_control_plan__c" />
+                        <lightning:inputField fieldName="Customer_Buying_Specification_Present__c" aura:id="Customer_Buying_Specification_Present__c"   style="display:none;" />
+                        <lightning:outputField fieldName="Customer_Buying_Specification_Present__c" aura:id="Customer_Buying_Specification_Present__c_read" onchange="{!c.onClick}" />
+                        <aura:if isTrue="{!v.variable8}">
+                            <lightning:outputField fieldName="Where_Can_I_find_Copy_of_It__c" />
+                        </aura:if>
+                    </div>
+                </div>
+                
+                
+            </lightning:tab>
+            
+            <lightning:tab  label="Finance" id="Finance" onactive="{!c.tabHandler}">
+                
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedById"/>
+                        <lightning:outputField fieldName="EntityCompany__c"/>
+                        <lightning:outputField fieldName="accmcredit_limit__c"/>
+                        <lightning:outputField fieldName="HoldInvoices__c"/>
+                        <lightning:outputField fieldName="AR_Terms__c"/>
+                        <lightning:outputField fieldName="AlternatePayor__c"/>
+                        <lightning:outputField fieldName="Date_LastCreditReview__c"/>
+                        <lightning:outputField fieldName="CustomerCurrencyCode_ABAmounts__c"/>
+                        <lightning:outputField fieldName="accmdate_created__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedDate"  />
+                        <lightning:outputField fieldName="Related_AddressNumber__c"/>
+                        <lightning:outputField fieldName="BillingAddressType__c"/>
+                        <lightning:outputField fieldName="CreditHoldExempt__c"/>
+                        <lightning:outputField fieldName="FreightHandlingCode__c"/>
+                        <lightning:outputField fieldName="Ext_SFAccCusNum__c"/>
+                        <lightning:outputField fieldName="DefaultAddress__c"/>
+                        <lightning:outputField fieldName="PaymentTermsCode__c"/>
+                    </div>
+                </div>
+                
+            </lightning:tab>
+            
+            <lightning:tab label="Summary" id="Summary" onactive="{!c.tabHandler}" >
+               <!-- 
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedById"/>
+                        <lightning:outputField fieldName="Name"/>
+                        <lightning:outputField fieldName="accmShortName__c"/>
+                        <lightning:outputField fieldName="Account_Level__c"/>
+                        <lightning:outputField fieldName="Website"/>
+                        
+                        
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedDate"  />
+                        <lightning:outputField fieldName="RecordTypeId"/>
+                        <lightning:outputField fieldName="JDE_Counterparty_Number__c"/>
+                        <lightning:outputField fieldName="Phone"/>
+                        <lightning:outputField fieldName="JDE_Status__c"/>                     
+                    </div>
+                </div>
+                -->
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> Company description </h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-1"><lightning:outputField fieldName="Description" aura:Id="Description"/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade">Products </h3>
+                    		<div  style="height:350px;">
+                                <div class="slds-scrollable_y" style="height:100%;">
+                                    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                        <thead>
+                                            <tr class="slds-text-title_caps">
+                                                <th scope="col">
+                                                    <div class="slds-truncate">PRODUCT</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">PURCHASE VOLUME</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">APPLICATION</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate">General Comments</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <aura:iteration items="{!v.lstProducts}" var="a">
+                                                <tr>
+                                                    <td data-label="PRODUCT">
+                                                        <lightning:input type="text"  value="{!a.Name}" name="{!a.Sequence__c}" aura:id="Name" default="English" disabled="true"/>
+                                                    </td>
+                                                    <td data-label="PURCHASE VOLUME">
+                                                        <lightning:input type="text" value="{!a.Purchase_Volume__c}"  name="{!a.Sequence__c}" aura:id="Purchase_Volume__c" disabled="true"/>    
+                                                    </td>
+                                                    <td data-label="APPLICATION">
+                                                        <lightning:input type="text" value="{!a.Application__c}"  name="{!a.Sequence__c}" aura:id="Application__c" disabled="true"/>
+                                                    </td>
+                                                    <td data-label="General Comments">
+                                                        <lightning:input type="text"  value="{!a.General_Connents__c}" name="{!a.Sequence__c}" aura:id="General_Connents__c" disabled="true"/>
+                                                    </td>
+                                                    
+                                                </tr>
+                                            </aura:iteration> 
+                                        </tbody>
+                                    </table>  
+                                </div>
+                    
+                            </div>
+                        </div>
+                    
+                <div class="slds-section slds-is-open" >  <h3 class="slds-section__title slds-theme_shade"> General remarks</h3>
+                    <div class="slds-section__content" >
+                        <div class="slds-grid">
+                    		<div class="slds-col slds-size_1-of-1"><lightning:outputField fieldName="General_Remark__c" aura:Id="General_Remark__c"/></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </lightning:tab>
+            
+            <lightning:tab label="Address" id="Address" onactive="{!c.tabHandler}" >
+                
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedById"/>
+                        
+                        <lightning:outputField fieldName="Office_Address__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:outputField fieldName="LastModifiedDate"  />
+                        <lightning:outputField fieldName="BillingAddress"/>
+                    </div>
+                </div>
+                
+            </lightning:tab>
+        </lightning:tabset>
+       <center>
+        	<lightning:button class="slds-m-top_small customButton" name="Edit" label="Edit" onclick="{! c.handleClick }" />
+      </center> 
+    </lightning:recordEditForm>
+    </aura:set>
+  </aura:if> 
+    
+   <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+       <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+         <span class="slds-assistive-text">Loading</span>
+         <div class="slds-spinner__dot-a"></div>
+         <div class="slds-spinner__dot-b"></div>
+       </div>
+    </div>
+ </aura:if>
+</aura:component>

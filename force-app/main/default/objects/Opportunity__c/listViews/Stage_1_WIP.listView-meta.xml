@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_1_WIP</fullName>
+    <columns>NAME</columns>
+    <columns>Trader__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Product_Group__c</columns>
+    <columns>Account__c</columns>
+    <columns>Delivered_Price_Calculated__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>WIP</value>
+    </filters>
+    <label>Stage 1 - WIP</label>
+</ListView>

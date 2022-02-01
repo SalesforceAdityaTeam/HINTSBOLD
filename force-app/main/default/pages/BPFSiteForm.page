@@ -1,0 +1,533 @@
+<apex:page standardController="BPF__c" tabStyle="BPF__c" extensions="BPFSiteFormExt" showHeader="false" sidebar="false" lightningStylesheets="false"  >
+    
+    <style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            width: 500px;
+            margin-left: -250px;
+            top: 50px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.70;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+            padding-top: 1700px;
+        }
+        
+        #tstpopuppop{
+            display: none;
+        }
+        .container1 {
+              position: relative;
+            }
+            
+            .container1 .content1 {
+              position: absolute;
+              top: 0;
+              color: #f1f1f1;
+             padding-left: 18%;
+            }
+        .dateFormat{
+            display: none;
+        }
+    </style>
+    
+    <script>
+        function enablepopup(){
+            document.getElementById("tstpopuppop").style.display = 'block'; 
+        }
+        
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"></script>
+    <script type="text/javascript">
+      var verifyCallback = function(response) {
+        document.getElementById("buttonarea").style.display = 'block';
+        document.getElementById("uploadfilesection").style.display = 'block';
+        document.getElementById("recaptchadata").style.display = 'none';
+        document.getElementById("recaptchadatatext").style.display = 'none';
+      };
+      var onloadCallback = function() {
+        grecaptcha.render('recaptchadata', {
+          'sitekey' : '6Lcf5eAZAAAAAFv0WdgrJNEyotcgTgVGFg4d4tEW',
+          'callback' : verifyCallback,
+          'theme' : 'light'
+        });
+      };
+    </script>
+    <script>
+         j$ = jQuery.noConflict();
+         j$(document).ready(function () {
+              j$('input,select').keypress(function(event) { return event.keyCode != 13; });
+         });
+    
+    </script>
+    <style>
+        .validationchek{
+                border-left: 3px solid #c00 !important;
+                border-top: 1px solid !important;
+                border-bottom: 1px solid !important;
+                border-right: 1px solid !important;
+        }
+    </style>
+  
+    <div class="container1">
+      <apex:image url="{!$Resource.CowLogo}" style="width: 100%;padding-top: 89px; height: 421px !important;" />
+      <div class="content1">
+            <apex:image url="{!$Resource.CompnayLogo}" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;    box-shadow: 3px 5px #bfbfbf96;" />
+      </div>
+    </div>
+
+           <table style="width: -webkit-fill-available;">
+            <tr>
+              <!--  <td></td> -->
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                    <i>    Hello and welcome to the Hoogwegt Partner Form! Someone within your organization has expressed interest in working with Hoogwegt US, 
+                        or already does business with Hoogwegt US. This form is the first step in building or maintaining a fruitful relationship. Please fill 
+                        out all information that you know to be accurate and truthful. Share the link to this page with others in your company if you need to 
+                        collaborate on the answers. Hoogwegt US requires an employee with decision making power to sign-off on the provided information as a way
+                        of record keeping. Please reach out to your representative from Hoogwegt if you have any questions or concerns. </i>
+                    </p>
+                </td>
+                
+            </tr>
+        </table>
+        
+    
+    <apex:form id="form">
+      <!--  <apex:pageMessages ></apex:pageMessages> -->
+        <br/>
+        
+        <apex:pageBlock title="" rendered="{!IF(section= 'done',false,true)}" >
+            <apex:pageblockSection columns="2" title="Compliance"  collapsible="false" id="flist">
+                <apex:pageBlockSectionItem >
+                <p>
+                   <i> Ultimate Beneficial Owner (UBO)(s) - (i.e. - any person that directly or indirectly holds 25% or more of the shares, voting rights or ownership in the company as well as their individual % of ownership) </i>
+                </p>
+                <p></p>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <br/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Do any owners own more than 25% or more of the company?" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.OwnersOwnMoreThan25OrMore__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="If yes, then complete the UBO fields and ownership percentages" />
+                </apex:pageBlockSectionItem>
+                
+                
+                <apex:pageBlockSectionItem >
+                    <br/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                   <apex:outputLabel value="Full name"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="" />
+                     <apex:outputLabel value="% Ownership" />
+                </apex:pageBlockSectionItem>
+               
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="UBO 1" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true"  value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_1__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true"  value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_1_per__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="UBO 2" />
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true" value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_2__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true"  value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_2_per__c}" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="UBO 3" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true"  value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_3__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true" value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_3_per__c}" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="UBO 4" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true" value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_4__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:inputField taborderhint="1" ignoreEditPermissionForRendering="true" value="{!BPF__c.Ultimate_Beneficial_Owner_UBO_4_per__c}" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+               
+               
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Is the company (fully or partially) state owned?" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Company_State_Owned__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="If yes, please provide details..." />
+                    <apex:inputField taborderhint="1"  value="{!BPF__c.CompanyStateOwnedDetail__c}" ignoreEditPermissionForRendering="true" label="" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Does the company have its own code of conduct or similar compliance /ethics policy or other anti-bribery/corruption policy in place?" />
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.CodeofConduct__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="If no, please provide details..." />
+                    <apex:inputField taborderhint="1"  value="{!BPF__c.CodeofConductDetail__c}" ignoreEditPermissionForRendering="true" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                 
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value=" To your knowledge, do any of the owners or directors have personal associations or family ties with public officials?" />
+                    <apex:inputField taborderhint="1"  value="{!BPF__c.PersonalAssociationswithPublicOfficials__c}" ignoreEditPermissionForRendering="true" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+              
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value=" If yes, please provide details..." />
+                    <apex:inputField taborderhint="1"  value="{!BPF__c.PersonalAssociationsDetails__c}" ignoreEditPermissionForRendering="true" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Will payments be made from the same country as you are (i) incorporated in or (ii) where our goods will be delivered to?          " />
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true" value="{!BPF__c.PaymentSameCountry__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="If no, please explain...          " />
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Paymentsamecountrydetail__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"  />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Will payments be made directly from the bank account listed in the bank information section below? (yes or no) If no, please explain why not          " />
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Payments_same_bank__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="If no, please explain why not...          " />
+                    <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Paymentsamebankdetail__c}" label="" onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                </apex:pageBlockSectionItem>
+                
+                
+            </apex:pageblockSection>
+            <apex:pageblockSection columns="2" title="Customer Application"  collapsible="false" >
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Registered_Legal_Name__c}" styleClass="validationchek" onkeydown="if(event.keyCode==13){this.blur();;}"></apex:inputField>
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.TaxIDorRegistration__c}"    onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.DBA_name__c}"  onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Vatifapplicable__c}"     onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Legalentitytype__c}"   styleClass="validationchek"  onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Companywebsite__c}"  styleClass="validationchek"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.LineofBusiness__c}"  styleClass="validationchek"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Companyphonenumber__c}"   styleClass="validationchek" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.YearofIncorporation__c}"  styleClass="validationchek"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.City_Of_Incorporation__c}"  styleClass="validationchek"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="1"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.Country_Of_Incorporation__c}"  styleClass="validationchek"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+            </apex:pageblockSection>
+            <apex:pageblockSection columns="2" title="Customer Addresses"  collapsible="false" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:outputLabel value="Principal Office" style="font-weight: 700;" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:outputLabel value="Mailing Address (if different)" style="font-weight: 700;" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:inputField taborderhint="2"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.PO_StreetAddress__c}"  styleClass="validationchek"   onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                <apex:inputField taborderhint="3"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.MA_StreetAddress__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="2"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.PO_City__c}"   styleClass="validationchek" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="3"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.MA_City__c}"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="2"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.PO_StateProvince__c}"  styleClass="validationchek" onkeydown="if(event.keyCode==13){this.blur();;}"  />
+                <apex:inputField taborderhint="3"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.MA_StateProvince__c}"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="2"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.PO_PostalCode__c}"  styleClass="validationchek" onkeydown="if(event.keyCode==13){this.blur();;}"  />
+                <apex:inputField taborderhint="3"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.MA_PostalCode__c}"  onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="2"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.PO_Country__c}"   styleClass="validationchek" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="3"  ignoreEditPermissionForRendering="true"   value="{!BPF__c.MA_Country__c}"   onkeydown="if(event.keyCode==13){this.blur();;}" />
+            </apex:pageblockSection>
+            <apex:pageblockSection columns="2" title="Additional Addresses"  collapsible="false" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:outputLabel value="Branch Office" style="font-weight: 700;" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="" />
+                    <apex:outputLabel value="Billing Address (if different)" style="font-weight: 700;" />
+                </apex:pageBlockSectionItem>
+                               
+                <apex:inputField taborderhint="4"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BO_StreetAddress__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="5"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BA_StreetAddress__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="4"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BO_City__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="5"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BA_City__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="4"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BO_StateProvince__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="5"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BA_StateProvince__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="4"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BO_PostalCode__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="5"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BA_PostalCode__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="4"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BO_Country__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField taborderhint="5"  ignoreEditPermissionForRendering="true"  value="{!BPF__c.BA_Country__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+            </apex:pageblockSection>
+            <apex:pageblockSection columns="2" title="Bank Information"  collapsible="false" >
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.Bankname__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.NameonAccount__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.BankAddress__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.Accountnumber__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.BankContact__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.Typeofaccount__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.EmailAddress__c}"  onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.SwiftCode__c}" onkeydown="if(event.keyCode==13){this.blur();;}" />
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.Phonenumber__c}"  onkeydown="if(event.keyCode==13){this.blur();;}"/>
+                <apex:inputField ignoreEditPermissionForRendering="true"  value="{!BPF__c.Methodofpayment__c}"  onkeydown="if(event.keyCode==13){this.blur();;}"  />
+            </apex:pageblockSection>
+            <apex:pageblockSection columns="1" title="Trade References (must provide at least 3)"  collapsible="false" >
+            <apex:outputPanel >
+      <!--  <apex:actionregion >    <apex:commandButton action="{!addMoreTR}" value="Add" reRender="form" immediate="true" /> </apex:actionregion> -->
+            <br/>
+            <apex:pageBlocktable var="objTR" value="{!lstTradeReferences}" width="100">
+                <apex:column headerValue="Company Name" ><apex:inputField ignoreEditPermissionForRendering="true"  value="{!objTR.Name}" onkeydown="if(event.keyCode==13){this.blur();;}" /></apex:column>
+                    <apex:column headerValue="Address"><apex:inputField ignoreEditPermissionForRendering="true"  value="{!objTR.Address__c}" onkeydown="if(event.keyCode==13){this.blur();;}" /></apex:column>
+                <apex:column headerValue="Contact Name"><apex:inputField ignoreEditPermissionForRendering="true"  value="{!objTR.ContactName__c}" onkeydown="if(event.keyCode==13){this.blur();;}"/></apex:column>
+                <apex:column headerValue="Email"><apex:inputField ignoreEditPermissionForRendering="true"  value="{!objTR.Email__c}" onkeydown="if(event.keyCode==13){this.blur();;}"/></apex:column>
+                <apex:column headerValue="Phone"><apex:inputField ignoreEditPermissionForRendering="true"  value="{!objTR.Phone__c}" onkeydown="if(event.keyCode==13){this.blur();;}"/></apex:column>
+            </apex:pageBlocktable>
+            </apex:outputPanel>
+        </apex:pageblockSection>
+        <apex:pageblockSection title="Accounts Payable Information" columns="1" id="condetail" collapsible="false" >
+            <apex:outputPanel >
+               <apex:actionregion > <apex:commandButton action="{!addMoreContact}" value="Add" reRender="form" immediate="true" rerender="condetail"/> </apex:actionregion>
+                <br/>
+                <apex:pageBlocktable var="objCon" value="{!lstContact}" width="100">
+                    <apex:column headerValue="First Name" ><apex:outputField value="{!objCon.FirstName}" rendered="{!objCon.Id != null}" /> <apex:inputField ignoreEditPermissionForRendering="true"  value="{!objCon.FirstName}"  onkeydown="if(event.keyCode==13){this.blur();;}" rendered="{!objCon.Id = null}" /></apex:column>
+                    <apex:column headerValue="Last Name"><apex:outputField value="{!objCon.LastName}" rendered="{!objCon.Id != null}" /> <apex:inputField ignoreEditPermissionForRendering="true"  value="{!objCon.LastName}" onkeydown="if(event.keyCode==13){this.blur();;}" rendered="{!objCon.Id = null}"  /></apex:column>
+                  <!--  <apex:column headerValue="Title"><apex:outputField value="{!objCon.Title}" rendered="{!objCon.Id != null}" /> <apex:inputField ignoreEditPermissionForRendering="true"  value="{!objCon.Title}" onkeydown="if(event.keyCode==13){this.blur();;}" rendered="{!objCon.Id = null}"  /></apex:column> -->
+                    <apex:column headerValue="Phone"><apex:outputField value="{!objCon.Phone}" rendered="{!objCon.Id != null}" /> <apex:inputField ignoreEditPermissionForRendering="true"  value="{!objCon.Phone}" onkeydown="if(event.keyCode==13){this.blur();;}" rendered="{!objCon.Id = null}"  /></apex:column>
+                    <apex:column headerValue="Email"><apex:outputField value="{!objCon.Email}" rendered="{!objCon.Id != null}" /> <apex:inputField ignoreEditPermissionForRendering="true"  value="{!objCon.Email}" onkeydown="if(event.keyCode==13){this.blur();;}" rendered="{!objCon.Id = null}"  /></apex:column>
+                    <apex:column headerValue="Role"><apex:outputField value="{!objCon.Role__c}" rendered="{!objCon.Id != null}" /> <apex:inputField ignoreEditPermissionForRendering="true"  value="{!objCon.Role__c}" onkeydown="if(event.keyCode==13){this.blur();;}" rendered="{!objCon.Id = null}"  /></apex:column>
+                    <apex:outputField value="{!objCon.AccountId}" style="display:none"/>
+                </apex:pageBlocktable>
+            </apex:outputPanel>
+        </apex:pageblockSection>
+        <br/>
+        <center>
+            <p id="recaptchadatatext">Please confirm you are not a robot to Upload Files and Save this form</p>
+                 <div id="recaptchadata">
+                 </div> <br/>
+        </center>
+        
+        <div style="display:block;" id="uploadfilesection">
+            <apex:pageBlockSection title="W9 & Other Files" collapsible="false" id="theBlock" columns="1" >
+            <apex:outputLabel >* Please provide extract/copy of the local Chamber of Commerce or similar institution with information about the company's registration (company registration certificate). For U.S. entities, please provide a copy of your W-9.<br/></apex:outputLabel>
+            <apex:outputLabel >** Please provide a copy of the passport of each UBO or official government/state issued ID if no passport is available.  UBO (Ultimate Beneficial Owner) is any person that directly or indirectly holds 25% or more of the shares, voting rights or ownership in the company as well as their individual % of ownership<br/></apex:outputLabel>
+                 <c:FileUpload parentId="{!BPF__c.Id}"/>
+        </apex:pageBlockSection>
+        </div>
+        
+        
+        <apex:pageBlockSection title="Data Privacy" collapsible="false" id="DataPrivacy" columns="1" >
+            <apex:outputLabel ><i>Hoogwegt US respects the need for data security when handling client information. Hoogwegt US will safeguard the details shared on this site and make use of it only for Customer Setup and validation. Please reach out to your Hoogwegt US contact if you have concerns about completing this form or uploading the necessary documents.                        </i></apex:outputLabel>
+        </apex:pageBlockSection>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <center>
+            <apex:actionregion > 
+                 
+            <table style="width: 25%;display:none;" id="buttonarea" >
+                <tr>
+                    <th style="text-align: center;"  >
+                        <apex:commandButton value="Sign & Submit" action="{!showPopup}" rendered="{!IF(section= 'done',false,true)}" ></apex:commandButton>
+                    </th>
+                    <th style="text-align: center;">
+                        <apex:commandButton action="{!nextSection}" value="Save Without Signing" immediate="false"  rendered="{!IF(section= 'done',false,true)}">
+                             <apex:param name="eventId" value="{!BPF__c.AccountName__c}" assignTo="{!accountId}"/>
+                        </apex:commandButton> 
+                    </th>
+                   
+                </tr>
+            </table>
+           </apex:actionregion> 
+        </center>
+        
+        <apex:pageBlockSection title="Terms & Conditions" collapsible="false" columns="1">
+            <apex:outputLabel ><i><p>
+                Credit terms: All invoices are due on the due date.  Any and all outstanding balances due beyond the agreed terms will be considered
+                delinquent and subject to late charges at the highest rate allowed by law.
+            </p></i></apex:outputLabel>
+            <apex:outputLabel ><i><p>
+                Collection and Attorney's fees: In the event of default, if this acount is turned over to a collection ageny and or attorney for collection,
+                the undersigned agrees to pay all reasonable attorney's fees and/or costs of collection whether or not suit is filed.  The applicant consents to
+                venue  in any court of competent jurisidiction selected by Hoogwegt US Inc. should legal means be necessary to collect on unpaid balances.
+            </p></i></apex:outputLabel>
+            <apex:outputLabel ><i><p>
+                The preceding information is for the purpose of obtaining credit and is warranted to be true. I/We hereby authorize Hoogwegt US Inc. to investigare
+                all references and customary credit information sources.   The person agreeing to the information above has the authority to bind the customer and 
+                is authorized by the customer to enter into this credit application terms and conditions and is an authorized signer on the bank account.
+            </p></i></apex:outputLabel>
+            
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+   
+        <apex:pageBlock rendered="{!IF(section= 'done',true,false)}">
+            {!message}
+        </apex:pageBlock>
+        
+        <!-- Popup  rendered="{!displayPopup}" --> 
+      
+       <apex:outputPanel id="tstpopup">
+        <apex:outputPanel styleClass="popupBackground" rendered="{!displayPopup}" layout="block" />
+            <apex:outputPanel styleClass="custPopup" rendered="{!displayPopup}" layout="block" >
+                <apex:pageBlock >
+                    <apex:pageBlockSection title="Approve Window" columns="1" collapsible="false">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+                            <script>
+                                var signaturePad;
+                                var canvas;
+                                var recId = '{!$CurrentPage.parameters.Id}'
+                                var signatureData;
+                                function onLoad(){
+                                    canvas = document.getElementById('sPad');
+                                    resizeCanvas();
+                                    signaturePad = new SignaturePad(canvas);
+                                }    
+                                function sPadClear(){
+                                    signaturePad.clear();
+                                }
+                                function resizeCanvas() {
+                                    var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+                                    canvas.width = canvas.offsetWidth * ratio;
+                                    canvas.height = canvas.offsetHeight * ratio;
+                                    canvas.getContext("2d").scale(ratio, ratio);
+                                }
+                            </script>    
+                            <style>
+                                .sPad{
+                                    width: 100%;
+                                    height: 90vh;
+                                    background-color: white;
+                                    height: 200px;
+                                }
+                            </style>
+                            <script type="text/javascript" >
+                                function savesing(){
+                                    data = signaturePad.toDataURL();
+                                    data = data.replace('data:image/png;base64,', '');
+                                    console.log(data);
+                                        Visualforce.remoting.Manager.invokeAction(
+                                            '{!$RemoteAction.BPFSiteFormExt.UploadImage}',
+                                            data, '{!$CurrentPage.parameters.Id}',
+                                            function(result, event){
+                                                if (event.status) {
+                                                    console.log('Success');
+                                                    priorityChangedJavaScript();
+                                                } else if (event.type === 'exception') {
+                                                     console.log(event.message + ' >>> '+ event.where);
+                                                } else {
+                                                    priorityChangedJavaScript();
+                                                     console.log(event.message);
+                                                }
+                                            }, 
+                                            {escape: true}
+                                        );
+                                }
+                            </script>
+                            <body onload="onLoad();">
+                                <div class="slds-grid slds-m-around--small slds-grid--vertical">
+                                     <div class="slds-col slds-col-rule--top slds-col-rule--right slds-col-rule--bottom slds-col-rule--left">
+                                        <canvas class="sPad" id="sPad"/>
+                                    </div>
+                                </div>
+                                <button class="slds-col slds-m-bottom--small slds-button slds-button--neutral" onclick="sPadClear();">Clear Signature</button>
+                            </body>
+                            <br/>
+                            <apex:inputField taborderhint="197"  ignoreEditPermissionForRendering="true"  value="{!objBPF.SignatureName__c}" />
+                            <apex:inputField taborderhint="198"  ignoreEditPermissionForRendering="true"  value="{!objBPF.SignatureTitle__c}" />
+                            <apex:inputField taborderhint="199"  ignoreEditPermissionForRendering="true"  value="{!objBPF.SignatureEmail__c}" />
+                            <apex:inputField taborderhint="200"  ignoreEditPermissionForRendering="true"  value="{!objBPF.SignaturePhone__c}" />
+                    </apex:pageBlockSection>
+                    <apex:actionFunction name="priorityChangedJavaScript" action="{!closePopup}" />
+                </apex:pageBlock>
+                <center>
+                    <table style="width:50%;" >
+                        <tr>
+                            <th style="text-align: center;" ><apex:commandButton value="save" onclick="savesing();" rerender="##"/></th>
+                            <th style="text-align: center;"><apex:commandButton value="Cancel" action="{!cancled}" /></th>
+                        </tr>
+                    </table>
+                </center>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        
+        <!-- END Popup --> 
+        
+    </apex:form>
+</apex:page>

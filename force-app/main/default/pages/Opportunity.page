@@ -1,0 +1,12 @@
+<apex:page standardController="Opportunity__c" extensions="OpportunityExt" showHeader="false" sidebar="false" action="{!init}">
+  <style>
+    a{
+    text-decoration: none;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+ </style>
+    
+    <apex:outputText value="{!data}" escape="false" />
+</apex:page>

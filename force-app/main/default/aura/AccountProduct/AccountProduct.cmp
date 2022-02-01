@@ -1,0 +1,61 @@
+<aura:component controller="AccountProductCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute type="List" name="lstProducts"/>
+    <aura:handler name="init" action="{!c.presetData}" value="{!this}"/> 
+    
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+         
+        <div class="slds-table--header-fixed_container" style="height:350px;">
+            <center>
+            	<lightning:button onclick="{!c.savedata}" variant="brand" label="Save" title="Save" />
+            </center>
+            <div class="slds-scrollable_y" style="height:100%;">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate">PRODUCT</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">PURCHASE VOLUME</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">APPLICATION</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">General Comments</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">Action </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.lstProducts}" var="a">
+                            <tr>
+                                <td data-label="PRODUCT">
+                                    <lightning:input type="text"  value="{!a.Name}" name="{!a.Sequence__c}" aura:id="Name" default="English" />
+                                </td>
+                                <td data-label="PURCHASE VOLUME">
+                                    <lightning:input type="text" value="{!a.Purchase_Volume__c}"  name="{!a.Sequence__c}" aura:id="Purchase_Volume__c" />    
+                                </td>
+                                <td data-label="APPLICATION">
+                                    <lightning:input type="text" value="{!a.Application__c}"  name="{!a.Sequence__c}" aura:id="Application__c" />
+                                </td>
+                                <td data-label="General Comments">
+                                    <lightning:input type="text"  value="{!a.General_Connents__c}" name="{!a.Sequence__c}" aura:id="General_Connents__c"/>
+                                </td>
+                                <td data-label="Action">
+                                    <lightning:button onclick="{!c.removedata}" variant="destructive" iconPosition="right" name="{!a.Sequence__c}" iconName="utility:close" />
+                                    <lightning:button onclick="{!c.addOnedata}" variant="success" iconPosition="right" name="{!a.Sequence__c}"  iconName="utility:add"/>    
+                                </td>
+                            </tr>
+                        </aura:iteration> 
+                    </tbody>
+                </table>  
+            </div>
+
+        </div>
+    </div>
+    
+</aura:component>

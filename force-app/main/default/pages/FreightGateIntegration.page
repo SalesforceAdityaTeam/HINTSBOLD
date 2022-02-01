@@ -1,0 +1,2 @@
+<apex:page controller="FreightGateIntegrationCtrl" action="{!init}">
+</apex:page>

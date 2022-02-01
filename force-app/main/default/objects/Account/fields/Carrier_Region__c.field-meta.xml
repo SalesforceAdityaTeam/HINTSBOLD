@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier_Region__c</fullName>
+    <externalId>false</externalId>
+    <label>Carrier Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EXPORT</fullName>
+                <default>false</default>
+                <label>EXPORT</label>
+            </value>
+            <value>
+                <fullName>MIDATL</fullName>
+                <default>false</default>
+                <label>MIDATL</label>
+            </value>
+            <value>
+                <fullName>MID E</fullName>
+                <default>false</default>
+                <label>MID E</label>
+            </value>
+            <value>
+                <fullName>MID W</fullName>
+                <default>false</default>
+                <label>MID W</label>
+            </value>
+            <value>
+                <fullName>N EAST</fullName>
+                <default>false</default>
+                <label>N EAST</label>
+            </value>
+            <value>
+                <fullName>N WEST</fullName>
+                <default>false</default>
+                <label>N WEST</label>
+            </value>
+            <value>
+                <fullName>PLAINS</fullName>
+                <default>false</default>
+                <label>PLAINS</label>
+            </value>
+            <value>
+                <fullName>S EAST</fullName>
+                <default>false</default>
+                <label>S EAST</label>
+            </value>
+            <value>
+                <fullName>SOUTH</fullName>
+                <default>false</default>
+                <label>SOUTH</label>
+            </value>
+            <value>
+                <fullName>S WEST</fullName>
+                <default>false</default>
+                <label>S WEST</label>
+            </value>
+            <value>
+                <fullName>WEST</fullName>
+                <default>false</default>
+                <label>WEST</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

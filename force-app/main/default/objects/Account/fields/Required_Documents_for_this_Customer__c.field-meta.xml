@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Documents_for_this_Customer__c</fullName>
+    <externalId>false</externalId>
+    <label>Required Documents for this Customer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial invoice</fullName>
+                <default>false</default>
+                <label>Commercial invoice</label>
+            </value>
+            <value>
+                <fullName>Transport document (BL/RWB/CMR/AWB)</fullName>
+                <default>false</default>
+                <label>Transport document (BL/RWB/CMR/AWB)</label>
+            </value>
+            <value>
+                <fullName>Trade document (FEED)</fullName>
+                <default>false</default>
+                <label>Trade document (FEED)</label>
+            </value>
+            <value>
+                <fullName>Trade identification document (TID)</fullName>
+                <default>false</default>
+                <label>Trade identification document (TID)</label>
+            </value>
+            <value>
+                <fullName>pre-certificates</fullName>
+                <default>false</default>
+                <label>Pre-certificates</label>
+            </value>
+            <value>
+                <fullName>Standard COA</fullName>
+                <default>false</default>
+                <label>Standard COA</label>
+            </value>
+            <value>
+                <fullName>Adjusted COA / supplementary CoA</fullName>
+                <default>false</default>
+                <label>Adjusted COA / supplementary CoA</label>
+            </value>
+            <value>
+                <fullName>Certificate of origin</fullName>
+                <default>false</default>
+                <label>Certificate of origin</label>
+            </value>
+            <value>
+                <fullName>Dioxin certificate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dioxin certificate</label>
+            </value>
+            <value>
+                <fullName>Free Sale Certificate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Free Sale Certificate</label>
+            </value>
+            <value>
+                <fullName>Radiation certificate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Radiation certificate</label>
+            </value>
+            <value>
+                <fullName>Veterinary/Health/Sanitary certificate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Veterinary/Health/Sanitary certificate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

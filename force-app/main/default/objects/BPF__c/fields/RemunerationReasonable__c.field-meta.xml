@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RemunerationReasonable__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Is the remuneration reasonable compared to the services to be provided by agent? (using professional personal judgement and common sense)</inlineHelpText>
+    <label>Remuneration Reasonable ?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

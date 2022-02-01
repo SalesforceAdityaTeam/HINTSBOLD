@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyAccounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Parent_Account__c</columns>
+    <columns>accmShortName__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Avg_Days_to_Pay__c</columns>
+    <columns>Avg_Days_Past_Due__c</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>Industry__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Accounts</label>
+</ListView>

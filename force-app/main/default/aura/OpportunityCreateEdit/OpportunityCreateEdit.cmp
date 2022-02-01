@@ -1,0 +1,318 @@
+<aura:component controller="OpportunityCreateEditCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride" access="global" >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="opp" type="Opportunity__c" />
+    <aura:attribute name="accid" type="String" />
+    <aura:attribute name="conid" type="String" />
+    <aura:attribute name="destid" type="String" />
+    <aura:attribute name="selectedDestination" type="sObject" default="{'sobjectType': 'Location__c'}"/>
+    <aura:attribute name="selectedChildAccount" type="sObject" default="{'sobjectType': 'Account'}"/>
+    <aura:attribute name="parentId" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="isSubmited" type="String" default="no" />
+    
+    <lightning:card iconName="standard:Opportunity__c" 
+                    title="{! (v.recordId == null ? 'New ' : 'Edit ') + 'Opportunity' }">
+        
+        <lightning:recordEditForm aura:id="form"
+                                  recordId="{!v.recordId}"
+                                  objectApiName="Opportunity__c"
+                                  class="slds-card__body_inner"
+                                  onload="{!c.handleCreateLoad}"
+                                  onsuccess="{!c.handleOnSuccess}"
+                                  onsubmit="{!c.handleOnSubmit}"
+                                  onerror="{!c.handleOnError}"
+                                  density ="comfy"
+                                  >
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1"> <lightning:messages aura:id="messageid" />  </div>
+            </div>
+            <div class="slds-grid slds-wrap" style="margin-bottom: 5px;" >
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField onchange="{!c.contactSelected}" aura:id ="Contact__c" fieldName="Contact__c" required="true" /> </div>
+                <div aura:id="accountcls" class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1" style="padding: 5px;"> 
+                    <abbr lightning-input_input="" title="required" class="slds-required">*</abbr>
+                    Account<br/>
+                    <c:customLookup recordId="{!v.parentId}" objectAPIName="Account" IconName="standard:Account" selectedRecord="{!v.selectedChildAccount}"/> 
+                </div>
+                <div aura:id="accountSH" class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-hide"  > <lightning:inputField aura:id ="Account__cFT" onchange="{!c.changeAccount}" fieldName="Account__c" /> </div>
+            </div>
+            
+            <div class="slds-grid slds-wrap " >
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> 
+                    <lightning:input label="Volume" onchange="{!c.first}" type="number" formatter="number" step="0.001" aura:id="Volume__c"  value="" required="true" />
+                    <!--  <lightning:inputField aura:id ="Volume__c" fieldName="Volume__c" /> --> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Unit_of_Measure__c" fieldName="Unit_of_Measure__c" onchange="{!c.first}" required="true" /> </div>
+            </div> 
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Brand__c" fieldName="Brand__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Product_Group__c" fieldName="Product_Group__c" required="true" /> </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Product_Description__c"  fieldName="Product_Description__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Packaging2__c" fieldName="Packaging2__c" /> </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Inco_Terms__c" fieldName="Inco_Terms__c" required="true" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Shipment_Period_Range_Start__c" fieldName="Shipment_Period_Range_Start__c" required="true" /> </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Shipment_Period_Range_End__c" fieldName="Shipment_Period_Range_End__c" required="true" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Origin__c" fieldName="Origin__c" /> </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div aura:id="destinationcls" class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1" style="padding: 5px;">Destination<br/>
+                    <c:customLookup recordId="{!v.parentId}" objectAPIName="Location__c" IconName="standard:Account" selectedRecord="{!v.selectedDestination}"/>  
+                </div>
+                <div aura:id="destinationSH" class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-hide"  > <lightning:inputField aura:id ="Destination_Location__cFT" onchange="{!c.changeLocation}"  fieldName="Destination_Location__c" /> </div>
+                
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Planned_of_Shipments__c" fieldName="Planned_of_Shipments__c" required="true" /> </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+               <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Stage__c" fieldName="Stage__c" /></div>
+               <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Product_Description_Other__c" fieldName="Product_Description_Other__c" /></div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Date_Quoted__c" fieldName="Date_Quoted__c" /></div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"><lightning:inputField aura:id ="Date_SO_Written__c" fieldName="Date_SO_Written__c" />  </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Sales_Order_Num__c" fieldName="Sales_Order_Num__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="Trader__c" fieldName="Trader__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1" style="padding: 5px;"> 
+                    <!--    <lightning:inputField onchange="{!c.first}" aura:id ="FOB_Price_OUT__c" fieldName="FOB_Price_OUT__c" /> -->
+                    <lightning:input label="FOB / LB" onchange="{!c.first}" type="number" formatter="currency" step="0.0001" aura:id="FOB_Price_OUT__c"  value="" />
+                </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1" style="padding: 5px;">
+                    <lightning:input label="Delivered Eval / UM" onchange="{!c.first}" type="number" formatter="currency" step="0.0001" aura:id="Delivered_Eval_UM__c"  value="" />
+                    <!-- <lightning:inputField onchange="{!c.first}" aura:id ="Delivered_Eval_UM__c" fieldName="Delivered_Eval_UM__c" /> --> 
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1" style="padding: 5px;"> 
+                    <!--   <lightning:inputField  aura:id ="Delivered_Price_Calculated__c" fieldName="Delivered_Price_Calculated__c" /> -->
+                    <lightning:input label="Delivered Offer / UM" onchange="{!c.first}" type="number" formatter="currency" step="0.0001" aura:id="Delivered_Price_Calculated__c"  value="" />
+                </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1" style="padding: 5px;"> 
+                    <!--   <lightning:inputField aura:id ="FOB_Price__c" fieldName="FOB_Price__c" />  -->
+                    <lightning:input label="FOB Evaluation / LB" onchange="{!c.first}" type="number" formatter="currency" step="0.0001" aura:id="FOB_Price__c"  value="" />
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  <lightning:inputField aura:id ="Competitor_s_Price__c" fieldName="Competitor_s_Price__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1">  </div>
+            </div>
+            <p class="slds-p-horizontal_small">
+                <b>  Pricing </b>
+            </p>
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> <lightning:inputField aura:id ="IndexPrice__c" fieldName="IndexPrice__c" /> </div>
+                <div class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-small-size_1-of-1"> </div>
+            </div>
+            
+            
+            
+            <lightning:accordion allowMultipleSectionsOpen="true" aura:id="accordion" activeSectionName="complexcalculation" >
+                <lightning:accordionSection name="complexcalculation" label="Complex Calculation">                    
+                    <aura:set attribute="body">
+                        <div class="slds-grid slds-wrap ">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">Drayage / Domestic Inland</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input style="display:none" onchange="{!c.first}" type="number" formatter="currency" step="0.0001" placeholder="$ per lb/MT" aura:id="Drayage_Domestic_Inland_per_lb_MT__c"  value="" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001" aura:id="Drayage_Domestic_Inland_Fixed__c" placeholder="$ fixed" value=""   /> 
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap ">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">Ocean Freight</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  style="display:none" onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Ocean_Freight_per_lb_MT__c" placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input   onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Ocean_Freight_Fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3  labelsection ">$/Shipment</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <!-- <lightning:input style="display:none" onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Dollar_Shipment_per_LB_MT__c" placeholder="$ per lb/MT"  value=""  disabled="true"/> -->
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Dollar_Shipment__c" placeholder="$ fixed"  value=""  disabled="true" />
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection "> Transport Subtotal ($/UOM)</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">  
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Transport_Subtotal__c" disabled="true" placeholder="Transport Subtotal"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" label="$/Contract" type="number" formatter="currency" step="0.0001"  aura:id="Dollar_Contract__c" disabled="true" placeholder="Dollar Contract"  value=""  />
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Cross doc.</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3" >
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"   aura:id="Cross_doc_per_lb_MT__c"  placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <!-- <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Cross_doc_Fixed__c" placeholder="$ fixed"  value=""  /> -->
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3  ">Logistics Total </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 ">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001" style="padding-top: 0px;"  aura:id="TCT"  value="" disabled="true"  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Pallets</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"   aura:id="Pallets_per_lb_MT__c" placeholder="$ per lb/MT"    value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"   aura:id="Pallets_Fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Labels</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Labels_per_lb_MT__c" placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Labels_Fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Docs</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Docs_per_lb_MT__c" placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Docs_fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Cwt.</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Cwt_per_lb_MT__c" placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Cwt_Fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">L/C Bank Fee</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="L_C_Bank_Fee_per_lb_MT__c" placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="L_C_Bank_Fee_Fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">Agent commission</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Agent_commission_per_lb_MT__c" placeholder="$ per lb/MT"  value=""  />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="Agent_commission_Fixed__c" placeholder="$ fixed"  value=""  />
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">
+                                Misc. Costs: Total
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3  ">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="MCT"  value=""   disabled="true"/>
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 labelsection">Assumptions: </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                                <lightning:inputField fieldName="Assumptions__c" />
+                            </div>
+                        </div>
+                        <hr/>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Logistics Total</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="t11"  value="" placeholder="$ PER LB/MT"    disabled="true" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"></div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection ">Misc. Costs Total</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="t21"  value="" placeholder="$ PER LB/MT"   disabled="true" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"></div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">Cargo Insurance</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="t31"  value="" placeholder="$ PER LB/MT"    disabled="true" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"></div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection"> Credit Insurance</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="t41"  value="" placeholder="$ PER LB/MT"   disabled="true" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"></div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">Finance Costs (Avg Days to Pay {!v.opp.AvgDaysPastDue__c})</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input  onchange="{!c.first}" type="number" formatter="currency" step="0.0001"  aura:id="t51"  value=""  placeholder="$ PER LB/MT"  disabled="true" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"></div>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 labelsection">Total Costs</div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                                <lightning:input type="number" formatter="currency" step="0.0001"  aura:id="t61"  value=""  placeholder="$ PER LB/MT"  disabled="true" />
+                            </div>
+                            <div class="slds-p-around--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"></div>
+                        </div>
+                    </aura:set>
+                </lightning:accordionSection> 
+            </lightning:accordion>   
+            
+            <div class="slds-m-top_medium">
+            <aura:if isTrue="{!v.isSubmited=='no'}">    <lightning:button variant="brand" label="Submit" type="submit"  /></aura:if>
+                <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{!c.cancel}" />
+            </div>
+            <!-- TO BE HIDDEN -->
+            <div class="slds-grid slds-wrap" style="display:none">
+                <lightning:inputField aura:id ="AvgDaysPastDue__c" fieldName="AvgDaysPastDue__c" /> 
+                <lightning:inputField aura:id ="Rate__cFT" fieldName="Rate__c" />
+                <lightning:inputField aura:id ="Planned_of_Total_Containers__c" fieldName="Planned_of_Total_Containers__c" />
+            </div>
+            <!-- TO BE HIDDEN END-->
+        </lightning:recordEditForm>
+    </lightning:card>
+    
+</aura:component>

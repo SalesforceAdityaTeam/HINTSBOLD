@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_BPF</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New BPF</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://hoogwegtus.my.salesforce.com/a0H/e?CF00N4P00000H66RL={!Account.Name}&amp;CF00N4P00000H66RL_lkid={!Account.Id}&amp;retURL={!Account.Id}</url>
+</WebLink>

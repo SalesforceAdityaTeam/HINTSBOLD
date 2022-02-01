@@ -1,0 +1,84 @@
+<apex:page controller="ProductPageCtrl">
+    
+    <apex:pageBlock id="searchCriteria">
+        <apex:form >
+        <apex:pageBlockSection >
+            <table>
+                <tr>
+                    <td><b>Product Name</b> </td>
+                    <td>
+                        <apex:selectList value="{!selectedProductName}" size="3" multiselect="true">
+                            <apex:selectOptions value="{!productName}"/>
+                        </apex:selectList>
+                     </td>
+                     <td> <apex:commandButton action="{!Search}" value="Search" rerender="searchresult"/> </td>
+                     </tr>
+                     <tr>
+                    <td><b>Vendor</b> </td>
+                    <td>
+                        <apex:selectList value="{!selectedVendar}" size="3" multiselect="true" >
+                            <apex:selectOptions value="{!vendar}"/>
+                        </apex:selectList>
+                     </td>
+                     <td> <apex:commandButton action="{!Search2}" value="Search" rerender="searchresult"/> </td>
+                </tr>
+                <tr>
+                    <td>><b>City, State, Zip</b> </td>
+                    <td>
+                        <apex:selectList value="{!SelectedAddress}" size="3" multiselect="true" >
+                            <apex:selectOptions value="{!address}"/>
+                        </apex:selectList>
+                     </td>
+                     <td> <apex:commandButton action="{!Search3}" value="Search" rerender="searchresult"/> </td>
+                </tr>
+                <tr>
+                    <td> <b>Part</b></td>
+                    <td>
+                        <apex:selectList value="{!selectedPart}" size="1">
+                            <apex:selectOptions value="{!part}"/>
+                        </apex:selectList>
+                     </td>
+                     <td></td>
+                </tr>
+                <tr>
+                    <td><b>Packaging</b> </td>
+                    <td>
+                        <apex:selectList value="{!selectedPacking}" size="1">
+                            <apex:selectOptions value="{!packing}"/>
+                        </apex:selectList>
+                     </td>
+                     <td></td>
+                </tr>
+                <tr>
+                    <td><apex:commandButton action="{!Search3}" value="Search" rerender="searchresult"/> </td>
+                    <td>
+                        
+                     </td>
+                </tr>
+            </table>
+            <br/>
+            
+        </apex:pageBlockSection>
+        </apex:form>
+    </apex:pageBlock>
+    <apex:form >
+    <apex:pageBlock id="searchresult">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!save}" value="save" rerender="na" />
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlockTable value="{!lstResult}" var="obj">
+            <apex:column headerValue="Select"  >
+                <apex:inputField value="{!obj.Select__c}" />
+            </apex:column>
+            <apex:column value="{!obj.name}" headerValue="Product Name" />
+            <apex:column value="{!obj.Vendor__c}" headerValue="Vendor" />
+            <apex:column value="{!obj.Item_Type__c}" headerValue="Product Type" />
+            <apex:column value="{!obj.Packaging__c}" headerValue="Packaging" />
+            <apex:column value="{!obj.City__c}" headerValue="City" />
+            <apex:column value="{!obj.State__c}" headerValue="State" />
+            <apex:column value="{!obj.Zip__c}" headerValue="Zip" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+     </apex:form>
+</apex:page>

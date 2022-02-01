@@ -1,0 +1,2781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>CompactLayout</compactLayoutAssignment>
+    <label>Vendor</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Status__c</picklist>
+        <values>
+            <fullName>Blacklisted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>etc</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Label_Package_Export__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Label_Pallet_Export__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Label_each_Package__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Label_each_Pallet__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_items_inside_container__c</picklist>
+        <values>
+            <fullName>Documents in container</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moisture absorbers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermologgers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additives__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Aflatoxin_M1__c</picklist>
+        <values>
+            <fullName>No requirement on Aflatoxin M1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On batch level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On monitoring basis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Allergen_declaration__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Antibiotics__c</picklist>
+        <values>
+            <fullName>No requirement on antibiotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On batch level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On monitoring basis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Any_Storage_Transport_Conditions__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Any_Technical_Document_for_each_Loading__c</picklist>
+        <values>
+            <fullName>Aflatoxin M1 statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergen declaration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antibiotics statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GFSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GMO Free statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GMP%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Halal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heavy metals statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melamine statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pesticides%2C incl%2E dioxins statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLOG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Applicable_Country_Requirements__c</picklist>
+        <values>
+            <fullName>Additional testing required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China CIQ parameters tested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China factory list</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Import license%2Fderogation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legalizations CoC and%2For Embassy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-shipment Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russia approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sanctioned country</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saudi Arabia SFDA registration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approved_Item__c</picklist>
+        <values>
+            <fullName>AMF %2F BUTTEROIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMPI WPC Feed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMPI WPC Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANIMAL FEED BLENDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANIMAL FEED LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANIMAL FEED MISC%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BFP FUTURES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BFP OPTIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLENDED MPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLUEGRASS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BULK SWEET WHEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTER - SALTED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTER - UNSALTED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTER FUTURES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTER OPTIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTER UNSALTED LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTER-SALTED LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTERMILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTERMILK   LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUTTERMILK OFF-SPEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEIN%2C ACID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEIN%2C RENNET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEINATE%2C CALCIUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEINATE%2C POTASSIUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEINATE%2C SODIUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEDDAR CHEESE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEESE%2C MISC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COCOA POWDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CREAM PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CREAM PRODUCTS  LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELACTOSED WHEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEMINERALIZED WHEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELLSWORTH WHEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMPTY TOTE BAGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESIDE ENT NFDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLUIDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLUIDS LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD GRADE BLENDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD GRADE MISC%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LACTOSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LH NFDM - CHSE%2FSWAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LH NFDM INTERNATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDVA BTR STRGE PRGM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MH NFDM INTERNATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MILK FUTURE %2F OPTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MISCELLANEOUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOZZARELLA CHEESE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MSG WHEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULLINS LACTOSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULLINS PERMEATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFDM HH LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFDM LH CCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFDM LH CCC DOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFDM LH LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFDM LH TACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFDM MH LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT DRY MILK HH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT DRY MILK LH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT DRY MILK MH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT DRY MILK MISC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT DRY MILK OFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT FUTURES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NONFAT OPTIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PERMEATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pollio Whey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOY ULTIMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SWEET WHEY POWDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UF MPC %3E 56%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UF MPC 56%25 OR LESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEAT GLUTEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEAT GLUTEN%2C MDFIED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEY BLENDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEY FUTURES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEY MISCELLANEOUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEY OFF-SPEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEY OPTIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEY%2C AMPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHOLE MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHOLE MILK   LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHOLE MILK INTERNAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHOLE MILK OFF-SPEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI DAIRY WPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WORLD MARKET NFDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WPC %3D %3E 50%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WPC 34%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WPC%2C AMPI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bank_approval_LOI_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C LOI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C bank approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C bank approval %2B LOI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>AGRIMARK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGROCOMERICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGROPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALIMENTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPROVED BRANDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BELGIOIOSO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BINCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLUEGRASS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BONGARDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BORDEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BREWSTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRIESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAYUGA MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEDAR VALLEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHALLENGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLALDY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COLUN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONAPROLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTINENTAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOPERATIVA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CORLASA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CROPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAITANVET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DANONE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DARIGOLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAVISCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELLSWORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMMI ROTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMPIRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETIKA DAIRIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABRICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAMILY FRESH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FONTERRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD INGREDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOODLINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOODTEC CANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOREMOST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOSTER FARMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRIESLAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First District</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GARCIA HERMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GLANBIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GRANDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GRASSLAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HAPRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HAVERO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIGH DESERT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HILLMAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HUMBOLDT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDAHO MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDULACSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INGREDIENT E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT MT DAIRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JVM SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KERRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KRAFT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LACTALIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LACTOGAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAKEVIEW CHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LANDOLAKES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAUBSCHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEPRINO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIMELCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LITTLE LADY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LONESTAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LYNN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MANFREY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAPLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAPLE GROVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAPLE ISLAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MARQUEZ BROTHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MARRON FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MASTELLONE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MASTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDVA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MICHIGAN MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MILK SPECIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MILKY WHEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MILLHAVEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINERVA DAIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULLINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millanos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NELSON-JAMES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NESTLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NUMIDIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nasonville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-AT-KA MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCEANIA DAIRIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OLAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OLD COUNTRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEN COUNTRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORGANIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORNUA INGRED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oberfranken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARAG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARMALAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRAIRIE FARMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRAIRIE-SWIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QUALITY INGR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RED CEDAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RENY PICOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SANTA CLARA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAPUTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SENSORY EFFE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPECIALTYCHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUN OPTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SWISS COLONY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYNLAIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TATUA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEUNISSEN RA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TILLAMOOK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TITAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUSCANY CHEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UELZENA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VALLEY MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VALLEY QUEEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAPSIE VALLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHITE RIVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHITEHALL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WINONA FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WIS WHEY PRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WISCONSIN DA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WISKERCHEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WP DAIRY UT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Carrier_Region__c</picklist>
+        <values>
+            <fullName>EXPORT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MID E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MID W</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIDATL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLAINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEST</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Carrier_Type__c</picklist>
+        <values>
+            <fullName>AGENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANIMAL FEED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAKERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLENDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEESE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONFECTION%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD SERVICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FROZEN FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICE CREAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERMED%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NUTRI FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PET FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PREP%2E FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNACK FOODS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country_Requirements__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Buying_Specification_Present__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Priority_Level__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Environmental_Sustainable_Requirements__c</picklist>
+        <values>
+            <fullName>ISO 140001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No requirements on environment%2Fsustainability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ethical__c</picklist>
+        <values>
+            <fullName>Code of conduct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No ethical requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMETA pillar 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMETA pillar 4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Free_from_irradiation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28free from irradiation%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Free_from_veterinary_disease__c</picklist>
+        <values>
+            <fullName>Anthrax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brucellosis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LSD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No requirement on veterinary disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Para TB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Free_time_at_POD_for_this_customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GFSI_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GFSI_Certificate__c</picklist>
+        <values>
+            <fullName>Any</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSSC22000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SQF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GMO_Free_statement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28GMO free%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GMP_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HACCP_Flow_diagram_incl_CCP__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Halal_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Halal__c</picklist>
+        <values>
+            <fullName>Jakim recognized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUI recognized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUIS recognized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No requirement on organization</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Heavy_metals__c</picklist>
+        <values>
+            <fullName>No requirement on heavy metals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On batch level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On monitoring basis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry__c</picklist>
+        <values>
+            <fullName>Bakery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cheese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chocolate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confectionary %26 Snack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dairy creamer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dairy drinks and beverages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dairy powder blends</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egg replacer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fat blends</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fatfilled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flavouring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMF %26 GUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ice cream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-food %28technical%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pizza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processed cheese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready to Meal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repacking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soft Serve Ice Cream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soup %26 Sauces</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports and health nutrition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweetened condensed %26 Evap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White cheese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yoghurt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>industry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Item__c</picklist>
+        <values>
+            <fullName>AMF %2F Butteroil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bluegrass and other products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Butter Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Butter Products LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buttermilk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caseins %26 Caseinates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cheeses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cocoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cream Products LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fluids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fluids LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lactose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milk Protein Concentrate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misc%2E Blends</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misc%2E Blends LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonfat Dry Milk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonfat Dry Milk LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permeate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHOLE MILK LSDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheat Gluten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whey Protein Concentrate34</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whey Protein Concentrate50%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whole Milk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kosher_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kosher__c</picklist>
+        <values>
+            <fullName>London Beth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manchaster Beth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No requirement on organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OU</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legalization_Whom_Where__c</picklist>
+        <values>
+            <fullName>Chamber of Commerce in beneficiary country</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chamber of Commerce in country of origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Embassy in beneficiary country</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Embassy in country of origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice by CoC in beneficiary country%2C other docs at origin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legalizations_by_CoC__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loading_Requirements2__c</picklist>
+        <values>
+            <fullName>IPPC Pallets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loose or IPPC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Logistics_Category__c</picklist>
+        <values>
+            <fullName>EU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU %26 Export</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Export</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting__c</picklist>
+        <values>
+            <fullName>Physical Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Conferencing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Melamine__c</picklist>
+        <values>
+            <fullName>No requirement on melamin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On batch level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On monitoring basis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>No_growth_promotors__c</picklist>
+        <values>
+            <fullName>No requirements on no-growth promotors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>rBGH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>rBST</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Organic_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Package_Label_Language__c</picklist>
+        <values>
+            <fullName>Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bosnian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macedonian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwanese</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Packaging_compliance_food_grade__c</picklist>
+        <values>
+            <fullName>Migration report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No requirement on packaging compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaging declaration of conformity %2F statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaging specification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pallet_Label_Language__c</picklist>
+        <values>
+            <fullName>Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bosnian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macedonian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwanese</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pesticides_incl_dioxins__c</picklist>
+        <values>
+            <fullName>No requirement on pesticides</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On batch level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On monitoring basis</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Required_Documents_for_this_Customer_Exp__c</picklist>
+        <values>
+            <fullName>Adjusted COA %2F supplementary CoA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate of origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-certificates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard COA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade document %28FEED%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade identification document %28TID%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport document %28BL%2FRWB%2FCMR%2FAWB%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Required_Documents_for_this_Customer__c</picklist>
+        <values>
+            <fullName>Adjusted COA %2F supplementary CoA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate of origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard COA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport document %28BL%2FRWB%2FCMR%2FAWB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pre-certificates</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Required_Items_Inside_Container__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requirements_on_Un_loading_Hrs__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Samples_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C Pre Shipment Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C Samples with Each Loading</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Trader__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Special_Shipping_Line_Requirements__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Specimen_CoA__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Traders_Involved__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vegetarian__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vendor_Priority_Level__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vlog_Certificate_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accm1_co_site__c</picklist>
+        <values>
+            <fullName>GH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HW</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>LP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accm1_rec_type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accm2_co_site__c</picklist>
+        <values>
+            <fullName>GH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accm2_rec_type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accm3_co_site__c</picklist>
+        <values>
+            <fullName>GH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accm3_rec_type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accmaccm_region__c</picklist>
+        <values>
+            <fullName>EXPORT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MID E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MID W</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIDATL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLAINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEST</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accmcarrier__c</picklist>
+        <values>
+            <fullName>AGENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANIMAL FEED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAKERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLENDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEESE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONFECTION%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD SERVICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FROZEN FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICE CREAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERMED%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NUTRI FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PET FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PREP%2E FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNACK FOODS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accmcredit_stat__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>accmterms_eom__c</picklist>
+        <values>
+            <fullName>N</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>cvof1_co_site__c</picklist>
+        <values>
+            <fullName>GH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>cvof1_rec_type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>cvof2_co_site__c</picklist>
+        <values>
+            <fullName>GH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>cvof2_rec_type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

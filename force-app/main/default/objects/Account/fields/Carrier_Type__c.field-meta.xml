@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Carrier Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AGENT</fullName>
+                <default>false</default>
+                <label>AGENT</label>
+            </value>
+            <value>
+                <fullName>ANIMAL FEED</fullName>
+                <default>false</default>
+                <label>ANIMAL FEED</label>
+            </value>
+            <value>
+                <fullName>BAKERY</fullName>
+                <default>false</default>
+                <label>BAKERY</label>
+            </value>
+            <value>
+                <fullName>BLENDER</fullName>
+                <default>false</default>
+                <label>BLENDER</label>
+            </value>
+            <value>
+                <fullName>CHEESE</fullName>
+                <default>false</default>
+                <label>CHEESE</label>
+            </value>
+            <value>
+                <fullName>CONFECTION.</fullName>
+                <default>false</default>
+                <label>CONFECTION.</label>
+            </value>
+            <value>
+                <fullName>DISTRIBUTOR</fullName>
+                <default>false</default>
+                <label>DISTRIBUTOR</label>
+            </value>
+            <value>
+                <fullName>FOOD SERVICE</fullName>
+                <default>false</default>
+                <label>FOOD SERVICE</label>
+            </value>
+            <value>
+                <fullName>FROZEN FOODS</fullName>
+                <default>false</default>
+                <label>FROZEN FOODS</label>
+            </value>
+            <value>
+                <fullName>ICE CREAM</fullName>
+                <default>false</default>
+                <label>ICE CREAM</label>
+            </value>
+            <value>
+                <fullName>INTERMED.</fullName>
+                <default>false</default>
+                <label>INTERMED.</label>
+            </value>
+            <value>
+                <fullName>NUTRI FOODS</fullName>
+                <default>false</default>
+                <label>NUTRI FOODS</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>PET FOODS</fullName>
+                <default>false</default>
+                <label>PET FOODS</label>
+            </value>
+            <value>
+                <fullName>PREP. FOODS</fullName>
+                <default>false</default>
+                <label>PREP. FOODS</label>
+            </value>
+            <value>
+                <fullName>SNACK FOODS</fullName>
+                <default>false</default>
+                <label>SNACK FOODS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

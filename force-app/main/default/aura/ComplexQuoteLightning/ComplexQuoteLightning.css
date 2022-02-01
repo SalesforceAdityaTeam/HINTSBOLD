@@ -1,0 +1,12 @@
+.THIS { 
+}
+.THIS .slds-input{
+    width: -webkit-fill-available;
+}
+.THIS .slds-hidden{
+    display : none; 
+}
+
+.THIS .labelsection {
+    padding-top: 35px;
+}

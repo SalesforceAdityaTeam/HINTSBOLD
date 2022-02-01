@@ -1,0 +1,101 @@
+<apex:page controller="TrainingController">
+ <apex:slds />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var j$ = jQuery.noConflict();
+
+    </script>
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div class="minerva18">
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                          <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                          </svg>
+                          <span class="slds-assistive-text">account</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Training">
+                                <span class="slds-text-heading_small">Training</span>
+                            </a>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">Welcome to your Salesforce.com Training Page. The following training
+                content has been created for your review and should familiarize you
+                with the features that have been created specifically for your company.
+                Enjoy!! <br/><br/><br/>
+                    <div class="slds-tabs--default" style="padding: 1%;">
+                        <ul class="slds-tabs--default__nav" role="tablist" style="background-color: #b7b7b74f;">
+                            <apex:repeat value="{!mapGrpTOObj}" var="key">
+                                <li class="slds-tabs--default__item slds-text-heading--label" title="Item One" role="presentation">
+                                    <a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0"
+                                        aria-selected="true" aria-controls="tab-default-{!SUBSTITUTE(SUBSTITUTE(key,' ',''),'.','')}" id="tab-default-{!SUBSTITUTE(SUBSTITUTE(key,' ',''),'.','')}__item">{!key}</a></li>
+                            </apex:repeat>
+                        </ul>
+                        <apex:repeat value="{!mapGrpTOObj}" var="key">
+                            <div id="tab-default-{!SUBSTITUTE(SUBSTITUTE(key,' ',''),'.','')}" class="slds-tabs--default__content slds-hide" role="tabpanel"
+                                aria-labelledby="tab-default-{!SUBSTITUTE(SUBSTITUTE(key,' ',''),'.','')}__item"> 
+                                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                                      <thead>
+                                        <tr class="slds-line-height_reset" style="background-color: #e1e3e5;">
+                                          <th class="" scope="col">
+                                            <div class="slds-truncate" title="NAME">NAME</div>
+                                          </th>
+                                          <th class="" scope="col">
+                                            <div class="slds-truncate" title="LINK">LINK</div>
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <apex:repeat value="{!mapGrpTOObj[key]}" var="objval">
+                                          <tr class="slds-hint-parent">
+                                          <td data-label="NAME">
+                                            <div class="slds-truncate" title="{!objval.Name__c}">{!objval.Name__c}</div>
+                                          </td>
+                                          <td data-label="NAME">
+                                            <div class="slds-truncate" title=""><a href="http://{!objval.Link__c}" target="_blank" >{!objval.Link__c} </a></div>
+                                          </td>
+                                           </tr>
+                                        </apex:repeat>
+                                      </tbody>
+                                    </table>
+                            </div>
+                        </apex:repeat>
+                    </div>
+                    <script>
+        j$('.slds-tabs--default__link,.slds-tabs--scoped__link').click(
+            function() {
+                j$(this).parent().parent().find(
+                    '.slds-tabs--default__link,.slds-tabs--scoped__link'
+                ).attr('aria-selected', 'false');
+                j$(this).attr('aria-selected', 'true');
+                j$(this).parent().parent().find(
+                    '.slds-tabs--default__link,.slds-tabs--scoped__link'
+                ).attr('tabindex', '-1');
+                j$(this).attr('tabindex', '0');
+                j$(this).parent().addClass('slds-active').siblings()
+                    .removeClass('slds-active');
+                j$(this).parent().parent().parent().find('.' + j$(
+                    this).parent().parent().parent().find(
+                    '.slds-tabs--default__content,.slds-tabs--scoped__content'
+                )[0].classList[0]).removeClass('slds-show').addClass(
+                    'slds-hide');
+                j$(this).parent().parent().parent().find('#' + j$(
+                    this).attr('aria-controls')).removeClass(
+                    'slds-hide').addClass('slds-show');
+            });
+
+    </script>
+                </div>
+        </article>
+    </div>
+    </html>
+
+</apex:page>

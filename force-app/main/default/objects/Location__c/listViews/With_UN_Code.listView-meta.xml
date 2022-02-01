@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>With_UN_Code</fullName>
+    <columns>NAME</columns>
+    <columns>UNCode__c</columns>
+    <columns>UNCodeFunction__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UNCode__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>With UN Code</label>
+</ListView>

@@ -1,0 +1,8 @@
+.THIS .customButton{
+   background-color: #2574a9;
+   color: #fff; 
+}
+.THIS .slds-spinner_container {  
+  z-index: 10000;
+  position: fixed;   
+}

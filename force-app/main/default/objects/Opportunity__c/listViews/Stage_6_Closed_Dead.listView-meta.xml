@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_6_Closed_Dead</fullName>
+    <columns>NAME</columns>
+    <columns>Trader__c</columns>
+    <columns>Date_Quoted__c</columns>
+    <columns>Account__c</columns>
+    <columns>Product_Group__c</columns>
+    <columns>Delivered_Price_Calculated__c</columns>
+    <columns>Competitor_s_Price__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Closed/Dead</value>
+    </filters>
+    <label>Stage 6 - Closed/Dead</label>
+</ListView>

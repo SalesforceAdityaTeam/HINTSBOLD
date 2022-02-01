@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipment_Period_Range_End</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR (
+AND(NOT(ISBLANK( Shipment_Period_Range_End__c )), ISNEW(), Shipment_Period_Range_End__c &lt; Shipment_Period_Range_Start__c )
+,
+AND(NOT(ISBLANK( Shipment_Period_Range_End__c )), NOT(ISNEW()), Shipment_Period_Range_End__c &lt; Shipment_Period_Range_Start__c , ISCHANGED(Shipment_Period_Range_End__c ) )
+)</errorConditionFormula>
+    <errorDisplayField>Shipment_Period_Range_End__c</errorDisplayField>
+    <errorMessage>End Date should not be a date prior to the Start Date.</errorMessage>
+</ValidationRule>

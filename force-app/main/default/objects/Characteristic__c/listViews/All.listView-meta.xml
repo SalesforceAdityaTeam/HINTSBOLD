@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Characteristic_Key__c</columns>
+    <columns>NAME</columns>
+    <columns>Value_Remark__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Characteristic_Key__c</field>
+        <operation>equals</operation>
+        <value>ORIGIN,FACTCODE,PLANTBRAND,SPEC_NO,CP_SPEC</value>
+    </filters>
+    <label>All</label>
+</ListView>

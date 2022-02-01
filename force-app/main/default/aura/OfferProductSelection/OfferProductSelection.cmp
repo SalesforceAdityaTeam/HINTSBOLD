@@ -1,0 +1,149 @@
+<aura:component controller="OfferProductSelectionCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute type="List" name="lstProducts"/>
+    <aura:attribute type="Boolean" default="false" name="spinner"/>
+    <aura:attribute name="selectedRecord" type="sObject" default="{}" />
+    <aura:attribute name="selectedLookUpRecords" type="sObject[]" default="[]"/>
+    <aura:attribute name="selectedLookUpRecordsbcc" type="sObject[]" default="[]"/>
+    <aura:handler name="init" action="{!c.presetData}" value="{!this}"/> 
+    
+    <div class="c-container">
+        <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Offer__c" aura:id="formdata" onsuccess="{!c.handleSuccess}">
+            <lightning:layout pullToBoundary="medium">
+                <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                    <lightning:INputField fieldName="Account__c" />
+                    <lightning:inputField fieldName="Mail_Language__c" default="English"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                    <lightning:INputField fieldName="Contact__c" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                    	<c:lookup  objectAPIName="Contact" IconName="standard:contact" lstSelectedRecords="{!v.selectedLookUpRecords}" label="CC Contacts"/>
+                		<c:lookup  objectAPIName="Contact" IconName="standard:contact" lstSelectedRecords="{!v.selectedLookUpRecordsbcc}" label="BCC Contacts"/>
+             </lightning:layoutItem>
+            </lightning:layout>
+            <br/>
+            <br/>
+            <lightning:layout pullToBoundary="medium">
+            
+                <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                    <h3 class="slds-section-title--divider">Product Details</h3>
+                    <br/>
+                    <lightning:INputField fieldName="Name" />
+                    <lightning:INputField fieldName="Offer_Introduction__c" />
+                    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+                        <div class="slds-table--header-fixed_container" style="height:350px;">
+                            <div class="slds-scrollable_y" style="height:100%;">
+                                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                    <thead>
+                                        <tr class="slds-text-title_caps">
+                                            <th scope="col">
+                                            </th>
+                                            <th scope="col">
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Volume</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Product</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Brand/Origin</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Spec - ID#</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Period</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Price</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">INCO</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Destination </div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Remark </div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate">Action </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.lstProducts}" var="a">
+                                            <tr>
+                                                <td data-label="">
+                                                    <lightning:button onclick="{!c.down}" variant="bare"  name="{!a.Sequence__c}"  iconName="utility:down"  />
+                                                    <lightning:button onclick="{!c.up}" variant="bare"  name="{!a.Sequence__c}"  iconName="utility:up"  />
+                                                </td>
+                                                <td data-label="">
+                                                    <lightning:input type="checkbox"  checked="{!a.For_Offer__c}" name="{!a.Sequence__c}"  aura:id="For_Offer__c"  /> 
+                                                </td>
+                                                <td data-label="Volume">
+                                                    <lightning:input type="text"  value="{!a.Volume__c}" name="{!a.Sequence__c}" aura:id="Volume__c" default="English" />
+                                                </td>
+                                                <td data-label="Product">
+                                                    <lightning:input type="text" value="{!a.Product__c}"  name="{!a.Sequence__c}" aura:id="Product__c" />    
+                                                </td>
+                                                <td data-label="Brand/Origin">
+                                                    <lightning:input type="text" value="{!a.Brand_Origin__c}"  name="{!a.Sequence__c}" aura:id="Brand_Origin__c" />
+                                                </td>
+                                                <td data-label="Spec - ID#">
+                                                    <lightning:input type="text"  value="{!a.Spec_ID__c}" name="{!a.Sequence__c}" aura:id="Spec_ID__c"/>
+                                                </td>
+                                                <td data-label="Period">
+                                                    <lightning:input  type="text"  value="{!a.Period__c}" name="{!a.Sequence__c}" aura:id="Period__c"/>
+                                                </td>
+                                                <td data-label="Price">
+                                                    <lightning:input  type="text"   value="{!a.Price__c}" name="{!a.Sequence__c}" aura:id="Price__c"/>
+                                                </td>
+                                                <td data-label="INCO">
+                                                    <lightning:input  type="text"  value="{!a.INCO__c}" name="{!a.Sequence__c}" aura:id="INCO__c" />
+                                                </td>
+                                                <td data-label="Destination">
+                                                    <lightning:input  type="text"  value="{!a.Destination__c}" name="{!a.Sequence__c}" aura:id="Destination__c"/>
+                                                </td>
+                                                <td data-label="Destination">
+                                                    <lightning:input  type="text"  value="{!a.Remark__c}" name="{!a.Sequence__c}" aura:id="Remark__c"/>
+                                                </td>
+                                                <td data-label="Action">
+                                                    <lightning:button onclick="{!c.removedata}" variant="destructive" iconPosition="right" name="{!a.Sequence__c}" iconName="utility:close" />
+                                                    <lightning:button onclick="{!c.addOnedata}" variant="success" iconPosition="right" name="{!a.Sequence__c}"  iconName="utility:add"/>    
+                                                </td>
+                                            </tr>
+                                        </aura:iteration> 
+                                        
+                                    </tbody>
+                                </table>  
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout pullToBoundary="medium">
+                <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                    <lightning:INputField fieldName="Offer_Close__c" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout pullToBoundary="medium">
+                <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                	<center>
+                        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="Save" label="Save" />
+                        <lightning:button class="slds-m-top_small" variant="brand"  name="Send Email" label="Send Email" onclick="{!c.saveandsend}" />
+                        <br/><br/>
+                    </center>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:recordEditForm>
+        
+    </div>
+    
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Order_Num_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Stage__c , &apos;Entered&apos;), ISNULL( Sales_Order_Num__c ) )</errorConditionFormula>
+    <errorDisplayField>Sales_Order_Num__c</errorDisplayField>
+    <errorMessage>Sales Order # is required to update the Stage Entered</errorMessage>
+</ValidationRule>

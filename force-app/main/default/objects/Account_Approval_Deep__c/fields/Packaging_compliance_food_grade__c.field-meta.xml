@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packaging_compliance_food_grade__c</fullName>
+    <externalId>false</externalId>
+    <label>Packaging compliance food grade</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No requirement on packaging compliance</fullName>
+                <default>false</default>
+                <label>No requirement on packaging compliance</label>
+            </value>
+            <value>
+                <fullName>Packaging declaration of conformity / statement</fullName>
+                <default>false</default>
+                <label>Packaging declaration of conformity / statement</label>
+            </value>
+            <value>
+                <fullName>Migration report</fullName>
+                <default>false</default>
+                <label>Migration report</label>
+            </value>
+            <value>
+                <fullName>Packaging specification</fullName>
+                <default>false</default>
+                <label>Packaging specification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

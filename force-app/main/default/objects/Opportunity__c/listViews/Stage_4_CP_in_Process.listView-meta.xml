@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_4_CP_in_Process</fullName>
+    <columns>NAME</columns>
+    <columns>Trader__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Product_Group__c</columns>
+    <columns>Destination__c</columns>
+    <columns>Account__c</columns>
+    <columns>Stage_Indicate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>In Process</value>
+    </filters>
+    <label>Stage 4 - CP in Process</label>
+</ListView>

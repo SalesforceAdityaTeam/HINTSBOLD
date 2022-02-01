@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>1. Open - This is a new opportunity the trader is working on with the customer.
+
+2. Closed/Dead - This is an opportunity the customer has declined.
+
+3. Sold -This is an opportunity the customer has approved for sale. When changed to sold, the opportunity should go to the commercial assistant (CA) dashboard. There may need to be warnings if it stays in the “Sold” stage for too long.
+
+4. In Process - This is when the opportunity has been picked up by a CA and they are working on entering it into the ERP system.
+
+5. Entered - This is when the opportunity has been entered into the ERP system.</description>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>WIP</fullName>
+                <default>true</default>
+                <label>WIP</label>
+            </value>
+            <value>
+                <fullName>Quoted</fullName>
+                <default>false</default>
+                <label>Quoted</label>
+            </value>
+            <value>
+                <fullName>Sold</fullName>
+                <default>false</default>
+                <label>Sold</label>
+            </value>
+            <value>
+                <fullName>In Process</fullName>
+                <default>false</default>
+                <label>In Process</label>
+            </value>
+            <value>
+                <fullName>Entered</fullName>
+                <default>false</default>
+                <label>Entered</label>
+            </value>
+            <value>
+                <fullName>Closed/Dead</fullName>
+                <default>false</default>
+                <label>Closed/Dead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

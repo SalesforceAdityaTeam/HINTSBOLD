@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>More_explanation_on_dried_milk_exposure__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>More explanation on exposure of dried milk product(?) (? e.g. what is the first process step of the dried milk product, which raw material is used/what temperature and pH is the product exposed to, other properties important)</inlineHelpText>
+    <label>More Explanation On Dried Milk Exposure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

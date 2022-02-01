@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Business_case</fullName>
+        <description>Business case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>TSS_Colleague__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approval_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Stage_Technical_feasibility_TSS</fullName>
+        <description>Stage: Technical feasibility (TSS)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Trader__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approval_Status</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Melamin__c</fullName>
+    <externalId>false</externalId>
+    <label>Melamin</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No requirement on melamin</fullName>
+                <default>false</default>
+                <label>No requirement on melamin</label>
+            </value>
+            <value>
+                <fullName>On monitoring basis</fullName>
+                <default>false</default>
+                <label>On monitoring basis</label>
+            </value>
+            <value>
+                <fullName>On batch level</fullName>
+                <default>false</default>
+                <label>On batch level</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

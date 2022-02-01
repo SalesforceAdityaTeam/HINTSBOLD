@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requirements_vs_Spec__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Customer/Prospect requirements versus factory/product (=spec): please list the GAPS &amp; benefits</inlineHelpText>
+    <label>Requirements vs. Spec</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

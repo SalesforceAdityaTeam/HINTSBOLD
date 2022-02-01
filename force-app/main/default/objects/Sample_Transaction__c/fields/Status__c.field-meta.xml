@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Draft</fullName>
+                <default>true</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Technical Review</fullName>
+                <default>false</default>
+                <label>Technical Review</label>
+            </value>
+            <value>
+                <fullName>Logistics Review</fullName>
+                <default>false</default>
+                <label>Logistics Review</label>
+            </value>
+            <value>
+                <fullName>Sample Requested</fullName>
+                <default>false</default>
+                <label>Sample Requested</label>
+            </value>
+            <value>
+                <fullName>Sample approved</fullName>
+                <default>false</default>
+                <label>Sample Approved</label>
+            </value>
+            <value>
+                <fullName>Sample Not Approved</fullName>
+                <default>false</default>
+                <label>Sample Not Approved</label>
+            </value>
+            <value>
+                <fullName>Sample lead dead</fullName>
+                <default>false</default>
+                <label>Sample Lead Dead</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>In Process</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Process</label>
+            </value>
+            <value>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Approved</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Sample Sent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sample Sent</label>
+            </value>
+            <value>
+                <fullName>Sample rejected</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sample rejected</label>
+            </value>
+            <value>
+                <fullName>Sent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

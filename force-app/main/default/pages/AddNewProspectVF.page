@@ -1,0 +1,12 @@
+<apex:page standardController="Account">
+    <apex:includeLightning />
+    <div id="lightninglayout" />
+    <script>
+ $Lightning.use("c:AddNewProspectApp", function() {
+ $Lightning.createComponent("c:AddNewProspect","",
+ "lightninglayout",
+ function(cmp) {
+    console.log('Component created, do something cool here');
+ });
+ });
+ </script></apex:page>

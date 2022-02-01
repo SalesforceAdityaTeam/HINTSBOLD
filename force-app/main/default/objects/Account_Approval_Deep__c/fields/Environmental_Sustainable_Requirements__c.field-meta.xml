@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Environmental_Sustainable_Requirements__c</fullName>
+    <externalId>false</externalId>
+    <label>Environmental/Sustainable Requirements</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No requirements on environment/sustainability</fullName>
+                <default>false</default>
+                <label>No requirements on environment/sustainability</label>
+            </value>
+            <value>
+                <fullName>ISO 140001</fullName>
+                <default>false</default>
+                <label>ISO 140001</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

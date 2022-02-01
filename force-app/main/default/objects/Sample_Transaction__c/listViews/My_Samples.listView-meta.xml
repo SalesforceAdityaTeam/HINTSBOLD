@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Samples</fullName>
+    <columns>NAME</columns>
+    <columns>Company__c</columns>
+    <columns>Contact__c</columns>
+    <columns>RequestedProduct__c</columns>
+    <columns>Record_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>StageSSI__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Samples</label>
+</ListView>

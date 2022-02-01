@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_approval_LOI_Required__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Is bank approval/LOI required for this customer in regard to sanctioned country?</inlineHelpText>
+    <label>Bank approval/LOI Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Logistics_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Yes, bank approval</fullName>
+                <default>false</default>
+                <label>Yes, bank approval</label>
+            </value>
+            <value>
+                <fullName>Yes, bank approval + LOI</fullName>
+                <default>false</default>
+                <label>Yes, bank approval + LOI</label>
+            </value>
+            <value>
+                <fullName>Yes, LOI</fullName>
+                <default>false</default>
+                <label>Yes, LOI</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>No</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Yes, bank approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Yes, bank approval + LOI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Export</controllingFieldValue>
+            <controllingFieldValue>EU &amp; Export</controllingFieldValue>
+            <valueName>Yes, LOI</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

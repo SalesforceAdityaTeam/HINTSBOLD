@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PFD</label>
+    <protected>false</protected>
+    <values>
+        <field>Field_API__c</field>
+        <value xsi:type="xsd:string">Volume__c,Unit_of_Measure__c,Brand__c,Product_Group__c,ProductName__c,Packaging2__c,Delivered_Price_Calculated__c,IndexPrice__c,Inco_Terms__c,Destination__c,Shipment_Period_Range_Start__c,Shipment_Period_Range_End__c,Payment_Term__c,Origin_formula__c,Product_Description__c,Product_Description_Other__c,Destination_CopyPast__c</value>
+    </values>
+    <values>
+        <field>Instruction__c</field>
+        <value xsi:type="xsd:string">Hoogwegt US Offers: Volume__c Unit_of_Measure__c of Brand__c [&quot;at sellers option&quot;] Product_Group__c - Product_Description__c Product_Description_Other__c ProductName__c (Packaging2__c) at Delivered_Price_Calculated__c IndexPrice__c/Unit_of_Measure__c Prepaid FOB Rail Transfer to Destination_CopyPast__c for delivery Shipment_Period_Range_Start__c to Shipment_Period_Range_End__c. Payment_Term__c payment terms apply. Please consider subject to final approval.</value>
+    </values>
+</CustomMetadata>

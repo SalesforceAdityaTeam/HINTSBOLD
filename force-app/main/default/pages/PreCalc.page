@@ -1,0 +1,343 @@
+<apex:page standardController="Pre_Calc__c">
+   <head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+</head>
+    <table>
+        <thead>
+            <tr>
+                <th>Pre Calculation</th>
+                <th>$ / .lb</th>
+                <th>$ / .MT</th>
+                <th>$ Total</th>
+                <th> Est. LOG CostCount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Base Sale price ex-plant </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Base_Sale_price_ex_plant_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Base_Sale_price_ex_plant_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Base_Sale_price_ex_plant_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dray / Inland Transport </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Dray_Inland_Transport_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Dray_Inland_Transport_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Dray_Inland_Transport_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Dray_Inland_Transport_Cont__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td>Cross Dock / Warehouse  </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Cross_Dock_Warehouse_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Cross_Dock_Warehouse_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Cross_Dock_Warehouse_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Cross_Dock_Warehouse_Cont__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td>Ocean Freight </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Ocean_Freight_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Ocean_Freight_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Ocean_Freight_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Ocean_Freight_Cont__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td>Insurance </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Insurance_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Insurance_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Insurance_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Pallets / Labels / Docs </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Pallets_Labels_Docs_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Pallets_Labels_Docs_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Pallets_Labels_Docs_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Pallets_Labels_Docs_Cont__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td>CWT Rebate </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.CWT_Rebate_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.CWT_Rebate_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.CWT_Rebate_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>L/C or Bank fees </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.L_C_or_Bank_fees_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.L_C_or_Bank_fees_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.L_C_or_Bank_fees_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.L_C_or_Bank_fees_Cont__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td>Agent Commission </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Agent_Commission_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Agent_Commission_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Agent_Commission_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Credit Insurance </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Credit_Insurance_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Credit_Insurance_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Credit_Insurance_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Total Selling Price </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Total_Selling_Price_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Total_Selling_Price_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Total_Selling_Price_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Finance Costs </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Finance_Costs_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Finance_Costs_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Finance_Costs_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Selling Costs </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Selling_Costs_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Selling_Costs_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Selling_Costs_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Average Inventory Cost </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Average_Inventory_Cost_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Average_Inventory_Cost_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Average_Inventory_Cost_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Expected Profit </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Expected_Profit_lb__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Expected_Profit_MT__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Expected_Profit_Total__c}" />
+                    </apex:outputText>
+                </td>
+                <td> 
+                    <apex:outputText value="{0, number, $##,###,###,###.##}">
+                        <apex:param value="{!Pre_Calc__c.Expected_Profit_Cont__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</apex:page>
